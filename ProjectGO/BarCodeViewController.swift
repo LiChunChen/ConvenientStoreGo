@@ -12,6 +12,7 @@ import AVFoundation
 class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
     @IBOutlet weak var barcodeFrame: UIImageView!
+    @IBOutlet weak var lightBtn: UIButton!
     
     let lightDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
     var isLightOn: Bool = false
@@ -35,6 +36,7 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
 
         fromCamera()
         view.bringSubview(toFront: readBarCodeIBOutlet)
+        view.bringSubview(toFront: lightBtn)
     }
     
     //通过摄像头扫描
