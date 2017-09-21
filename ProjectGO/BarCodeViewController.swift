@@ -13,7 +13,8 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
 
     @IBOutlet weak var barcodeFrame: UIImageView!
     
-    
+    let lightDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+    var isLightOn: Bool = false
     
     // 使用的裝置
     var device:AVCaptureDevice!
@@ -151,6 +152,25 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         session.startRunning()
         isRunning = true
         
+    }
+    @IBAction func lightBtn(_ sender: Any) {
+        
+        do {
+            //修改鎖定設備以便進行手電筒狀態
+            try lightDevice?.lockForConfiguration()
+        } catch {
+            print("error")
+        }
+        if isLightOn {
+            
+            lightDevice?.torchMode = .off
+            isLightOn = false
+        } else {
+            
+            lightDevice?.torchMode = .on
+            isLightOn = true
+        }
+        lightDevice?.unlockForConfiguration()
     }
     
     override func didReceiveMemoryWarning() {
