@@ -26,15 +26,17 @@ class WalkthroughContentViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        headingLabel.text=heading
+        headingLabel.text = heading
         contentTextLabel.text = content
         contentImageView.image = UIImage(named: imageFile)
         pageControl.currentPage = index
         
         switch index{
-        case 3: forwardBtn.setTitle("開始使用APP", for: .normal)
+        case 0,1,2 : forwardBtn.isHidden = true
+        case 3 : forwardBtn.setTitle("開始使用APP", for: .normal)
         default:break
             
+
         }
     
     }
@@ -43,17 +45,12 @@ class WalkthroughContentViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-//    @IBAction func nextBtn(_ sender: UIButton) {
+
+//    @IBAction func nextBtn(_ sender: Any) {
+////        self.view.window?.rootViewController = BarCodeViewController()
 //        
-//        switch index {
-//        case 3:
-//            dismiss(animated: true, completion: nil)
-//        default:
-//            break
-//        }
 //    }
-    
+}
 
     /*
     // MARK: - Navigation
@@ -65,4 +62,5 @@ class WalkthroughContentViewController: UIViewController {
     }
     */
 
-}
+//}
+

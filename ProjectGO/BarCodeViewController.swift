@@ -38,6 +38,7 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         view.bringSubview(toFront: readBarCodeIBOutlet)
         view.bringSubview(toFront: lightBtn)
     }
+ 
     
     //通过摄像头扫描
     func fromCamera() {

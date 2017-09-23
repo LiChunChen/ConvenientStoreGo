@@ -12,7 +12,7 @@ class WalkthroughPageViewController: UIPageViewController,UIPageViewControllerDa
     
     var pageHeadings=["Scanner3456789","Map","Product Detail","Use APP"]
     var pageImages = ["scaner","map","product","LetGo"]
-    var pageContent = ["scanner","map","product","LetGo"]
+    var pageContent = ["scanner","map","product",""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
