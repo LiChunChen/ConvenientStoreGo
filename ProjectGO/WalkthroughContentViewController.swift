@@ -46,10 +46,11 @@ class WalkthroughContentViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-//    @IBAction func nextBtn(_ sender: Any) {
-////        self.view.window?.rootViewController = BarCodeViewController()
-//        
-//    }
+    @IBAction func nextBtn(_ sender: Any) {
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(true, forKey: "onOK")
+        userDefaults.synchronize()
+    }
 }
 
     /*

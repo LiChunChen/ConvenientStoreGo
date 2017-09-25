@@ -57,6 +57,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="nextBtn:" destination="Vcc-hg-Hmd" eventType="touchUpInside" id="9xt-54-3NC"/>
                                     <segue destination="UeN-g6-QvF" kind="show" id="Rji-JB-jn3"/>
                                 </connections>
                             </button>
@@ -98,7 +99,7 @@
         <!--Start View Controller-->
         <scene sceneID="YAt-z7-B5U">
             <objects>
-                <viewController id="5cz-SJ-4sM" customClass="StartViewController" customModule="ProjectGO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="on" id="5cz-SJ-4sM" customClass="StartViewController" customModule="ProjectGO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pv2-4H-Q4p"/>
                         <viewControllerLayoutGuide type="bottom" id="bNi-fU-vSz"/>
