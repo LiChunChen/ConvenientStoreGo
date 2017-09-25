@@ -10,6 +10,9 @@ import UIKit
 
 class ItemsViewController: UIViewController{
 
+   
+    @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
+    var menuShowing = false
     @IBOutlet weak var Page1Btn: UIButton!
     @IBOutlet weak var Page2Btn: UIButton!
     @IBOutlet weak var Page3Btn: UIButton!
@@ -127,6 +130,20 @@ class ItemsViewController: UIViewController{
         changePage(to: Page8TableViewController)
     }
 
-
+    @IBAction func open(_ sender: Any) {
+        if (menuShowing) {
+            trailingConstraint.constant = -140
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.layoutIfNeeded()
+            })
+        }else{
+            trailingConstraint.constant = 0
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.layoutIfNeeded()
+            })
+        }
+        menuShowing = !menuShowing
+    }
+    
 }
 

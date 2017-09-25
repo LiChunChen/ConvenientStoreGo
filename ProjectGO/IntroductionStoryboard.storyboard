@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5cz-SJ-4sM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yPR-fi-Q4v">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -254,6 +254,39 @@
                                     <segue destination="vSc-qy-w8t" kind="embed" identifier="ContainerViewSegue" id="w7T-5R-f8J"/>
                                 </connections>
                             </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sxl-gb-PSM">
+                                <rect key="frame" x="375" y="64" width="140" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Khs-og-AaF">
+                                        <rect key="frame" x="39" y="17.5" width="62" height="165"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbw-hN-rjc">
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
+                                                <state key="normal" title="掃描"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeF-Ap-goW">
+                                                <rect key="frame" x="0.0" y="45" width="62" height="30"/>
+                                                <state key="normal" title="地圖"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WyV-q7-YrN">
+                                                <rect key="frame" x="0.0" y="90" width="62" height="30"/>
+                                                <state key="normal" title="我的最愛"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQO-AZ-i6U">
+                                                <rect key="frame" x="0.0" y="135" width="62" height="30"/>
+                                                <state key="normal" title="瀏覽紀錄"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.63230822939999998" green="0.83760310910000002" blue="0.83760310910000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Khs-og-AaF" firstAttribute="centerY" secondItem="sxl-gb-PSM" secondAttribute="centerY" id="CyV-s5-Stk"/>
+                                    <constraint firstAttribute="width" constant="140" id="kTw-R9-6aP"/>
+                                    <constraint firstAttribute="height" constant="200" id="lZc-Xd-pLv"/>
+                                    <constraint firstItem="Khs-og-AaF" firstAttribute="centerX" secondItem="sxl-gb-PSM" secondAttribute="centerX" id="zhL-pO-gH7"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -264,9 +297,22 @@
                             <constraint firstItem="r2L-4O-VzR" firstAttribute="leading" secondItem="315-Qs-Bkd" secondAttribute="leading" id="Wta-u3-JT2"/>
                             <constraint firstItem="Eqy-Ly-CCf" firstAttribute="top" secondItem="r2L-4O-VzR" secondAttribute="bottom" id="ZYz-cb-t0E"/>
                             <constraint firstAttribute="trailing" secondItem="r2L-4O-VzR" secondAttribute="trailing" id="e0g-lL-ApU"/>
+                            <constraint firstAttribute="trailing" secondItem="sxl-gb-PSM" secondAttribute="trailing" constant="-140" id="hAa-SD-dtf"/>
+                            <constraint firstItem="sxl-gb-PSM" firstAttribute="top" secondItem="0IP-w4-fxQ" secondAttribute="bottom" id="hol-OA-8Fh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="kXQ-gx-YcZ"/>
+                    <navigationItem key="navigationItem" id="kXQ-gx-YcZ">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="880-V0-O3x">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GUh-vY-pbU">
+                                <rect key="frame" x="297" y="7" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="功能選單"/>
+                                <connections>
+                                    <action selector="open:" destination="63j-wx-mP2" eventType="touchUpInside" id="6mu-ND-r69"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="Page1Btn" destination="eX4-Ao-cox" id="mxD-Yn-waz"/>
                         <outlet property="Page2Btn" destination="eoU-Pl-Buw" id="F4e-Vq-h46"/>
@@ -277,6 +323,7 @@
                         <outlet property="Page7Btn" destination="7eg-4V-PMB" id="MzA-7h-Rpu"/>
                         <outlet property="Page8Btn" destination="BPt-SC-pz7" id="Z24-Bv-mPZ"/>
                         <outlet property="containerView" destination="Eqy-Ly-CCf" id="k9j-nZ-Kaa"/>
+                        <outlet property="trailingConstraint" destination="hAa-SD-dtf" id="zIi-8W-L0v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6h-sb-Kar" sceneMemberID="firstResponder"/>
