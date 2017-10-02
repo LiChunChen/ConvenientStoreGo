@@ -20,8 +20,6 @@
 		023FD86B1F7361260097EF70 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD8681F7361260097EF70 /* StartViewController.swift */; };
 		023FD86C1F7361260097EF70 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD8691F7361260097EF70 /* WalkthroughContentViewController.swift */; };
 		023FD86D1F7361260097EF70 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD86A1F7361260097EF70 /* WalkthroughPageViewController.swift */; };
-		023FD8701F73645F0097EF70 /* chinese.png in Resources */ = {isa = PBXBuildFile; fileRef = 023FD86E1F73645F0097EF70 /* chinese.png */; };
-		023FD8711F73645F0097EF70 /* english.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 023FD86F1F73645F0097EF70 /* english.jpeg */; };
 		023FD8731F736A8A0097EF70 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD8721F736A8A0097EF70 /* ItemsViewController.swift */; };
 		023FD8751F736AAB0097EF70 /* ChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD8741F736AAB0097EF70 /* ChangeViewController.swift */; };
 		023FD8771F736AE00097EF70 /* BarCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD8761F736AE00097EF70 /* BarCodeViewController.swift */; };
@@ -60,8 +58,6 @@
 		023FD8681F7361260097EF70 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		023FD8691F7361260097EF70 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		023FD86A1F7361260097EF70 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
-		023FD86E1F73645F0097EF70 /* chinese.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chinese.png; sourceTree = "<group>"; };
-		023FD86F1F73645F0097EF70 /* english.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = english.jpeg; sourceTree = "<group>"; };
 		023FD8721F736A8A0097EF70 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		023FD8741F736AAB0097EF70 /* ChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeViewController.swift; sourceTree = "<group>"; };
 		023FD8761F736AE00097EF70 /* BarCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarCodeViewController.swift; sourceTree = "<group>"; };
@@ -157,8 +153,6 @@
 				56D1B4D31F653D5600F1727A /* Assets.xcassets */,
 				56D1B4D51F653D5600F1727A /* LaunchScreen.storyboard */,
 				56D1B4D81F653D5600F1727A /* Info.plist */,
-				023FD86E1F73645F0097EF70 /* chinese.png */,
-				023FD86F1F73645F0097EF70 /* english.jpeg */,
 				023FD8801F736B390097EF70 /* 2.jpg */,
 				023FD8811F736B390097EF70 /* BarCodeFrame.png */,
 				023FD8821F736B390097EF70 /* heart.png */,
@@ -241,9 +235,7 @@
 				023FD8861F736B390097EF70 /* heart.png in Resources */,
 				023FD8541F7360AA0097EF70 /* IntroductionStoryboard.storyboard in Resources */,
 				56D1B4D41F653D5600F1727A /* Assets.xcassets in Resources */,
-				023FD8701F73645F0097EF70 /* chinese.png in Resources */,
 				023FD87F1F736B210097EF70 /* BarcodeStoryboard.storyboard in Resources */,
-				023FD8711F73645F0097EF70 /* english.jpeg in Resources */,
 				023FD8841F736B390097EF70 /* 2.jpg in Resources */,
 				023FD8871F736B390097EF70 /* star.png in Resources */,
 				56D1B4D21F653D5600F1727A /* Main.storyboard in Resources */,

@@ -10,9 +10,9 @@ import UIKit
 
 class WalkthroughPageViewController: UIPageViewController,UIPageViewControllerDataSource {
     
-    var pageHeadings=["Scanner3456789","Map","Product Detail","Use APP"]
-    var pageImages = ["scaner","map","product","LetGo"]
-    var pageContent = ["scanner","map","product",""]
+    var pageHeadings=["掃描條碼","找尋店家位置地圖","飲品相關資訊","使用APP"]
+    var pageImages = ["iphone","iphone","iphone","最後畫面"]
+    var pageContent = ["輕鬆一鍵快速掃描","查看附近店家位置","清楚知道商品成分",""]
     
     override func viewDidLoad() {
         super.viewDidLoad()

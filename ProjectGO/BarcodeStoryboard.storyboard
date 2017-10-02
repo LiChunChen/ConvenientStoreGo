@@ -34,10 +34,11 @@
                                     <action selector="readBarCode:" destination="GYr-EP-lYq" eventType="touchUpInside" id="Swh-Hf-ES0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdZ-xN-DNh">
-                                <rect key="frame" x="22" y="78" width="35" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdZ-xN-DNh">
+                                <rect key="frame" x="10" y="70" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Light"/>
+                                <state key="normal" title="Light" image="手電筒"/>
+                                <state key="highlighted" image="light-1"/>
                                 <connections>
                                     <action selector="lightBtn:" destination="GYr-EP-lYq" eventType="touchUpInside" id="bur-VB-ynh"/>
                                 </connections>
@@ -312,5 +313,7 @@
     <resources>
         <image name="BarCodeFrame.png" width="302" height="117"/>
         <image name="heart.png" width="20" height="20"/>
+        <image name="light-1" width="475" height="465"/>
+        <image name="手電筒" width="475" height="465"/>
     </resources>
 </document>
