@@ -10,7 +10,7 @@ import UIKit
 
 class Page1TableViewController: UITableViewController {
 
-    func loadData() {
+    @objc func loadData() {
         print("load data")
         
         if (self.refreshControl?.isRefreshing)! {

@@ -68,7 +68,7 @@ class DetailViewController: UIViewController {
     }
   
     
-    func onControl(sender:UISegmentedControl) {
+    @objc func onControl(sender:UISegmentedControl) {
         
        if detailSegmentControl.selectedSegmentIndex == 0{
         changePage(to: descriptionVC)

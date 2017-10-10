@@ -14,7 +14,7 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     @IBOutlet weak var barcodeFrame: UIImageView!
     @IBOutlet weak var lightBtn: UIButton!
     
-    let lightDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+    let lightDevice = AVCaptureDevice.default(for: AVMediaType.video)
     var isLightOn: Bool = false
     
     // 使用的裝置
@@ -50,7 +50,7 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         // 設定物理設備和其他屬性(取得照相機裝置)
         // self.device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         // builtInMicrophone: 內建的相機裝置
-        device = AVCaptureDevice.defaultDevice(withDeviceType: .builtInWideAngleCamera, mediaType: AVMediaTypeVideo, position: .back)            
+        device = AVCaptureDevice.default(AVCaptureDevice.DeviceType.builtInWideAngleCamera, for: AVMediaType.video, position: .back)            
 
         
         do {
@@ -68,11 +68,11 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
         session.addOutput(output)
         // 支援的條碼類型 一定要先加到 session 之後才能做設定
-        output.metadataObjectTypes = [AVMetadataObjectTypeEAN13Code,
-                                      AVMetadataObjectTypeEAN8Code,
-                                      AVMetadataObjectTypeCode128Code,
-                                      AVMetadataObjectTypeCode39Code,
-                                      AVMetadataObjectTypeCode93Code]
+        output.metadataObjectTypes = [AVMetadataObject.ObjectType.ean13,
+                                      AVMetadataObject.ObjectType.ean8,
+                                      AVMetadataObject.ObjectType.code128,
+                                      AVMetadataObject.ObjectType.code39,
+                                      AVMetadataObject.ObjectType.code93]
         // 取得螢幕的size
         let windowSize = UIScreen.main.bounds.size
         // 計算掃描的區域範圍
@@ -82,7 +82,7 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
         preview = AVCaptureVideoPreviewLayer(session: session)
         preview.frame = view.layer.bounds
-        preview.videoGravity = AVLayerVideoGravityResizeAspectFill
+        preview.videoGravity = AVLayerVideoGravity.resizeAspectFill
 //        let blurEffect = UIBlurEffect(style: .light)
 //        let blurEffectView = UIVisualEffectView(effect: blurEffect)
 //        blurEffectView.frame = view.bounds
@@ -123,9 +123,9 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
     
     //摄像头捕获
-    func captureOutput(_ captureOutput: AVCaptureOutput!,
-                       didOutputMetadataObjects metadataObjects: [Any]!,
-                       from connection: AVCaptureConnection!) {
+    func metadataOutput(captureOutput: AVCaptureMetadataOutput,
+                       didOutput metadataObjects: [AVMetadataObject],
+                       from connection: AVCaptureConnection) {
         
         guard let barcodeData = metadataObjects.first as? AVMetadataMachineReadableCodeObject else {
             print("Can not get metadataObjects.")

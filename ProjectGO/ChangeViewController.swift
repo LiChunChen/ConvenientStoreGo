@@ -31,7 +31,7 @@ class ChangeViewController: UIViewController,UIScrollViewDelegate {
         codePageControl.currentPage = currentPageNumber
     }
     
-    func codePageControlAction(_ sender: UIPageControl) {
+    @objc func codePageControlAction(_ sender: UIPageControl) {
         
         let currentPageNumber = sender.currentPage //得到選取的頁面
         let width = myScrollView.frame.size.width
