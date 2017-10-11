@@ -28,6 +28,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var favoriteCountsLabel: UILabel!
         
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
