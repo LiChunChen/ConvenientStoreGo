@@ -8,8 +8,9 @@
 
 import UIKit
 
-class writingCommentsVC: UIViewController {
+class writingCommentsVC: UIViewController, UITextFieldDelegate{
 
+    @IBOutlet weak var tf: UITextField!
     @IBOutlet weak var ratingStarView: CosmosView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,8 +18,18 @@ class writingCommentsVC: UIViewController {
         // Do any additional setup after loading the view.
         self.title = "我的評論"
         ratingStarView.text = String(ratingStarView.rating)
+        tf.delegate = self
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
         
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        tf.resignFirstResponder()
+        return true
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
