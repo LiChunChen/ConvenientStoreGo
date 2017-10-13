@@ -28,7 +28,7 @@ class Page8TableViewController: UIViewController,UITableViewDataSource,UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! HistoryRecordCell
         cell.textLabel?.text = "測試標題 \(indexPath.row)"
         return cell
     }

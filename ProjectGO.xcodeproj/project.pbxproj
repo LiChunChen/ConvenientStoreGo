@@ -43,6 +43,7 @@
 		56D1B4EC1F656F6800F1727A /* writingCommentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1B4EB1F656F6800F1727A /* writingCommentsVC.swift */; };
 		56E65FC11F65753200E99C62 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E65FC01F65753200E99C62 /* CosmosDistrib.swift */; };
 		5AA353907AE7E27A39B1A2F8 /* Pods_ProjectGO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E4996880052A8F3EC04A22 /* Pods_ProjectGO.framework */; };
+		AE3DCBBA1F9108B600F7DC1E /* Page9TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3DCBB91F9108B600F7DC1E /* Page9TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		56F7E03C1F8D199B004692CC /* shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shop.swift; sourceTree = "<group>"; };
 		56F7E03D1F8D199B004692CC /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		56F7E03E1F8D199B004692CC /* DispatchQueue+Once.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Once.swift"; sourceTree = "<group>"; };
+		AE3DCBB91F9108B600F7DC1E /* Page9TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page9TableViewController.swift; sourceTree = "<group>"; };
 		B4E4996880052A8F3EC04A22 /* Pods_ProjectGO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectGO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 				023FD85A1F7360E10097EF70 /* Page6TableViewController.swift */,
 				023FD85B1F7360E10097EF70 /* Page7TableViewController.swift */,
 				023FD85C1F7360E10097EF70 /* Page8TableViewController.swift */,
+				AE3DCBB91F9108B600F7DC1E /* Page9TableViewController.swift */,
 			);
 			name = Product;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				023FD86B1F7361260097EF70 /* StartViewController.swift in Sources */,
 				023FD8771F736AE00097EF70 /* BarCodeViewController.swift in Sources */,
 				023FD8641F7360E10097EF70 /* Page8TableViewController.swift in Sources */,
+				AE3DCBBA1F9108B600F7DC1E /* Page9TableViewController.swift in Sources */,
 				023FD8601F7360E10097EF70 /* Page4TableViewController.swift in Sources */,
 				023FD87A1F736AF10097EF70 /* HistoryRecordCell.swift in Sources */,
 				023FD8751F736AAB0097EF70 /* ChangeViewController.swift in Sources */,

@@ -21,6 +21,7 @@ class ItemsViewController: UIViewController{
     @IBOutlet weak var Page6Btn: UIButton!
     @IBOutlet weak var Page7Btn: UIButton!
     @IBOutlet weak var Page8Btn: UIButton!
+    @IBOutlet weak var Page9Btn: UIButton!
     @IBOutlet weak var containerView: UIView!
     var selectedButton: UIButton!
     // 1.
@@ -47,6 +48,9 @@ class ItemsViewController: UIViewController{
     }()
     lazy var Page8TableViewController: Page8TableViewController = {
         self.storyboard!.instantiateViewController(withIdentifier: "Page8" )as! Page8TableViewController
+    }()
+    lazy var Page9TableViewController: Page9TableViewController = {
+        self.storyboard!.instantiateViewController(withIdentifier: "Page8" )as! Page9TableViewController
     }()
     
     // 3.
@@ -131,6 +135,10 @@ class ItemsViewController: UIViewController{
         changePage(to: Page8TableViewController)
     }
 
+    @IBAction func showPage9(_ sender: Any) {
+        changeTab(to: Page9Btn)
+        changePage(to: Page9TableViewController)
+    }
     @IBAction func open(_ sender: Any) {
         if (menuShowing) {
             trailingConstraint.constant = -140
@@ -144,6 +152,37 @@ class ItemsViewController: UIViewController{
             })
         }
         menuShowing = !menuShowing
+    }
+    
+    @IBAction func connetScanner(_ sender: Any) {
+        
+        let push1 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
+        let barcodeVC = push1.instantiateViewController(withIdentifier: "BarCodeViewController")
+        self.navigationController?.pushViewController(barcodeVC, animated: true)
+        
+
+        
+    }
+    @IBAction func connectMap(_ sender: Any) {
+        let modal1 = UIStoryboard.init(name: "Main", bundle: nil)
+        let mapVC = modal1.instantiateViewController(withIdentifier: "")
+        self.present(mapVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func connectMyLove(_ sender: Any) {
+        let push2 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
+        let loveVC = push2.instantiateViewController(withIdentifier: "MyLoveTVC")
+        self.navigationController?.pushViewController(loveVC, animated: true)
+        
+      
+
+    }
+    
+    @IBAction func connectRecord(_ sender: Any) {
+        let modal2 = UIStoryboard.init(name: "Main", bundle: nil)
+        let recordVC = modal2.instantiateViewController(withIdentifier: "")
+        self.present(recordVC, animated: true, completion: nil)
+
     }
     
 }
