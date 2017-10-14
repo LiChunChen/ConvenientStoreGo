@@ -9,12 +9,17 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
+    var menuShowing = false
 
     @IBOutlet weak var detailImage: UIImageView!
     
     @IBOutlet weak var detailSegmentControl: UISegmentedControl!
     
     @IBOutlet weak var containerView: UIView!
+    
+    @IBOutlet weak var showStarView: CosmosView!
     
     var descriptionVC: descriptionVC!
     
@@ -35,6 +40,7 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         selectedVC = descriptionVC
         
+        //prepare to present product title
         self.title = ""
         
         detailSegmentControl.addTarget(self, action: #selector(onControl(sender:)), for: .valueChanged)
@@ -79,13 +85,52 @@ class DetailViewController: UIViewController {
         }
     }
     
-    @IBAction func myFavorButton(_ sender: Any) {
-        //change heart image
-        //add to my favorite
+    @IBAction func addToMyFav(_ sender: Any) {
+    }
+    
+    
+    @IBAction func sideMenu(_ sender: Any) {
+        if (menuShowing) {
+            leadingConstraint.constant = -140
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.layoutIfNeeded()
+            })
+        }else{
+            leadingConstraint.constant = 0
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.layoutIfNeeded()
+            })
+        }
+        menuShowing = !menuShowing
+       
+    }
+    
+    @IBAction func showScan(_ sender: Any) {
+        let push1 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
+        let barcodeVC = push1.instantiateViewController(withIdentifier: "BarCodeViewController")
+        self.navigationController?.pushViewController(barcodeVC, animated: true)
         
     }
-  
-
+    @IBAction func showMap(_ sender: Any) {
+        let push = UIStoryboard.init(name: "Map", bundle: nil)
+        let mapVC = push.instantiateViewController(withIdentifier: "MapViewController")
+        self.navigationController?.pushViewController(mapVC, animated: true)
+        
+    }
+    
+    @IBAction func showFav(_ sender: Any) {
+        let push2 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
+        let loveVC = push2.instantiateViewController(withIdentifier: "MyLoveTVC")
+        self.navigationController?.pushViewController(loveVC, animated: true)
+        
+    }
+    
+    @IBAction func showRecord(_ sender: Any) {
+        let modal2 = UIStoryboard.init(name: "Main", bundle: nil)
+        let recordVC = modal2.instantiateViewController(withIdentifier: "")
+        self.present(recordVC, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

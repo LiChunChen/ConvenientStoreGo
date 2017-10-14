@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yPR-fi-Q4v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5cz-SJ-4sM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -98,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="580" y="156.97151424287858"/>
         </scene>
-        <!--writingCommentsVC-->
+        <!--detailNav-->
         <scene sceneID="7QG-QO-Evc">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="writingCommentsVC" id="UeN-g6-QvF" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="detailNav" id="UeN-g6-QvF" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F8K-Bd-WGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1233" y="128"/>
@@ -665,7 +665,7 @@
         <!--Navigation Controller-->
         <scene sceneID="2FR-62-ZPi">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yPR-fi-Q4v" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="itemNav" automaticallyAdjustsScrollViewInsets="NO" id="yPR-fi-Q4v" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pct-pm-PGm">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

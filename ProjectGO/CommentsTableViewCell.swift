@@ -11,11 +11,10 @@ import UIKit
 class CommentsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var usernameLabel: UILabel!
-    
-    @IBOutlet weak var starLabel: UILabel!
-    
+   
     @IBOutlet weak var commentsTextView: UITextView!
     
+    @IBOutlet weak var showStarView: CosmosView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

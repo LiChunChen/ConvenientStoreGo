@@ -161,7 +161,7 @@ struct CosmosDefaultSettings {
   static let fillMode = StarFillMode.full
   
   /// Rating value that is shown in the storyboard by default.
-  static let rating: Double = 2.718281828
+  static var rating: Double = 2.5
   
   /// Distance between stars.
   static let starMargin: Double = 5
@@ -174,10 +174,10 @@ struct CosmosDefaultSettings {
   static let starPoints: [CGPoint] = [
     CGPoint(x: 49.5,  y: 0.0),
     CGPoint(x: 60.5,  y: 35.0),
-    CGPoint(x: 99.0, y: 35.0),
+    CGPoint(x: 99.0,  y: 35.0),
     CGPoint(x: 67.5,  y: 58.0),
     CGPoint(x: 78.5,  y: 92.0),
-    CGPoint(x: 49.5,    y: 71.0),
+    CGPoint(x: 49.5,  y: 71.0),
     CGPoint(x: 20.5,  y: 92.0),
     CGPoint(x: 31.5,  y: 58.0),
     CGPoint(x: 0.0,   y: 35.0),

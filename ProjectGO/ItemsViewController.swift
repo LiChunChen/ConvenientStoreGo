@@ -164,9 +164,9 @@ class ItemsViewController: UIViewController{
         
     }
     @IBAction func connectMap(_ sender: Any) {
-        let modal1 = UIStoryboard.init(name: "Main", bundle: nil)
-        let mapVC = modal1.instantiateViewController(withIdentifier: "")
-        self.present(mapVC, animated: true, completion: nil)
+        let push = UIStoryboard.init(name: "Map", bundle: nil)
+        let mapVC = push.instantiateViewController(withIdentifier: "MapViewController")
+        self.navigationController?.pushViewController(mapVC, animated: true)
     }
     
     @IBAction func connectMyLove(_ sender: Any) {
