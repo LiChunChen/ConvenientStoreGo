@@ -23,8 +23,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Milk -" translatesAutoresizingMaskIntoConstraints="NO" id="RMb-5G-ZyW">
-                                <rect key="frame" x="0.0" y="84" width="375" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RMb-5G-ZyW">
+                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="M9b-aI-YpB"/>
                                     <constraint firstAttribute="height" constant="200" id="vDe-mC-Qor"/>
@@ -198,25 +198,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="916" y="-125.4872563718141"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="KO9-sd-aQ9">
-            <objects>
-                <viewController id="5cO-K9-kej" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="q9X-Bv-iEk"/>
-                        <viewControllerLayoutGuide type="bottom" id="DZ3-Xz-2SD"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="iMS-u8-hV8">
-                        <rect key="frame" x="0.0" y="0.0" width="140" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <size key="freeformSize" width="140" height="667"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nhK-fm-rEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1238.4000000000001" y="-605.84707646176912"/>
         </scene>
         <!--DescriptionVC-->
         <scene sceneID="tgj-JJ-pKR">
@@ -472,7 +453,6 @@
     </scenes>
     <resources>
         <image name="Enter" width="98" height="30"/>
-        <image name="Milk -" width="213" height="275"/>
         <image name="功能選單" width="34" height="24"/>
     </resources>
 </document>

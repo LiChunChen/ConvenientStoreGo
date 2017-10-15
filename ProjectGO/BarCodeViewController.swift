@@ -129,7 +129,7 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         if let viewcontroller = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
             let barcode = barcodeString
             viewcontroller.barcodes = [barcode]
-            present(viewcontroller, animated: true, completion: nil)
+           self.navigationController?.pushViewController(viewcontroller, animated: true)
         }
     }
     @IBAction func openMenu(_ sender: Any) {

@@ -261,7 +261,7 @@
 				TargetAttributes = {
 					56D1B4C81F653D5600F1727A = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 4HWCBSMFJU;
+						DevelopmentTeam = 7UK8PZR57E;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -528,11 +528,11 @@
 			baseConfigurationReference = 2031CB7178061594B6C52B8A /* Pods-ProjectGO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4HWCBSMFJU;
+				DEVELOPMENT_TEAM = 7UK8PZR57E;
 				INFOPLIST_FILE = ProjectGO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Jenny.HelloBLESwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.team.projectgo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -544,11 +544,11 @@
 			baseConfigurationReference = 161F20937880477E0FC7E34E /* Pods-ProjectGO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4HWCBSMFJU;
+				DEVELOPMENT_TEAM = 7UK8PZR57E;
 				INFOPLIST_FILE = ProjectGO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Jenny.HelloBLESwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.team.projectgo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
