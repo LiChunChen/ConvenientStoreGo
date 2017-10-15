@@ -35,7 +35,7 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         // info: privace of camera's string
         // This app requires camera access to function properly
         // 此應用程序需要相機訪問才能正常工作
-
+        self.navigationItem.rightBarButtonItem=nil
         self.navigationItem.leftBarButtonItem=nil
         self.navigationItem.hidesBackButton=true
         

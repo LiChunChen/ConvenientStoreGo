@@ -209,8 +209,10 @@
                         <outlet property="detailSegmentControl" destination="knh-eA-cqH" id="4vA-iA-3Qh"/>
                         <outlet property="ingredientTextView" destination="7Uz-Cf-88L" id="5HO-l3-cNQ"/>
                         <outlet property="leadingConstraint" destination="fE0-Tu-Pz5" id="b7E-Fq-LRB"/>
+                        <outlet property="mainView" destination="8bC-Xf-vdC" id="YfY-5f-ynS"/>
                         <outlet property="myFavBut" destination="MTG-vF-6L7" id="Eqt-EZ-ozw"/>
                         <outlet property="showStarView" destination="otg-sk-moa" id="Elc-qk-2G1"/>
+                        <outlet property="subMenu" destination="DM4-m1-wzT" id="SSw-JO-nla"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -233,29 +235,26 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="284"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品說明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpd-ae-LF2">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="18"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="17.5"/>
                                         <color key="backgroundColor" red="0.74152689999999999" green="0.9758615625" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="KIRIN午後紅茶–奶茶使用與牛乳口感絕妙融合的斯里蘭卡古都Kandy紅茶，獨有的茶香交織成濃厚柔和的奶茶風味" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TiH-h3-eah">
-                                        <rect key="frame" x="0.0" y="18" width="375" height="128"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TiH-h3-eah">
+                                        <rect key="frame" x="0.0" y="17.5" width="375" height="128"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="yxQ-tc-d6F"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成分" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIP-kc-JGb">
-                                        <rect key="frame" x="0.0" y="146" width="375" height="20"/>
+                                        <rect key="frame" x="0.0" y="145.5" width="375" height="20.5"/>
                                         <color key="backgroundColor" red="0.74152689999999999" green="0.9758615625" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="//..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Uz-Cf-88L">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Uz-Cf-88L">
                                         <rect key="frame" x="0.0" y="166" width="375" height="118"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -266,20 +265,14 @@
                                     </textView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="TiH-h3-eah" firstAttribute="leading" secondItem="LIn-dM-mdy" secondAttribute="leading" id="8i7-64-s87"/>
-                                    <constraint firstAttribute="bottom" secondItem="7Uz-Cf-88L" secondAttribute="bottom" id="JcD-SG-hVD"/>
-                                    <constraint firstItem="TiH-h3-eah" firstAttribute="top" secondItem="dpd-ae-LF2" secondAttribute="bottom" id="Qgk-11-IDu"/>
-                                    <constraint firstAttribute="trailing" secondItem="TiH-h3-eah" secondAttribute="trailing" id="iQa-Ww-eMB"/>
-                                    <constraint firstItem="7Uz-Cf-88L" firstAttribute="top" secondItem="TiH-h3-eah" secondAttribute="bottom" constant="20" id="nFV-md-N5f"/>
-                                    <constraint firstItem="SIP-kc-JGb" firstAttribute="top" secondItem="TiH-h3-eah" secondAttribute="bottom" id="rox-AN-JyP"/>
                                     <constraint firstItem="7Uz-Cf-88L" firstAttribute="top" secondItem="SIP-kc-JGb" secondAttribute="bottom" id="uHZ-k5-HX4"/>
-                                    <constraint firstItem="dpd-ae-LF2" firstAttribute="centerX" secondItem="LIn-dM-mdy" secondAttribute="centerX" id="uYk-c4-tlF"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LIn-dM-mdy" firstAttribute="top" secondItem="68W-6i-wVz" secondAttribute="bottom" id="OSa-ts-yFl"/>
+                            <constraint firstItem="LIn-dM-mdy" firstAttribute="centerX" secondItem="WEG-E2-rQn" secondAttribute="centerX" id="PC7-dL-MRM"/>
                             <constraint firstAttribute="bottom" secondItem="LIn-dM-mdy" secondAttribute="bottom" id="e2C-Ad-r9q"/>
                             <constraint firstItem="LIn-dM-mdy" firstAttribute="leading" secondItem="WEG-E2-rQn" secondAttribute="leading" id="i1Y-45-Klx"/>
                             <constraint firstAttribute="trailing" secondItem="LIn-dM-mdy" secondAttribute="trailing" id="wPu-5i-OR6"/>

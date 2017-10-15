@@ -10,6 +10,10 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet var mainView: UIView!
+    
+    @IBOutlet weak var subMenu: UIView!
+    
     var barcodes: [String]?
     let urlManager = URLManager()
     var information = [Item]()
@@ -56,6 +60,8 @@ class DetailViewController: UIViewController {
         //prepare to present product title
         self.title = "商品"
         myFavBut.isEnabled = false
+        
+        mainView.bringSubview(toFront: subMenu)
         
         detailSegmentControl.addTarget(self, action: #selector(onControl(sender:)), for: .valueChanged)
         
