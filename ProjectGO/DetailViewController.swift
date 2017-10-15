@@ -17,11 +17,14 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var detailSegmentControl: UISegmentedControl!
     
+    @IBOutlet weak var myFavBut: UIButton!
     @IBOutlet weak var containerView: UIView!
     
     @IBOutlet weak var showStarView: CosmosView!
     
     var descriptionVC: descriptionVC!
+    
+    var pressed = true
     
     lazy var commentsTVC: commentsTVC = {
         self.storyboard!.instantiateViewController(withIdentifier: "commentsTVC") as! commentsTVC
@@ -44,6 +47,8 @@ class DetailViewController: UIViewController {
         self.title = ""
         
         detailSegmentControl.addTarget(self, action: #selector(onControl(sender:)), for: .valueChanged)
+        
+        showStarView.updateOnTouch = false
         
     }
 
@@ -86,6 +91,17 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func addToMyFav(_ sender: Any) {
+        let likedImage = UIImage(named: "liked00")
+        let likeImage = UIImage(named: "like00")
+        if pressed == true{
+            myFavBut.setImage(likedImage, for: .normal)
+            pressed = false
+        }else{
+            myFavBut.setImage(likeImage, for: .normal)
+            pressed = true
+            
+        }
+        
     }
     
     
@@ -126,9 +142,9 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func showRecord(_ sender: Any) {
-        let modal2 = UIStoryboard.init(name: "Main", bundle: nil)
-        let recordVC = modal2.instantiateViewController(withIdentifier: "")
-        self.present(recordVC, animated: true, completion: nil)
+        let modal2 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
+        let recordVC = modal2.instantiateViewController(withIdentifier: "HistoryRecordTVC")
+       self.navigationController?.pushViewController(recordVC, animated: true)
     }
     
     /*

@@ -42,6 +42,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.activityType = .automotiveNavigation
         locationManager.startUpdatingLocation()
+        self.title = "離我最近的超商"
         checkNetworkConnection()
        
         
@@ -118,7 +119,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         //change device language to show chinese name of city
         let defaults = UserDefaults.standard
-        
         let lans = defaults.object(forKey: "AppleLanguages")
         //繁體中文
         defaults.set(["zh-TW"], forKey: "AppleLanguages")
@@ -126,7 +126,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let loc = CLLocation(latitude:center.latitude, longitude: center.longitude)
         var address = ""
         
-        ceo.reverseGeocodeLocation(loc, completionHandler:
+        let locale = Locale(identifier: "zh-TW")
+        
+        ceo.reverseGeocodeLocation(loc, preferredLocale: locale, completionHandler:
             {(placemarks, error) in
                 if (error != nil)
                 {

@@ -18,6 +18,7 @@ class CommentsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        showStarView.updateOnTouch = false
         // Initialization code
     }
 

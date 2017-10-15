@@ -179,9 +179,9 @@ class ItemsViewController: UIViewController{
     }
     
     @IBAction func connectRecord(_ sender: Any) {
-        let modal2 = UIStoryboard.init(name: "Main", bundle: nil)
-        let recordVC = modal2.instantiateViewController(withIdentifier: "")
-        self.present(recordVC, animated: true, completion: nil)
+        let modal2 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
+        let recordVC = modal2.instantiateViewController(withIdentifier: "HistoryRecordTVC")
+        self.navigationController?.pushViewController(recordVC, animated: true)
 
     }
     

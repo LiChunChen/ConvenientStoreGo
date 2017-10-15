@@ -4,8 +4,8 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,24 +21,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="convinience+scan" translatesAutoresizingMaskIntoConstraints="NO" id="INi-hj-8gO">
-                                <rect key="frame" x="61" y="86" width="270" height="283"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="convinience+scan" translatesAutoresizingMaskIntoConstraints="NO" id="INi-hj-8gO">
+                                <rect key="frame" x="66.5" y="83.5" width="261" height="233"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="drink01" translatesAutoresizingMaskIntoConstraints="NO" id="MIv-nV-gGj">
-                                <rect key="frame" x="43" y="412" width="54" height="126"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="water01" translatesAutoresizingMaskIntoConstraints="NO" id="qm3-0t-MOP">
-                                <rect key="frame" x="151" y="412" width="72" height="113"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tea" translatesAutoresizingMaskIntoConstraints="NO" id="ugx-mS-d2j">
-                                <rect key="frame" x="269" y="417" width="62" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBq-Bi-gZL">
+                                <rect key="frame" x="0.0" y="371" width="375" height="296"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="drink01" translatesAutoresizingMaskIntoConstraints="NO" id="MIv-nV-gGj">
+                                        <rect key="frame" x="63" y="17" width="54" height="121"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tea" translatesAutoresizingMaskIntoConstraints="NO" id="ugx-mS-d2j">
+                                        <rect key="frame" x="269" y="21" width="62" height="108"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="water01" translatesAutoresizingMaskIntoConstraints="NO" id="qm3-0t-MOP">
+                                        <rect key="frame" x="160" y="16" width="72" height="113"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.95903646423662914" blue="0.66995874955939561" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bBq-Bi-gZL" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="2li-g9-mzR"/>
+                            <constraint firstItem="INi-hj-8gO" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="0.6" id="4Zy-VH-hg2"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="bBq-Bi-gZL" secondAttribute="bottom" id="5Cm-yo-bQx"/>
+                            <constraint firstItem="INi-hj-8gO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" multiplier="1.05" id="Uzw-SL-oCQ"/>
+                            <constraint firstAttribute="trailing" secondItem="bBq-Bi-gZL" secondAttribute="trailing" id="c7t-a2-vC4"/>
+                            <constraint firstItem="bBq-Bi-gZL" firstAttribute="top" secondItem="INi-hj-8gO" secondAttribute="bottom" constant="54.5" id="eGd-QY-SlD"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
