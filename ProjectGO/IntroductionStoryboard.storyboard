@@ -97,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="580" y="156.97151424287858"/>
         </scene>
-        <!--detailNav-->
+        <!--BarcodeNav-->
         <scene sceneID="7QG-QO-Evc">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="detailNav" id="UeN-g6-QvF" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="BarcodeStoryboard" referencedIdentifier="BarcodeNav" id="UeN-g6-QvF" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F8K-Bd-WGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1233" y="128"/>

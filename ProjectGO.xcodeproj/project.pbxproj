@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		022A402D1F9345B400237D5C /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A402B1F9345B300237D5C /* URLManager.swift */; };
+		022A402E1F9345B400237D5C /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A402C1F9345B400237D5C /* Singleton.swift */; };
+		022A40301F93538300237D5C /* 圖片無法顯示.png in Resources */ = {isa = PBXBuildFile; fileRef = 022A402F1F93537A00237D5C /* 圖片無法顯示.png */; };
 		023FD8541F7360AA0097EF70 /* IntroductionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023FD8531F7360AA0097EF70 /* IntroductionStoryboard.storyboard */; };
 		023FD85D1F7360E10097EF70 /* Page1TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD8551F7360E10097EF70 /* Page1TableViewController.swift */; };
 		023FD85E1F7360E10097EF70 /* Page2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD8561F7360E10097EF70 /* Page2TableViewController.swift */; };
@@ -27,10 +30,7 @@
 		023FD87B1F736AF10097EF70 /* HistoryRecordTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD8791F736AF10097EF70 /* HistoryRecordTVC.swift */; };
 		023FD87D1F736AF60097EF70 /* MyLoveTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD87C1F736AF60097EF70 /* MyLoveTVC.swift */; };
 		023FD87F1F736B210097EF70 /* BarcodeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023FD87E1F736B210097EF70 /* BarcodeStoryboard.storyboard */; };
-		023FD8841F736B390097EF70 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 023FD8801F736B390097EF70 /* 2.jpg */; };
 		023FD8851F736B390097EF70 /* BarCodeFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 023FD8811F736B390097EF70 /* BarCodeFrame.png */; };
-		023FD8861F736B390097EF70 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 023FD8821F736B390097EF70 /* heart.png */; };
-		023FD8871F736B390097EF70 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 023FD8831F736B390097EF70 /* star.png */; };
 		565C68721F923A5A0040DA95 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565C686C1F923A580040DA95 /* MapViewController.swift */; };
 		565C68731F923A5A0040DA95 /* loadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565C686D1F923A580040DA95 /* loadData.swift */; };
 		565C68741F923A5A0040DA95 /* shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565C686E1F923A580040DA95 /* shop.swift */; };
@@ -54,6 +54,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		022A402B1F9345B300237D5C /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
+		022A402C1F9345B400237D5C /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		022A402F1F93537A00237D5C /* 圖片無法顯示.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圖片無法顯示.png"; sourceTree = "<group>"; };
 		023FD8531F7360AA0097EF70 /* IntroductionStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IntroductionStoryboard.storyboard; sourceTree = "<group>"; };
 		023FD8551F7360E10097EF70 /* Page1TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1TableViewController.swift; sourceTree = "<group>"; };
 		023FD8561F7360E10097EF70 /* Page2TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page2TableViewController.swift; sourceTree = "<group>"; };
@@ -74,10 +77,7 @@
 		023FD8791F736AF10097EF70 /* HistoryRecordTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryRecordTVC.swift; sourceTree = "<group>"; };
 		023FD87C1F736AF60097EF70 /* MyLoveTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLoveTVC.swift; sourceTree = "<group>"; };
 		023FD87E1F736B210097EF70 /* BarcodeStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BarcodeStoryboard.storyboard; sourceTree = "<group>"; };
-		023FD8801F736B390097EF70 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		023FD8811F736B390097EF70 /* BarCodeFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BarCodeFrame.png; sourceTree = "<group>"; };
-		023FD8821F736B390097EF70 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
-		023FD8831F736B390097EF70 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		161F20937880477E0FC7E34E /* Pods-ProjectGO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectGO.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectGO/Pods-ProjectGO.release.xcconfig"; sourceTree = "<group>"; };
 		2031CB7178061594B6C52B8A /* Pods-ProjectGO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectGO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectGO/Pods-ProjectGO.debug.xcconfig"; sourceTree = "<group>"; };
 		565C686C1F923A580040DA95 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +180,8 @@
 				023FD8761F736AE00097EF70 /* BarCodeViewController.swift */,
 				023FD8781F736AF10097EF70 /* HistoryRecordCell.swift */,
 				023FD8791F736AF10097EF70 /* HistoryRecordTVC.swift */,
+				022A402C1F9345B400237D5C /* Singleton.swift */,
+				022A402B1F9345B300237D5C /* URLManager.swift */,
 				023FD87C1F736AF60097EF70 /* MyLoveTVC.swift */,
 				56D1B4D31F653D5600F1727A /* Assets.xcassets */,
 				565C68771F923A670040DA95 /* Map */,
@@ -191,10 +193,8 @@
 				565C686E1F923A580040DA95 /* shop.swift */,
 				56D1B4D51F653D5600F1727A /* LaunchScreen.storyboard */,
 				56D1B4D81F653D5600F1727A /* Info.plist */,
-				023FD8801F736B390097EF70 /* 2.jpg */,
 				023FD8811F736B390097EF70 /* BarCodeFrame.png */,
-				023FD8821F736B390097EF70 /* heart.png */,
-				023FD8831F736B390097EF70 /* star.png */,
+				022A402F1F93537A00237D5C /* 圖片無法顯示.png */,
 			);
 			path = ProjectGO;
 			sourceTree = "<group>";
@@ -261,7 +261,7 @@
 				TargetAttributes = {
 					56D1B4C81F653D5600F1727A = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = J5VAWCKFVV;
+						DevelopmentTeam = 4HWCBSMFJU;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -291,14 +291,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				565C68781F9240630040DA95 /* Map.storyboard in Resources */,
+				022A40301F93538300237D5C /* 圖片無法顯示.png in Resources */,
 				023FD8851F736B390097EF70 /* BarCodeFrame.png in Resources */,
 				56D1B4D71F653D5600F1727A /* LaunchScreen.storyboard in Resources */,
-				023FD8861F736B390097EF70 /* heart.png in Resources */,
 				023FD8541F7360AA0097EF70 /* IntroductionStoryboard.storyboard in Resources */,
 				56D1B4D41F653D5600F1727A /* Assets.xcassets in Resources */,
 				023FD87F1F736B210097EF70 /* BarcodeStoryboard.storyboard in Resources */,
-				023FD8841F736B390097EF70 /* 2.jpg in Resources */,
-				023FD8871F736B390097EF70 /* star.png in Resources */,
 				56D1B4D21F653D5600F1727A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,11 +364,13 @@
 				565C68761F923A5A0040DA95 /* DispatchQueue+Once.swift in Sources */,
 				023FD8731F736A8A0097EF70 /* ItemsViewController.swift in Sources */,
 				023FD85D1F7360E10097EF70 /* Page1TableViewController.swift in Sources */,
+				022A402E1F9345B400237D5C /* Singleton.swift in Sources */,
 				023FD85F1F7360E10097EF70 /* Page3TableViewController.swift in Sources */,
 				565C68741F923A5A0040DA95 /* shop.swift in Sources */,
 				023FD87D1F736AF60097EF70 /* MyLoveTVC.swift in Sources */,
 				023FD86B1F7361260097EF70 /* StartViewController.swift in Sources */,
 				023FD8771F736AE00097EF70 /* BarCodeViewController.swift in Sources */,
+				022A402D1F9345B400237D5C /* URLManager.swift in Sources */,
 				023FD8641F7360E10097EF70 /* Page8TableViewController.swift in Sources */,
 				AE3DCBBA1F9108B600F7DC1E /* Page9TableViewController.swift in Sources */,
 				023FD8601F7360E10097EF70 /* Page4TableViewController.swift in Sources */,
@@ -528,11 +528,11 @@
 			baseConfigurationReference = 2031CB7178061594B6C52B8A /* Pods-ProjectGO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J5VAWCKFVV;
+				DEVELOPMENT_TEAM = 4HWCBSMFJU;
 				INFOPLIST_FILE = ProjectGO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.myname.HelloBLESwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jenny.HelloBLESwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -544,11 +544,11 @@
 			baseConfigurationReference = 161F20937880477E0FC7E34E /* Pods-ProjectGO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J5VAWCKFVV;
+				DEVELOPMENT_TEAM = 4HWCBSMFJU;
 				INFOPLIST_FILE = ProjectGO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.myname.HelloBLESwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jenny.HelloBLESwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;

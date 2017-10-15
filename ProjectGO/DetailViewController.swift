@@ -10,6 +10,13 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    var barcodes: [String]?
+    let urlManager = URLManager()
+    var information = [Item]()
+    var isfavorite = false
+    var favorites = MyLove.sharedInstance()
+    var number = 0
+    
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     var menuShowing = false
 
@@ -24,7 +31,7 @@ class DetailViewController: UIViewController {
     
     var descriptionVC: descriptionVC!
     
-    var pressed = true
+//    var pressed = true
     
     lazy var commentsTVC: commentsTVC = {
         self.storyboard!.instantiateViewController(withIdentifier: "commentsTVC") as! commentsTVC
@@ -40,13 +47,51 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.leftBarButtonItem=nil
+        self.navigationItem.hidesBackButton=true
+        
         // Do any additional setup after loading the view.
         selectedVC = descriptionVC
         
         //prepare to present product title
-        self.title = ""
+        self.title = "商品"
+        myFavBut.isEnabled = false
         
         detailSegmentControl.addTarget(self, action: #selector(onControl(sender:)), for: .valueChanged)
+        
+        guard let barcodes = barcodes else {
+            return
+        }
+        urlManager.askForRequest(parameters: barcodes, urlString: requestURL) { (success, error, results) in
+            guard success == true else {
+                print("askForRequest fail.")
+                return
+            }
+            guard let results = results else {
+                print("Get results fail.")
+                return
+            }
+            let data = NSData(contentsOf: URL(string: results[0].imgURL!)!)
+            if data != nil {
+                self.detailImage.image = UIImage(data:data! as Data)
+            }
+            self.information = results
+            self.descriptionVC.information = results
+            if self.favorites.myLoveList.count != 0 {
+                for i in 0..<self.favorites.myLoveList.count {
+                    if self.favorites.myLoveList[i] == barcodes[0] {
+                        self.number = i
+                        self.isfavorite = true
+                        self.myFavBut.setImage(UIImage(named:"Cancel"), for: UIControlState.normal)
+                        //                        self.myFavBut.imageView?.image = UIImage(named: "Cancel")
+                    }
+                }
+            }
+            if self.isfavorite == false {
+                self.myFavBut.isEnabled = true
+            }
+            self.descriptionVC.self.viewDidLoad()
+        }
         
         showStarView.updateOnTouch = false
         
@@ -91,16 +136,26 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func addToMyFav(_ sender: Any) {
-        let likedImage = UIImage(named: "liked00")
-        let likeImage = UIImage(named: "like00")
-        if pressed == true{
-            myFavBut.setImage(likedImage, for: .normal)
-            pressed = false
-        }else{
-            myFavBut.setImage(likeImage, for: .normal)
-            pressed = true
-            
+        
+        guard information[0].favorite != nil else {
+            return
         }
+        
+        if isfavorite == false {
+            information[0].favorite! += 1
+            isfavorite = true
+            myFavBut.setImage(UIImage(named:"Cancel"), for: UIControlState.normal)
+            favorites.myLoveList.append(barcodes![0])
+            print(favorites.myLoveList)
+        }else {
+            information[0].favorite! -= 1
+            isfavorite = false
+            myFavBut.setImage(UIImage(named:"Enter"), for: UIControlState.normal)
+            favorites.myLoveList.remove(at: number)
+        }
+        
+        let parameter = ["favorite":information[0].favorite!,"barcode":barcodes![0]] as [String : Any]
+        urlManager.changeToDB(parameter: parameter)
         
     }
     

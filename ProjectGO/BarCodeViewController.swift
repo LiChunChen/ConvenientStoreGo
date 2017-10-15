@@ -11,6 +11,8 @@ import AVFoundation
 
 class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
+    @IBOutlet weak var rightLC: NSLayoutConstraint!
+    var menuShowing = true
     @IBOutlet weak var barcodeFrame: UIImageView!
     @IBOutlet weak var lightBtn: UIButton!
     
@@ -34,45 +36,42 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         // This app requires camera access to function properly
         // 此應用程序需要相機訪問才能正常工作
 
+        self.navigationItem.leftBarButtonItem=nil
+        self.navigationItem.hidesBackButton=true
+        
         fromCamera()
         view.bringSubview(toFront: readBarCodeIBOutlet)
         view.bringSubview(toFront: lightBtn)
     }
  
     
-    //通过摄像头扫描
+    //透過相機來掃條碼
     func fromCamera() {
         
-            
+        
         // 會管理從攝像頭獲取的數據——將輸入的數據轉為可以使用的輸出
         session = AVCaptureSession()
         
         // 設定物理設備和其他屬性(取得照相機裝置)
-        // self.device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         // builtInMicrophone: 內建的相機裝置
-        device = AVCaptureDevice.default(AVCaptureDevice.DeviceType.builtInWideAngleCamera, for: AVMediaType.video, position: .back)            
-
+        device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back)
         
         do {
             // 從設備中獲取數據
             input = try AVCaptureDeviceInput(device: device)
             session.addInput(input)
         }catch {
-           scanningNotPossible()
+            scanningNotPossible()
         }
         
-            
         // Sets the delegate and dispatch queue to use handle callbacks
         output = AVCaptureMetadataOutput()
         // 會將捕獲到的數據通過串行隊列發送給 delegate 對象
         output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
         session.addOutput(output)
         // 支援的條碼類型 一定要先加到 session 之後才能做設定
-        output.metadataObjectTypes = [AVMetadataObject.ObjectType.ean13,
-                                      AVMetadataObject.ObjectType.ean8,
-                                      AVMetadataObject.ObjectType.code128,
-                                      AVMetadataObject.ObjectType.code39,
-                                      AVMetadataObject.ObjectType.code93]
+        output.metadataObjectTypes = [.ean13, .ean8, .code128, .code39, .code93]
+        
         // 取得螢幕的size
         let windowSize = UIScreen.main.bounds.size
         // 計算掃描的區域範圍
@@ -82,33 +81,13 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
         preview = AVCaptureVideoPreviewLayer(session: session)
         preview.frame = view.layer.bounds
-        preview.videoGravity = AVLayerVideoGravity.resizeAspectFill
-//        let blurEffect = UIBlurEffect(style: .light)
-//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-//        blurEffectView.frame = view.bounds
+        preview.videoGravity = .resizeAspectFill
         view.layer.addSublayer(preview)
-//        barcodeFrame.layer.addSublayer(preview)
-//        view.addSubview(blurEffectView)
-//        view.bringSubview(toFront: blurEffectView)
-        
-        
         
         // 一定要將 barcodeFrame 提到最前面，才會顯示出來
         view.bringSubview(toFront: barcodeFrame)
-       
-            
-//            // Allow the view to resize freely
-//            self.highlightView.autoresizingMask =   UIViewAutoresizing.FlexibleTopMargin |
-//                UIViewAutoresizing.FlexibleBottomMargin |
-//                UIViewAutoresizing.FlexibleLeftMargin |
-//                UIViewAutoresizing.FlexibleRightMargin
-//            
-//            // Select the color you want for the completed scan reticle
-//            self.highlightView.layer.borderColor = UIColor.greenColor().CGColor
-//            self.highlightView.layer.borderWidth = 3
-
-            
-        //开始捕获
+        
+        //開始捕獲
         session.startRunning()
         isRunning = true
         
@@ -123,28 +102,83 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
     
     //摄像头捕获
-    func metadataOutput(captureOutput: AVCaptureMetadataOutput,
-                       didOutput metadataObjects: [AVMetadataObject],
-                       from connection: AVCaptureConnection) {
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         
-        guard let barcodeData = metadataObjects.first as? AVMetadataMachineReadableCodeObject else {
-            print("Can not get metadataObjects.")
+        guard metadataObjects.count > 0 else {
+            NSLog("No metadata available.")
             return
         }
         
-        print(barcodeData)
+        // 轉型成為 AVMetadataMachineReadableCodeObject，他的父為AVMetadataObject
+        guard let metadata = metadataObjects.first as? AVMetadataMachineReadableCodeObject else {
+            NSLog("Not valid metadata object.")
+            return
+        }
         
-//        let barcodeString = barcodeData.stringValue
-//        print(barcodeString ?? "Transform To String Fail!")
-        guard let barcodeString = barcodeData.stringValue else {
+        //        let barcodeString = barcodeData.stringValue
+        //        print(barcodeString ?? "Transform To String Fail!")
+        guard let barcodeString = metadata.stringValue else {
             print("Transform To String Fail!")
             return
         }
         
-        print(barcodeString)
         session.stopRunning()
         isRunning = false
+        
+        let storyboard = UIStoryboard(name:"Main",bundle:nil)
+        if let viewcontroller = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+            let barcode = barcodeString
+            viewcontroller.barcodes = [barcode]
+            present(viewcontroller, animated: true, completion: nil)
+        }
     }
+    @IBAction func openMenu(_ sender: Any) {
+        if (menuShowing) {
+            rightLC.constant = -140
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.layoutIfNeeded()
+            })
+        }else{
+            rightLC.constant = 0
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.layoutIfNeeded()
+            })
+        }
+        menuShowing = !menuShowing
+        
+    }
+    @IBAction func openLove(_ sender: Any) {
+        let push2 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
+        let loveVC = push2.instantiateViewController(withIdentifier: "MyLoveTVC")
+        self.navigationController?.pushViewController(loveVC, animated: true)
+    }
+    @IBAction func openMap(_ sender: Any) {
+        let push = UIStoryboard.init(name: "Map", bundle: nil)
+        let mapVC = push.instantiateViewController(withIdentifier: "MapViewController")
+        self.navigationController?.pushViewController(mapVC, animated: true)
+    }
+    @IBAction func openScan(_ sender: Any) {
+        let push1 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
+        let barcodeVC = push1.instantiateViewController(withIdentifier: "BarCodeViewController")
+        self.navigationController?.pushViewController(barcodeVC, animated: true)
+        
+    }
+    @IBAction func openRecord(_ sender: Any) {
+    }
+    
+    @IBAction func openLag(_ sender: Any) {
+    }
+    //    func captureOutput(_ captureOutput: AVCaptureOutput!,
+//                       didOutputMetadataObjects metadataObjects: [Any]!,
+//                       from connection: AVCaptureConnection!) {
+//
+//        guard let barcodeData = metadataObjects.first as? AVMetadataMachineReadableCodeObject else {
+//            print("Can not get metadataObjects.")
+//            return
+//        }
+//
+//
+//    }
     
     @IBAction func readBarCode(_ sender: Any) {
         
@@ -178,6 +212,21 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        
+        do {
+            //修改鎖定設備以便進行手電筒狀態
+            try lightDevice?.lockForConfiguration()
+        } catch {
+            print("error")
+        }
+        if isLightOn {
+            lightDevice?.torchMode = .off
+        }
+        lightDevice?.unlockForConfiguration()
     }
 }
 
