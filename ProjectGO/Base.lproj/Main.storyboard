@@ -73,45 +73,63 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DM4-m1-wzT">
                                 <rect key="frame" x="375" y="63" width="140" height="200"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2cd-FW-cnb">
-                                        <rect key="frame" x="39" y="17.5" width="62" height="165"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2cd-FW-cnb">
+                                        <rect key="frame" x="10" y="10" width="120" height="180"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cey-X3-OEE">
-                                                <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="17.5"/>
                                                 <state key="normal" title="掃描"/>
                                                 <connections>
                                                     <action selector="showScan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ntv-Gx-4aA"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7JR-wW-Nog">
-                                                <rect key="frame" x="0.0" y="45" width="62" height="30"/>
+                                                <rect key="frame" x="0.0" y="32.5" width="120" height="17.5"/>
                                                 <state key="normal" title="超商地圖"/>
                                                 <connections>
                                                     <action selector="showMap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pdY-ei-peI"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5m-zh-fTe">
-                                                <rect key="frame" x="0.0" y="90" width="62" height="30"/>
+                                                <rect key="frame" x="0.0" y="65" width="120" height="17.5"/>
                                                 <state key="normal" title="我的最愛"/>
                                                 <connections>
                                                     <action selector="showFav:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dj7-R1-Ios"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z63-aj-2iC">
-                                                <rect key="frame" x="0.0" y="135" width="62" height="30"/>
+                                                <rect key="frame" x="0.0" y="97.5" width="120" height="17.5"/>
                                                 <state key="normal" title="瀏覽紀錄"/>
                                                 <connections>
                                                     <action selector="showRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1VB-5l-YLf"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leR-6x-Tl4">
+                                                <rect key="frame" x="0.0" y="130" width="120" height="17.5"/>
+                                                <state key="normal" title="商品資訊"/>
+                                                <connections>
+                                                    <action selector="openDrink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gcr-Zf-0x2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Hn-bL-UdA">
+                                                <rect key="frame" x="0.0" y="162.5" width="120" height="17.5"/>
+                                                <state key="normal" title="語言設置"/>
+                                                <connections>
+                                                    <action selector="changeLag:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nnm-Wg-R1V"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.8164597602739726" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.72093050309999995" blue="0.61400430250000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="2cd-FW-cnb" secondAttribute="trailing" constant="10" id="0A7-1P-xZW"/>
                                     <constraint firstItem="2cd-FW-cnb" firstAttribute="centerY" secondItem="DM4-m1-wzT" secondAttribute="centerY" id="KWD-F6-iDM"/>
+                                    <constraint firstAttribute="bottom" secondItem="2cd-FW-cnb" secondAttribute="bottom" constant="10" id="PMw-Mu-fSj"/>
+                                    <constraint firstItem="2cd-FW-cnb" firstAttribute="top" secondItem="DM4-m1-wzT" secondAttribute="top" constant="10" id="VFI-9G-uz2"/>
                                     <constraint firstItem="2cd-FW-cnb" firstAttribute="centerX" secondItem="DM4-m1-wzT" secondAttribute="centerX" id="Zfd-Ac-b1V"/>
                                     <constraint firstAttribute="height" constant="200" id="b6T-Vo-gQ3"/>
+                                    <constraint firstItem="2cd-FW-cnb" firstAttribute="leading" secondItem="DM4-m1-wzT" secondAttribute="leading" constant="10" id="tR3-kJ-Nqb"/>
                                     <constraint firstAttribute="width" constant="140" id="y2q-HN-o2R"/>
                                 </constraints>
                             </view>
@@ -284,10 +302,10 @@
             </objects>
             <point key="canvasLocation" x="158" y="321"/>
         </scene>
-        <!--itemNav-->
+        <!--BarCodeViewController-->
         <scene sceneID="Uhi-qe-g07">
             <objects>
-                <viewControllerPlaceholder storyboardName="IntroductionStoryboard" referencedIdentifier="itemNav" id="9xU-Ka-9BW" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="BarcodeStoryboard" referencedIdentifier="BarCodeViewController" id="9xU-Ka-9BW" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mMX-BL-R83" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="473" y="338"/>

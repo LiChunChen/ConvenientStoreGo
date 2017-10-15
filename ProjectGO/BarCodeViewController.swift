@@ -164,6 +164,16 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
     }
     @IBAction func openRecord(_ sender: Any) {
+        let modal2 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
+        let recordVC = modal2.instantiateViewController(withIdentifier: "HistoryRecordTVC")
+        self.navigationController?.pushViewController(recordVC, animated: true)
+
+    }
+    @IBAction func openDrink(_ sender: Any) {
+        let modal3 = UIStoryboard.init(name: "IntroductionStoryboard", bundle: nil)
+        let drinkVC = modal3.instantiateViewController(withIdentifier: "ItemsViewController")
+        self.navigationController?.pushViewController(drinkVC, animated: true)
+        
     }
     
     @IBAction func openLag(_ sender: Any) {

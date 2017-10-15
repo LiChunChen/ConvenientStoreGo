@@ -62,6 +62,9 @@ class ItemsViewController: UIViewController{
         selectedButton = Page1Btn
         selectedViewController = Page1TableViewController
         
+        self.navigationItem.leftBarButtonItem=nil
+        self.navigationItem.hidesBackButton=true
+        
         
     }
 
@@ -184,6 +187,14 @@ class ItemsViewController: UIViewController{
         self.navigationController?.pushViewController(recordVC, animated: true)
 
     }
+    @IBAction func connectDrink(_ sender: Any) {
+        let modal3 = UIStoryboard.init(name: "IntroductionStoryboard", bundle: nil)
+        let drinkVC = modal3.instantiateViewController(withIdentifier: "ItemsViewController")
+        self.navigationController?.pushViewController(drinkVC, animated: true)
+        
+    }
     
+    @IBAction func connectLag(_ sender: Any) {
+    }
 }
 

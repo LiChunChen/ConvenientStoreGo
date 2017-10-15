@@ -201,7 +201,15 @@ class DetailViewController: UIViewController {
         let recordVC = modal2.instantiateViewController(withIdentifier: "HistoryRecordTVC")
        self.navigationController?.pushViewController(recordVC, animated: true)
     }
+    @IBAction func openDrink(_ sender: Any) {
+        let modal3 = UIStoryboard.init(name: "IntroductionStoryboard", bundle: nil)
+        let drinkVC = modal3.instantiateViewController(withIdentifier: "ItemsViewController")
+        self.navigationController?.pushViewController(drinkVC, animated: true)
+        
+    }
     
+    @IBAction func changeLag(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 
