@@ -16,6 +16,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var isFirstLocationReceived = false
     var shopList = [Shop]()
     var address = ""
+    var addressArray = [String]()
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -89,15 +90,15 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         NSLog("Lat:\(coordinate.latitude),Lon:\(coordinate.longitude)")
         
         //download your-city-location-data
-        DispatchQueue.once(token: "locateYourCity"){
-           
-            getAddressFromCoordinate(pdblLatitude: String(coordinate.latitude), withLongitude: String(coordinate.longitude)) { (address) in
-             self.address = address
+       
+        DispatchQueue.once(token: "LocateYourCity"){
+        getAddressFromCoordinate(pdblLatitude: String(coordinate.latitude), withLongitude: String(coordinate.longitude)) { (address) in
+            self.address = address
              loadData(url:getURL(city: address), completion: { (shopList) in
                 self.addShopAnnotation(list: shopList)
              })
+            }
             
-          }
         }
         
         DispatchQueue.once(token: "MoveAndZoomMap"){
@@ -142,7 +143,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                         if pm.subAdministrativeArea != nil{
                             address += pm.subAdministrativeArea!
                         }
-                    print(address)
+                    self.addressArray.append(address)
+                    print(self.addressArray)
                     
                 }
                 completion(address)
@@ -166,7 +168,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                     annotation.title = shop.title
                     annotation.subtitle = shop.address
                 }
-                 print(annotation.coordinate)
                  self.mapView.addAnnotation(annotation)
                 
             }
