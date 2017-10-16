@@ -10,6 +10,7 @@ import Foundation
 
 let requestURL = "https://convenientgo.000webhostapp.com/DBTest.php"
 let categoryURL = "https://convenientgo.000webhostapp.com/Category.php"
+let testURL = "https://convenientgo.000webhostapp.com/DBTest2.php"
 let uploadURL = "https://convenientgo.000webhostapp.com/UpdateFavorite.php"
 
 struct Item {

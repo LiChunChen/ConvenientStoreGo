@@ -93,9 +93,7 @@ class DetailViewController: UIViewController {
                     }
                 }
             }
-            if self.isfavorite == false {
-                self.myFavBut.isEnabled = true
-            }
+            self.myFavBut.isEnabled = true
             self.descriptionVC.self.viewDidLoad()
         }
         

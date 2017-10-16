@@ -13,16 +13,17 @@ class MyLoveTVC: UITableViewController {
     var urlManager = URLManager()
     var favorites = MyLove.sharedInstance()
     var informations = [Item]()
-    //    var items = ["生活泡沫綠茶","麥香紅茶","泰山冰鎮紅茶"]
-    //    var details = ["350ml","300ml","450ml"]
-    //    var hearts = ["24","300","183"]
-    //    var stars = ["3.11(12)","4.57(235)","4.13(102)"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(favorites.myLoveList)
-//        favorites.append("123")
+        let alert = UIAlertController(title: "零筆收藏", message: "您目前沒有將任何商品加入收藏內", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "知道了", style: .default, handler: nil)
+        alert.addAction(ok)
+        if favorites.myLoveList.isEmpty == true {
+            present(alert, animated: true, completion: nil)
+        }
+        
         tableView.estimatedRowHeight = 150.0
         tableView.rowHeight = UITableViewAutomaticDimension
         guard favorites.myLoveList.count != 0 else {
@@ -58,7 +59,7 @@ class MyLoveTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if favorites.myLoveList.count == 0 {
-            return 1
+            return 0
         }else {
             return favorites.myLoveList.count
         }

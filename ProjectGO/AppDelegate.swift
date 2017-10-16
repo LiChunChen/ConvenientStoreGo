@@ -22,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let userDefaults = UserDefaults.standard
         if userDefaults.bool(forKey: "onOK") {
-            let sb1 = UIStoryboard(name:"Main",bundle:nil)
-            inVC = sb1.instantiateViewController(withIdentifier: "detailViewControllerNav")
+            let sb1 = UIStoryboard(name:"BarcodeStoryboard",bundle:nil)
+            inVC = sb1.instantiateViewController(withIdentifier: "BarcodeNav")
         }
         
         window?.rootViewController = inVC

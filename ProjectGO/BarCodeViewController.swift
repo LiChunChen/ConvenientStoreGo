@@ -114,9 +114,7 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             NSLog("Not valid metadata object.")
             return
         }
-        
-        //        let barcodeString = barcodeData.stringValue
-        //        print(barcodeString ?? "Transform To String Fail!")
+     
         guard let barcodeString = metadata.stringValue else {
             print("Transform To String Fail!")
             return
@@ -198,8 +196,8 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
         session.startRunning()
         isRunning = true
-        
     }
+    
     @IBAction func lightBtn(_ sender: Any) {
         
         do {

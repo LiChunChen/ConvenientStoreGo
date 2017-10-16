@@ -83,6 +83,20 @@ class Page1TableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name:"Main",bundle:nil)
+        if let viewcontroller = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+            //            print("Original barcode: \(informations![indexPath.row].barcode)")
+            //            guard let barcode = informations![indexPath.row].barcode else {
+            //                return
+            //            }
+            //            print("Guard1 barcode: \(barcode)")
+            //            let barcodeString = barcode as! String
+            //            print("let barcodeString: \(barcodeString)")
+            viewcontroller.barcodes = ["4710088470423"]
+            self.navigationController?.pushViewController(viewcontroller, animated: true)
+        }
+    }
     
     /*
      // Override to support conditional editing of the table view.
