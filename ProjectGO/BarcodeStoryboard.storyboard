@@ -33,50 +33,50 @@
                                     <action selector="lightBtn:" destination="GYr-EP-lYq" eventType="touchUpInside" id="bur-VB-ynh"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wzR-WN-O81">
-                                <rect key="frame" x="375" y="64" width="140" height="200"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wzR-WN-O81">
+                                <rect key="frame" x="235" y="64" width="140" height="200"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TqG-Ri-flO">
-                                        <rect key="frame" x="10" y="10" width="120" height="180"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TqG-Ri-flO">
+                                        <rect key="frame" x="39" y="-2.5" width="62" height="205"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ae-u9-kHx">
-                                                <rect key="frame" x="0.0" y="0.0" width="120" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
+                                                <state key="normal" title="掃描"/>
                                                 <connections>
                                                     <action selector="openScan:" destination="GYr-EP-lYq" eventType="touchUpInside" id="RQc-GQ-a1h"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqQ-Ou-4I8">
-                                                <rect key="frame" x="0.0" y="30" width="120" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                                <rect key="frame" x="0.0" y="35" width="62" height="30"/>
+                                                <state key="normal" title="商品地圖"/>
                                                 <connections>
                                                     <action selector="openMap:" destination="GYr-EP-lYq" eventType="touchUpInside" id="dsc-V5-HI2"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1P-s4-alS">
-                                                <rect key="frame" x="0.0" y="60" width="120" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                                <rect key="frame" x="0.0" y="70" width="62" height="30"/>
+                                                <state key="normal" title="我的最愛"/>
                                                 <connections>
                                                     <action selector="openLove:" destination="GYr-EP-lYq" eventType="touchUpInside" id="tzp-SR-SNd"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7X-Lk-3zI">
-                                                <rect key="frame" x="0.0" y="90" width="120" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                                <rect key="frame" x="0.0" y="105" width="62" height="30"/>
+                                                <state key="normal" title="瀏覽紀錄"/>
                                                 <connections>
                                                     <action selector="openRecord:" destination="GYr-EP-lYq" eventType="touchUpInside" id="HQ3-cb-jnK"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haT-CU-UBj">
-                                                <rect key="frame" x="0.0" y="120" width="120" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                                <rect key="frame" x="0.0" y="140" width="62" height="30"/>
+                                                <state key="normal" title="商品資訊"/>
                                                 <connections>
                                                     <action selector="openDrink:" destination="GYr-EP-lYq" eventType="touchUpInside" id="w9R-VR-w7L"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gv4-2v-HFP">
-                                                <rect key="frame" x="0.0" y="150" width="120" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                                <rect key="frame" x="0.0" y="175" width="62" height="30"/>
+                                                <state key="normal" title="語言設置"/>
                                                 <connections>
                                                     <action selector="openLag:" destination="GYr-EP-lYq" eventType="touchUpInside" id="HAf-yQ-fZs"/>
                                                 </connections>
@@ -84,30 +84,20 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.72093050309999995" blue="0.61400430250000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="TqG-Ri-flO" firstAttribute="top" secondItem="wzR-WN-O81" secondAttribute="top" constant="10" id="B0V-Hp-961"/>
-                                    <constraint firstAttribute="trailing" secondItem="TqG-Ri-flO" secondAttribute="trailing" constant="10" id="VmM-kC-ZLM"/>
-                                    <constraint firstAttribute="bottom" secondItem="TqG-Ri-flO" secondAttribute="bottom" constant="10" id="agX-4U-1lf"/>
-                                    <constraint firstItem="TqG-Ri-flO" firstAttribute="leading" secondItem="wzR-WN-O81" secondAttribute="leading" constant="10" id="jS6-Nz-8V7"/>
-                                    <constraint firstAttribute="height" constant="200" id="qxs-Eh-3yF"/>
-                                    <constraint firstAttribute="width" constant="140" id="t4c-vp-z4B"/>
+                                    <constraint firstAttribute="height" constant="200" id="6zy-lB-PCA"/>
+                                    <constraint firstAttribute="width" constant="140" id="a2Y-ly-kAy"/>
+                                    <constraint firstItem="TqG-Ri-flO" firstAttribute="centerY" secondItem="wzR-WN-O81" secondAttribute="centerY" id="hPh-wX-lpn"/>
+                                    <constraint firstItem="TqG-Ri-flO" firstAttribute="centerX" secondItem="wzR-WN-O81" secondAttribute="centerX" id="tpM-S2-l1Z"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ks-Vk-Q64">
-                                <rect key="frame" x="311" y="80" width="56" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="掃條碼"/>
-                                <connections>
-                                    <action selector="readBarCode:" destination="GYr-EP-lYq" eventType="touchUpInside" id="Swh-Hf-ES0"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="wzR-WN-O81" secondAttribute="trailing" constant="-140" id="Skw-AX-CHx"/>
-                            <constraint firstItem="wzR-WN-O81" firstAttribute="top" secondItem="A5t-vo-ea0" secondAttribute="bottom" id="Tbb-fi-Vm7"/>
+                            <constraint firstItem="wzR-WN-O81" firstAttribute="top" secondItem="A5t-vo-ea0" secondAttribute="bottom" id="XNz-Mt-h7A"/>
                             <constraint firstItem="xla-4P-MCw" firstAttribute="centerX" secondItem="dO3-nb-vW9" secondAttribute="centerX" id="YG1-Eh-IVx"/>
+                            <constraint firstAttribute="trailing" secondItem="wzR-WN-O81" secondAttribute="trailing" constant="-140" id="a4d-8Z-nIr"/>
                             <constraint firstItem="xla-4P-MCw" firstAttribute="width" secondItem="dO3-nb-vW9" secondAttribute="width" multiplier="0.8" id="cPc-fu-4au"/>
                             <constraint firstItem="xla-4P-MCw" firstAttribute="centerY" secondItem="dO3-nb-vW9" secondAttribute="centerY" id="haZ-6d-hd2"/>
                             <constraint firstItem="xla-4P-MCw" firstAttribute="height" secondItem="dO3-nb-vW9" secondAttribute="height" multiplier="0.2" id="ybP-AQ-qd5"/>
@@ -123,8 +113,8 @@
                     <connections>
                         <outlet property="barcodeFrame" destination="xla-4P-MCw" id="DpG-Wx-Lwv"/>
                         <outlet property="lightBtn" destination="tdZ-xN-DNh" id="qyl-wh-q8G"/>
-                        <outlet property="readBarCodeIBOutlet" destination="3Ks-Vk-Q64" id="7hY-f3-2lL"/>
-                        <outlet property="rightLC" destination="Skw-AX-CHx" id="H3M-Ja-EKH"/>
+                        <outlet property="rightLC" destination="a4d-8Z-nIr" id="DRF-3q-EfF"/>
+                        <outlet property="sideView" destination="wzR-WN-O81" id="uIY-6d-slw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F5O-Aa-LuD" sceneMemberID="firstResponder"/>
@@ -144,7 +134,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YJX-mm-3P7" id="QFb-EL-m7c">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xgA-Iq-q4n">
@@ -269,7 +259,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hj4-Lb-6xw" id="jo8-SA-yKe">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="圖片無法顯示.png" translatesAutoresizingMaskIntoConstraints="NO" id="akc-SB-MF6">
@@ -338,10 +328,28 @@
                             <outlet property="delegate" destination="HBa-kr-gPD" id="HTX-ul-cJx"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="BrG-M9-ySN"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QZp-UT-oHA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3792.8000000000002" y="940.47976011994012"/>
+            <point key="canvasLocation" x="4132" y="940.47976011994012"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="biO-y8-qxE">
+            <objects>
+                <viewController id="Pbk-Wk-4WD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jlG-1q-8Ja"/>
+                        <viewControllerLayoutGuide type="bottom" id="Emc-1s-IB9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zea-03-ku3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MmQ-lS-2rq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

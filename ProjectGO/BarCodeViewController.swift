@@ -10,9 +10,10 @@ import UIKit
 import AVFoundation
 
 class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
-
+    @IBOutlet weak var sideView: UIView!
     @IBOutlet weak var rightLC: NSLayoutConstraint!
     var menuShowing = true
+    
     @IBOutlet weak var barcodeFrame: UIImageView!
     @IBOutlet weak var lightBtn: UIButton!
     
@@ -28,19 +29,20 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     var preview:AVCaptureVideoPreviewLayer!
     var isRunning = false
     
-    @IBOutlet weak var readBarCodeIBOutlet: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // info: privace of camera's string
         // This app requires camera access to function properly
         // 此應用程序需要相機訪問才能正常工作
-        self.navigationItem.rightBarButtonItem=nil
+    
         self.navigationItem.leftBarButtonItem=nil
         self.navigationItem.hidesBackButton=true
         
         fromCamera()
-        view.bringSubview(toFront: readBarCodeIBOutlet)
+        view.bringSubview(toFront: sideView)
+        
         view.bringSubview(toFront: lightBtn)
     }
  
@@ -132,18 +134,18 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
     @IBAction func openMenu(_ sender: Any) {
         if (menuShowing) {
-            rightLC.constant = -140
+            rightLC.constant = 0
             UIView.animate(withDuration: 0.3, animations: {
                 self.view.layoutIfNeeded()
             })
         }else{
-            rightLC.constant = 0
+            rightLC.constant = -140
             UIView.animate(withDuration: 0.3, animations: {
                 self.view.layoutIfNeeded()
             })
         }
         menuShowing = !menuShowing
-        
+
     }
     @IBAction func openLove(_ sender: Any) {
         let push2 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
@@ -188,15 +190,7 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
 //
 //    }
     
-    @IBAction func readBarCode(_ sender: Any) {
-        
-        guard isRunning != true else {
-            return
-        }
-        
-        session.startRunning()
-        isRunning = true
-    }
+  
     
     @IBAction func lightBtn(_ sender: Any) {
         
