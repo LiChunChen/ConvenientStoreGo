@@ -50,7 +50,7 @@ class ItemsViewController: UIViewController{
         self.storyboard!.instantiateViewController(withIdentifier: "Page8" )as! Page8TableViewController
     }()
     lazy var Page9TableViewController: Page9TableViewController = {
-        self.storyboard!.instantiateViewController(withIdentifier: "Page8" )as! Page9TableViewController
+        self.storyboard!.instantiateViewController(withIdentifier: "Page9" )as! Page9TableViewController
     }()
     
     // 3.

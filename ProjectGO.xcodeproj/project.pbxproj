@@ -12,13 +12,6 @@
 		022A40301F93538300237D5C /* 圖片無法顯示.png in Resources */ = {isa = PBXBuildFile; fileRef = 022A402F1F93537A00237D5C /* 圖片無法顯示.png */; };
 		023FD8541F7360AA0097EF70 /* IntroductionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023FD8531F7360AA0097EF70 /* IntroductionStoryboard.storyboard */; };
 		023FD85D1F7360E10097EF70 /* Page1TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD8551F7360E10097EF70 /* Page1TableViewController.swift */; };
-		023FD85E1F7360E10097EF70 /* Page2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD8561F7360E10097EF70 /* Page2TableViewController.swift */; };
-		023FD85F1F7360E10097EF70 /* Page3TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD8571F7360E10097EF70 /* Page3TableViewController.swift */; };
-		023FD8601F7360E10097EF70 /* Page4TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD8581F7360E10097EF70 /* Page4TableViewController.swift */; };
-		023FD8611F7360E10097EF70 /* Page5TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD8591F7360E10097EF70 /* Page5TableViewController.swift */; };
-		023FD8621F7360E10097EF70 /* Page6TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD85A1F7360E10097EF70 /* Page6TableViewController.swift */; };
-		023FD8631F7360E10097EF70 /* Page7TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD85B1F7360E10097EF70 /* Page7TableViewController.swift */; };
-		023FD8641F7360E10097EF70 /* Page8TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD85C1F7360E10097EF70 /* Page8TableViewController.swift */; };
 		023FD8671F73611A0097EF70 /* RadiusBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD8661F73611A0097EF70 /* RadiusBtn.swift */; };
 		023FD86B1F7361260097EF70 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD8681F7361260097EF70 /* StartViewController.swift */; };
 		023FD86C1F7361260097EF70 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD8691F7361260097EF70 /* WalkthroughContentViewController.swift */; };
@@ -50,7 +43,14 @@
 		56D1B4EC1F656F6800F1727A /* writingCommentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1B4EB1F656F6800F1727A /* writingCommentsVC.swift */; };
 		56E65FC11F65753200E99C62 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E65FC01F65753200E99C62 /* CosmosDistrib.swift */; };
 		5AA353907AE7E27A39B1A2F8 /* Pods_ProjectGO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E4996880052A8F3EC04A22 /* Pods_ProjectGO.framework */; };
-		AE3DCBBA1F9108B600F7DC1E /* Page9TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3DCBB91F9108B600F7DC1E /* Page9TableViewController.swift */; };
+		AE31CCC71F94AC0A002F9E19 /* Page8TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE31CCBF1F94AC09002F9E19 /* Page8TableViewController.swift */; };
+		AE31CCC81F94AC0A002F9E19 /* Page3TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE31CCC01F94AC0A002F9E19 /* Page3TableViewController.swift */; };
+		AE31CCC91F94AC0A002F9E19 /* Page4TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE31CCC11F94AC0A002F9E19 /* Page4TableViewController.swift */; };
+		AE31CCCA1F94AC0A002F9E19 /* Page6TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE31CCC21F94AC0A002F9E19 /* Page6TableViewController.swift */; };
+		AE31CCCB1F94AC0A002F9E19 /* Page5TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE31CCC31F94AC0A002F9E19 /* Page5TableViewController.swift */; };
+		AE31CCCC1F94AC0A002F9E19 /* Page9TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE31CCC41F94AC0A002F9E19 /* Page9TableViewController.swift */; };
+		AE31CCCD1F94AC0A002F9E19 /* Page7TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE31CCC51F94AC0A002F9E19 /* Page7TableViewController.swift */; };
+		AE31CCCE1F94AC0A002F9E19 /* Page2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE31CCC61F94AC0A002F9E19 /* Page2TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,13 +59,6 @@
 		022A402F1F93537A00237D5C /* 圖片無法顯示.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圖片無法顯示.png"; sourceTree = "<group>"; };
 		023FD8531F7360AA0097EF70 /* IntroductionStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IntroductionStoryboard.storyboard; sourceTree = "<group>"; };
 		023FD8551F7360E10097EF70 /* Page1TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1TableViewController.swift; sourceTree = "<group>"; };
-		023FD8561F7360E10097EF70 /* Page2TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page2TableViewController.swift; sourceTree = "<group>"; };
-		023FD8571F7360E10097EF70 /* Page3TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page3TableViewController.swift; sourceTree = "<group>"; };
-		023FD8581F7360E10097EF70 /* Page4TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page4TableViewController.swift; sourceTree = "<group>"; };
-		023FD8591F7360E10097EF70 /* Page5TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page5TableViewController.swift; sourceTree = "<group>"; };
-		023FD85A1F7360E10097EF70 /* Page6TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page6TableViewController.swift; sourceTree = "<group>"; };
-		023FD85B1F7360E10097EF70 /* Page7TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page7TableViewController.swift; sourceTree = "<group>"; };
-		023FD85C1F7360E10097EF70 /* Page8TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page8TableViewController.swift; sourceTree = "<group>"; };
 		023FD8661F73611A0097EF70 /* RadiusBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadiusBtn.swift; sourceTree = "<group>"; };
 		023FD8681F7361260097EF70 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		023FD8691F7361260097EF70 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +93,14 @@
 		56D1B4E81F6564CB00F1727A /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
 		56D1B4EB1F656F6800F1727A /* writingCommentsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = writingCommentsVC.swift; sourceTree = "<group>"; };
 		56E65FC01F65753200E99C62 /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
-		AE3DCBB91F9108B600F7DC1E /* Page9TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page9TableViewController.swift; sourceTree = "<group>"; };
+		AE31CCBF1F94AC09002F9E19 /* Page8TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page8TableViewController.swift; sourceTree = "<group>"; };
+		AE31CCC01F94AC0A002F9E19 /* Page3TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page3TableViewController.swift; sourceTree = "<group>"; };
+		AE31CCC11F94AC0A002F9E19 /* Page4TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page4TableViewController.swift; sourceTree = "<group>"; };
+		AE31CCC21F94AC0A002F9E19 /* Page6TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page6TableViewController.swift; sourceTree = "<group>"; };
+		AE31CCC31F94AC0A002F9E19 /* Page5TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page5TableViewController.swift; sourceTree = "<group>"; };
+		AE31CCC41F94AC0A002F9E19 /* Page9TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page9TableViewController.swift; sourceTree = "<group>"; };
+		AE31CCC51F94AC0A002F9E19 /* Page7TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page7TableViewController.swift; sourceTree = "<group>"; };
+		AE31CCC61F94AC0A002F9E19 /* Page2TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2TableViewController.swift; sourceTree = "<group>"; };
 		B4E4996880052A8F3EC04A22 /* Pods_ProjectGO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectGO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -120,14 +120,14 @@
 			isa = PBXGroup;
 			children = (
 				023FD8551F7360E10097EF70 /* Page1TableViewController.swift */,
-				023FD8561F7360E10097EF70 /* Page2TableViewController.swift */,
-				023FD8571F7360E10097EF70 /* Page3TableViewController.swift */,
-				023FD8581F7360E10097EF70 /* Page4TableViewController.swift */,
-				023FD8591F7360E10097EF70 /* Page5TableViewController.swift */,
-				023FD85A1F7360E10097EF70 /* Page6TableViewController.swift */,
-				023FD85B1F7360E10097EF70 /* Page7TableViewController.swift */,
-				023FD85C1F7360E10097EF70 /* Page8TableViewController.swift */,
-				AE3DCBB91F9108B600F7DC1E /* Page9TableViewController.swift */,
+				AE31CCC61F94AC0A002F9E19 /* Page2TableViewController.swift */,
+				AE31CCC01F94AC0A002F9E19 /* Page3TableViewController.swift */,
+				AE31CCC11F94AC0A002F9E19 /* Page4TableViewController.swift */,
+				AE31CCC31F94AC0A002F9E19 /* Page5TableViewController.swift */,
+				AE31CCC21F94AC0A002F9E19 /* Page6TableViewController.swift */,
+				AE31CCC51F94AC0A002F9E19 /* Page7TableViewController.swift */,
+				AE31CCBF1F94AC09002F9E19 /* Page8TableViewController.swift */,
+				AE31CCC41F94AC0A002F9E19 /* Page9TableViewController.swift */,
 			);
 			name = Product;
 			sourceTree = "<group>";
@@ -261,7 +261,7 @@
 				TargetAttributes = {
 					56D1B4C81F653D5600F1727A = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7UK8PZR57E;
+						DevelopmentTeam = J5VAWCKFVV;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -358,34 +358,34 @@
 			files = (
 				56D1B4E51F6555DF00F1727A /* commentsTVC.swift in Sources */,
 				565C68731F923A5A0040DA95 /* loadData.swift in Sources */,
-				023FD85E1F7360E10097EF70 /* Page2TableViewController.swift in Sources */,
 				023FD86D1F7361260097EF70 /* WalkthroughPageViewController.swift in Sources */,
 				56D1B4E31F65486400F1727A /* descriptionVC.swift in Sources */,
 				565C68761F923A5A0040DA95 /* DispatchQueue+Once.swift in Sources */,
+				AE31CCC91F94AC0A002F9E19 /* Page4TableViewController.swift in Sources */,
+				AE31CCCE1F94AC0A002F9E19 /* Page2TableViewController.swift in Sources */,
 				023FD8731F736A8A0097EF70 /* ItemsViewController.swift in Sources */,
 				023FD85D1F7360E10097EF70 /* Page1TableViewController.swift in Sources */,
 				022A402E1F9345B400237D5C /* Singleton.swift in Sources */,
-				023FD85F1F7360E10097EF70 /* Page3TableViewController.swift in Sources */,
 				565C68741F923A5A0040DA95 /* shop.swift in Sources */,
 				023FD87D1F736AF60097EF70 /* MyLoveTVC.swift in Sources */,
+				AE31CCCC1F94AC0A002F9E19 /* Page9TableViewController.swift in Sources */,
 				023FD86B1F7361260097EF70 /* StartViewController.swift in Sources */,
 				023FD8771F736AE00097EF70 /* BarCodeViewController.swift in Sources */,
 				022A402D1F9345B400237D5C /* URLManager.swift in Sources */,
-				023FD8641F7360E10097EF70 /* Page8TableViewController.swift in Sources */,
-				AE3DCBBA1F9108B600F7DC1E /* Page9TableViewController.swift in Sources */,
-				023FD8601F7360E10097EF70 /* Page4TableViewController.swift in Sources */,
 				5692F0511F920A7E00DE2AB3 /* UserInput.swift in Sources */,
 				023FD87A1F736AF10097EF70 /* HistoryRecordCell.swift in Sources */,
 				023FD8751F736AAB0097EF70 /* ChangeViewController.swift in Sources */,
-				023FD8611F7360E10097EF70 /* Page5TableViewController.swift in Sources */,
 				56D1B4DF1F653E7700F1727A /* DetailViewController.swift in Sources */,
+				AE31CCCB1F94AC0A002F9E19 /* Page5TableViewController.swift in Sources */,
 				56E65FC11F65753200E99C62 /* CosmosDistrib.swift in Sources */,
-				023FD8621F7360E10097EF70 /* Page6TableViewController.swift in Sources */,
 				023FD86C1F7361260097EF70 /* WalkthroughContentViewController.swift in Sources */,
 				56D1B4E91F6564CB00F1727A /* CommentsTableViewCell.swift in Sources */,
 				023FD8671F73611A0097EF70 /* RadiusBtn.swift in Sources */,
-				023FD8631F7360E10097EF70 /* Page7TableViewController.swift in Sources */,
+				AE31CCCA1F94AC0A002F9E19 /* Page6TableViewController.swift in Sources */,
+				AE31CCC81F94AC0A002F9E19 /* Page3TableViewController.swift in Sources */,
+				AE31CCC71F94AC0A002F9E19 /* Page8TableViewController.swift in Sources */,
 				56D1B4CF1F653D5600F1727A /* ViewController.swift in Sources */,
+				AE31CCCD1F94AC0A002F9E19 /* Page7TableViewController.swift in Sources */,
 				023FD87B1F736AF10097EF70 /* HistoryRecordTVC.swift in Sources */,
 				56D1B4EC1F656F6800F1727A /* writingCommentsVC.swift in Sources */,
 				565C68721F923A5A0040DA95 /* MapViewController.swift in Sources */,
@@ -528,11 +528,11 @@
 			baseConfigurationReference = 2031CB7178061594B6C52B8A /* Pods-ProjectGO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7UK8PZR57E;
+				DEVELOPMENT_TEAM = J5VAWCKFVV;
 				INFOPLIST_FILE = ProjectGO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.projectgo.team;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myname.delegate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -544,11 +544,11 @@
 			baseConfigurationReference = 161F20937880477E0FC7E34E /* Pods-ProjectGO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7UK8PZR57E;
+				DEVELOPMENT_TEAM = J5VAWCKFVV;
 				INFOPLIST_FILE = ProjectGO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.projectgo.team;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myname.delegate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
