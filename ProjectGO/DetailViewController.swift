@@ -21,7 +21,9 @@ class DetailViewController: UIViewController {
     var favorites = MyLove.sharedInstance()
     var number = 0
     
-    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
+ 
+    @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
+    
     var menuShowing = false
 
     @IBOutlet weak var detailImage: UIImageView!
@@ -31,7 +33,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var myFavBut: UIButton!
     @IBOutlet weak var containerView: UIView!
     
-    @IBOutlet weak var showStarView: CosmosView!
     
     var descriptionVC: descriptionVC!
     
@@ -97,7 +98,6 @@ class DetailViewController: UIViewController {
             self.descriptionVC.self.viewDidLoad()
         }
         
-        showStarView.updateOnTouch = false
         
     }
 
@@ -166,12 +166,12 @@ class DetailViewController: UIViewController {
     
     @IBAction func sideMenu(_ sender: Any) {
         if (menuShowing) {
-            leadingConstraint.constant = -140
+            trailingConstraint.constant = -140
             UIView.animate(withDuration: 0.3, animations: {
                 self.view.layoutIfNeeded()
             })
         }else{
-            leadingConstraint.constant = 0
+            trailingConstraint.constant = 0
             UIView.animate(withDuration: 0.3, animations: {
                 self.view.layoutIfNeeded()
             })
@@ -211,6 +211,13 @@ class DetailViewController: UIViewController {
         self.navigationController?.pushViewController(drinkVC, animated: true)
         
     }
+    
+    @IBAction func writingComment(_ sender: Any) {
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "writingCommentsVC") as? writingCommentsVC
+        self.navigationController?.pushViewController(controller!, animated: true)
+    }
+    
+    
     
     @IBAction func changeLag(_ sender: Any) {
     }

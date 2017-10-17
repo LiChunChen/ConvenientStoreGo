@@ -10,11 +10,12 @@ import UIKit
 
 class commentsTVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var showStarView: CosmosView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        showStarView.updateOnTouch = false
     }
 
     override func didReceiveMemoryWarning() {

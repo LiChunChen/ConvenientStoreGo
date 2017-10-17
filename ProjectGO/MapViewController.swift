@@ -16,7 +16,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var isFirstLocationReceived = false
     var shopList = [Shop]()
     var address = ""
-    var addressArray = [String]()
+    var coordinateArray = [CLLocationCoordinate2D]()
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -45,6 +45,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         locationManager.startUpdatingLocation()
         self.title = "離我最近的超商"
         checkNetworkConnection()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+            self.startDownloading()
+        })
        
         
     }
@@ -89,17 +92,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         }
         NSLog("Lat:\(coordinate.latitude),Lon:\(coordinate.longitude)")
         
+        coordinateArray.append(coordinate)
         //download your-city-location-data
-       
-        DispatchQueue.once(token: "LocateYourCity"){
-        getAddressFromCoordinate(pdblLatitude: String(coordinate.latitude), withLongitude: String(coordinate.longitude)) { (address) in
-            self.address = address
-             loadData(url:getURL(city: address), completion: { (shopList) in
-                self.addShopAnnotation(list: shopList)
-             })
-            }
-            
-        }
         
         DispatchQueue.once(token: "MoveAndZoomMap"){
             let span = MKCoordinateSpanMake(0.001,0.001)
@@ -143,8 +137,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                         if pm.subAdministrativeArea != nil{
                             address += pm.subAdministrativeArea!
                         }
-                    self.addressArray.append(address)
-                    print(self.addressArray)
                     
                 }
                 completion(address)
@@ -152,6 +144,20 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 //restore device language
                 defaults.set(lans, forKey: "AppleLanguages")
         })
+        
+    }
+    
+    
+    func startDownloading(){
+        let mycoordinate = coordinateArray[0]
+        getAddressFromCoordinate(pdblLatitude: String(mycoordinate.latitude), withLongitude: String(mycoordinate.longitude)) { (address) in
+            self.address = address
+            loadData(url:getURL(city: address), completion: { (shopList) in
+                self.addShopAnnotation(list: shopList)
+            })
+            
+        }
+        
         
     }
     
