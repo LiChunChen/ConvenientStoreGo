@@ -10,7 +10,6 @@
 		022A402D1F9345B400237D5C /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A402B1F9345B300237D5C /* URLManager.swift */; };
 		022A402E1F9345B400237D5C /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A402C1F9345B400237D5C /* Singleton.swift */; };
 		022A40301F93538300237D5C /* 圖片無法顯示.png in Resources */ = {isa = PBXBuildFile; fileRef = 022A402F1F93537A00237D5C /* 圖片無法顯示.png */; };
-		023FD8541F7360AA0097EF70 /* IntroductionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023FD8531F7360AA0097EF70 /* IntroductionStoryboard.storyboard */; };
 		023FD85D1F7360E10097EF70 /* Page1TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD8551F7360E10097EF70 /* Page1TableViewController.swift */; };
 		023FD8671F73611A0097EF70 /* RadiusBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD8661F73611A0097EF70 /* RadiusBtn.swift */; };
 		023FD86B1F7361260097EF70 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD8681F7361260097EF70 /* StartViewController.swift */; };
@@ -22,7 +21,6 @@
 		023FD87A1F736AF10097EF70 /* HistoryRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD8781F736AF10097EF70 /* HistoryRecordCell.swift */; };
 		023FD87B1F736AF10097EF70 /* HistoryRecordTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD8791F736AF10097EF70 /* HistoryRecordTVC.swift */; };
 		023FD87D1F736AF60097EF70 /* MyLoveTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD87C1F736AF60097EF70 /* MyLoveTVC.swift */; };
-		023FD87F1F736B210097EF70 /* BarcodeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 023FD87E1F736B210097EF70 /* BarcodeStoryboard.storyboard */; };
 		023FD8851F736B390097EF70 /* BarCodeFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 023FD8811F736B390097EF70 /* BarCodeFrame.png */; };
 		565C68721F923A5A0040DA95 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565C686C1F923A580040DA95 /* MapViewController.swift */; };
 		565C68731F923A5A0040DA95 /* loadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565C686D1F923A580040DA95 /* loadData.swift */; };
@@ -43,6 +41,8 @@
 		56D1B4EC1F656F6800F1727A /* writingCommentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D1B4EB1F656F6800F1727A /* writingCommentsVC.swift */; };
 		56E65FC11F65753200E99C62 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E65FC01F65753200E99C62 /* CosmosDistrib.swift */; };
 		5AA353907AE7E27A39B1A2F8 /* Pods_ProjectGO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E4996880052A8F3EC04A22 /* Pods_ProjectGO.framework */; };
+		AE2383801F9631C9003C0CA6 /* IntroductionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE2383821F9631C9003C0CA6 /* IntroductionStoryboard.storyboard */; };
+		AE2383851F9633E8003C0CA6 /* BarcodeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE2383871F9633E8003C0CA6 /* BarcodeStoryboard.storyboard */; };
 		AE31CCC71F94AC0A002F9E19 /* Page8TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE31CCBF1F94AC09002F9E19 /* Page8TableViewController.swift */; };
 		AE31CCC81F94AC0A002F9E19 /* Page3TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE31CCC01F94AC0A002F9E19 /* Page3TableViewController.swift */; };
 		AE31CCC91F94AC0A002F9E19 /* Page4TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE31CCC11F94AC0A002F9E19 /* Page4TableViewController.swift */; };
@@ -57,7 +57,6 @@
 		022A402B1F9345B300237D5C /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
 		022A402C1F9345B400237D5C /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		022A402F1F93537A00237D5C /* 圖片無法顯示.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圖片無法顯示.png"; sourceTree = "<group>"; };
-		023FD8531F7360AA0097EF70 /* IntroductionStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IntroductionStoryboard.storyboard; sourceTree = "<group>"; };
 		023FD8551F7360E10097EF70 /* Page1TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page1TableViewController.swift; sourceTree = "<group>"; };
 		023FD8661F73611A0097EF70 /* RadiusBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadiusBtn.swift; sourceTree = "<group>"; };
 		023FD8681F7361260097EF70 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -69,7 +68,6 @@
 		023FD8781F736AF10097EF70 /* HistoryRecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryRecordCell.swift; sourceTree = "<group>"; };
 		023FD8791F736AF10097EF70 /* HistoryRecordTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryRecordTVC.swift; sourceTree = "<group>"; };
 		023FD87C1F736AF60097EF70 /* MyLoveTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLoveTVC.swift; sourceTree = "<group>"; };
-		023FD87E1F736B210097EF70 /* BarcodeStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BarcodeStoryboard.storyboard; sourceTree = "<group>"; };
 		023FD8811F736B390097EF70 /* BarCodeFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BarCodeFrame.png; sourceTree = "<group>"; };
 		161F20937880477E0FC7E34E /* Pods-ProjectGO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectGO.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectGO/Pods-ProjectGO.release.xcconfig"; sourceTree = "<group>"; };
 		2031CB7178061594B6C52B8A /* Pods-ProjectGO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectGO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectGO/Pods-ProjectGO.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +91,12 @@
 		56D1B4E81F6564CB00F1727A /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
 		56D1B4EB1F656F6800F1727A /* writingCommentsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = writingCommentsVC.swift; sourceTree = "<group>"; };
 		56E65FC01F65753200E99C62 /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
+		AE23837E1F963045003C0CA6 /* en-TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-TW"; path = "en-TW.lproj/Main.strings"; sourceTree = "<group>"; };
+		AE23837F1F963045003C0CA6 /* en-TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-TW"; path = "en-TW.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		AE2383811F9631C9003C0CA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/IntroductionStoryboard.storyboard; sourceTree = "<group>"; };
+		AE2383841F9631CD003C0CA6 /* en-TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-TW"; path = "en-TW.lproj/IntroductionStoryboard.strings"; sourceTree = "<group>"; };
+		AE2383861F9633E8003C0CA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BarcodeStoryboard.storyboard; sourceTree = "<group>"; };
+		AE2383891F9633EB003C0CA6 /* en-TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-TW"; path = "en-TW.lproj/BarcodeStoryboard.strings"; sourceTree = "<group>"; };
 		AE31CCBF1F94AC09002F9E19 /* Page8TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page8TableViewController.swift; sourceTree = "<group>"; };
 		AE31CCC01F94AC0A002F9E19 /* Page3TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page3TableViewController.swift; sourceTree = "<group>"; };
 		AE31CCC11F94AC0A002F9E19 /* Page4TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page4TableViewController.swift; sourceTree = "<group>"; };
@@ -168,7 +172,7 @@
 				56D1B4E41F6555DF00F1727A /* commentsTVC.swift */,
 				56D1B4E21F65486400F1727A /* descriptionVC.swift */,
 				56E65FC21F6575DB00E99C62 /* writingComments */,
-				023FD8531F7360AA0097EF70 /* IntroductionStoryboard.storyboard */,
+				AE2383821F9631C9003C0CA6 /* IntroductionStoryboard.storyboard */,
 				023FD8661F73611A0097EF70 /* RadiusBtn.swift */,
 				023FD8681F7361260097EF70 /* StartViewController.swift */,
 				023FD8741F736AAB0097EF70 /* ChangeViewController.swift */,
@@ -176,7 +180,7 @@
 				023FD8691F7361260097EF70 /* WalkthroughContentViewController.swift */,
 				023FD86A1F7361260097EF70 /* WalkthroughPageViewController.swift */,
 				023FD8651F7360EA0097EF70 /* Product */,
-				023FD87E1F736B210097EF70 /* BarcodeStoryboard.storyboard */,
+				AE2383871F9633E8003C0CA6 /* BarcodeStoryboard.storyboard */,
 				023FD8761F736AE00097EF70 /* BarCodeViewController.swift */,
 				023FD8781F736AF10097EF70 /* HistoryRecordCell.swift */,
 				023FD8791F736AF10097EF70 /* HistoryRecordTVC.swift */,
@@ -261,7 +265,7 @@
 				TargetAttributes = {
 					56D1B4C81F653D5600F1727A = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 4HWCBSMFJU;
+						DevelopmentTeam = J5VAWCKFVV;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -274,6 +278,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"en-TW",
 			);
 			mainGroup = 56D1B4C01F653D5600F1727A;
 			productRefGroup = 56D1B4CA1F653D5600F1727A /* Products */;
@@ -294,9 +299,9 @@
 				022A40301F93538300237D5C /* 圖片無法顯示.png in Resources */,
 				023FD8851F736B390097EF70 /* BarCodeFrame.png in Resources */,
 				56D1B4D71F653D5600F1727A /* LaunchScreen.storyboard in Resources */,
-				023FD8541F7360AA0097EF70 /* IntroductionStoryboard.storyboard in Resources */,
+				AE2383801F9631C9003C0CA6 /* IntroductionStoryboard.storyboard in Resources */,
 				56D1B4D41F653D5600F1727A /* Assets.xcassets in Resources */,
-				023FD87F1F736B210097EF70 /* BarcodeStoryboard.storyboard in Resources */,
+				AE2383851F9633E8003C0CA6 /* BarcodeStoryboard.storyboard in Resources */,
 				56D1B4D21F653D5600F1727A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +406,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				56D1B4D11F653D5600F1727A /* Base */,
+				AE23837E1F963045003C0CA6 /* en-TW */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -409,8 +415,27 @@
 			isa = PBXVariantGroup;
 			children = (
 				56D1B4D61F653D5600F1727A /* Base */,
+				AE23837F1F963045003C0CA6 /* en-TW */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AE2383821F9631C9003C0CA6 /* IntroductionStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE2383811F9631C9003C0CA6 /* Base */,
+				AE2383841F9631CD003C0CA6 /* en-TW */,
+			);
+			name = IntroductionStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		AE2383871F9633E8003C0CA6 /* BarcodeStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE2383861F9633E8003C0CA6 /* Base */,
+				AE2383891F9633EB003C0CA6 /* en-TW */,
+			);
+			name = BarcodeStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -420,6 +445,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -477,6 +503,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -528,11 +555,11 @@
 			baseConfigurationReference = 2031CB7178061594B6C52B8A /* Pods-ProjectGO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4HWCBSMFJU;
+				DEVELOPMENT_TEAM = J5VAWCKFVV;
 				INFOPLIST_FILE = ProjectGO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Jenny.HelloMyBarCode;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myname.delegate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -544,11 +571,11 @@
 			baseConfigurationReference = 161F20937880477E0FC7E34E /* Pods-ProjectGO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4HWCBSMFJU;
+				DEVELOPMENT_TEAM = J5VAWCKFVV;
 				INFOPLIST_FILE = ProjectGO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Jenny.HelloMyBarCode;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myname.delegate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;

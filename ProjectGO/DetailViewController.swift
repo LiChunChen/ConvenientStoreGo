@@ -224,11 +224,7 @@ class DetailViewController: UIViewController {
         controller?.barcodes = barcodes!
         self.navigationController?.pushViewController(controller!, animated: true)
     }
-    
-    
-    
-    @IBAction func changeLag(_ sender: Any) {
-    }
+
     /*
     // MARK: - Navigation
 

@@ -194,7 +194,6 @@ class ItemsViewController: UIViewController{
         
     }
     
-    @IBAction func connectLag(_ sender: Any) {
-    }
+   
 }
 

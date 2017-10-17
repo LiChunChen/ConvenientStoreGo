@@ -82,6 +82,16 @@ class Page2TableViewController: UITableViewController {
         
         return cell
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let barcode = informations![indexPath.row].barcode!
+        var history = History.sharedInstance().historyList
+        history.append(barcode)
+        let storyboard = UIStoryboard(name:"Main",bundle:nil)
+        if let viewcontroller = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+            viewcontroller.barcodes = [barcode]
+            self.navigationController?.pushViewController(viewcontroller, animated: true)
+        }
+    }
     
     
     /*

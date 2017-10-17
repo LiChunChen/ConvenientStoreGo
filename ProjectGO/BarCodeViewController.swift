@@ -175,9 +175,7 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         self.navigationController?.pushViewController(drinkVC, animated: true)
         
     }
-    
-    @IBAction func openLag(_ sender: Any) {
-    }
+ 
     //    func captureOutput(_ captureOutput: AVCaptureOutput!,
 //                       didOutputMetadataObjects metadataObjects: [Any]!,
 //                       from connection: AVCaptureConnection!) {
