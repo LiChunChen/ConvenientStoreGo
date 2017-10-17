@@ -75,9 +75,7 @@ class Page4TableViewController: UITableViewController {
         }
         cell.itemName.text = informations![row].name
         cell.itemDetail.text = informations![row].ml
-        cell.itemHeart.image = UIImage(named: "heart.png")
         cell.heartNum.text = String(describing: informations![row].favorite)
-        cell.itemStars.image = UIImage(named: "star.png")
         cell.starsNum.text = String(describing: informations![row].stars)
         
         return cell
