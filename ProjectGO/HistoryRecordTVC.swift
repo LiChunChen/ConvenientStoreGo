@@ -9,11 +9,10 @@
 import UIKit
 
 class HistoryRecordTVC: UITableViewController {
-
-    var items = ["生活泡沫綠茶","麥香紅茶","泰山冰鎮紅茶"]
-    var details = ["350ml","300ml","450ml"]
-    var hearts = ["24","300","183"]
-    var stars = ["3.11(12)","4.57(235)","4.13(102)"]
+    
+    var urlManager = URLManager()
+    var historys = History.sharedInstance()
+    var informations = [Item]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +22,29 @@ class HistoryRecordTVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        let alert = UIAlertController(title: "0筆記錄", message: "您目前還沒有瀏覽過任何商品", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "知道了", style: .default, handler: nil))
+        
+        tableView.estimatedRowHeight = 150.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        guard historys.historyList.count != 0 else {
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        urlManager.askForRequest(parameters: historys.historyList, urlString: requestURL) { (success, error, results) in
+            guard success == true else {
+                print("askForRequest fail.")
+                return
+            }
+            guard let results = results else {
+                print("Get results fail.")
+                return
+            }
+            self.informations = results
+            self.tableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,23 +60,44 @@ class HistoryRecordTVC: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return items.count
+        if historys.historyList.count == 0 {
+            return 0
+        }else {
+            return historys.historyList.count
+        }
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! HistoryRecordCell
         
-        cell.itemImg.image = UIImage(named: "2.jpg")
-        cell.itemName.text = items[indexPath.row]
-        cell.itemDetail.text = details[indexPath.row]
-        cell.itemHeart.image = UIImage(named: "heart.png")
-        cell.heartNum.text = hearts[indexPath.row]
-        cell.itemStars.image = UIImage(named: "star.png")
-        cell.starsNum.text = stars[indexPath.row]
-        
+        guard informations.isEmpty == false else {
+            return cell
+        }
+        let row = indexPath.row
+        let data = NSData(contentsOf: URL(string: informations[row].imgURL!)!)
+        if data != nil {
+            cell.itemImg.image = UIImage(data:data! as Data)
+        }
+        cell.itemName.text = informations[row].name
+        cell.itemDetail.text = informations[row].ml
+        cell.itemHeart.image = UIImage(named: "liked00")
+        if let heart = informations[row].favorite {
+            cell.heartNum.text = String(describing: heart)
+        }
+        cell.itemStars.image = UIImage(named: "")
+        if let star = informations[row].stars {
+            cell.starsNum.text = String(describing: star)
+        }
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name:"Main",bundle:nil)
+        if let viewcontroller = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+            viewcontroller.barcodes = [informations[indexPath.row].barcode!]
+            self.navigationController?.pushViewController(viewcontroller, animated: true)
+        }
     }
     
 

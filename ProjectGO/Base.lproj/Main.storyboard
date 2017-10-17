@@ -21,10 +21,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Milk -" translatesAutoresizingMaskIntoConstraints="NO" id="RMb-5G-ZyW">
-                                <rect key="frame" x="0.0" y="109.5" width="375" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Milk -" translatesAutoresizingMaskIntoConstraints="NO" id="RMb-5G-ZyW">
+                                <rect key="frame" x="0.0" y="64" width="188" height="246"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0f-c3-o4s">
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J0f-c3-o4s">
                                 <rect key="frame" x="0.0" y="376" width="375" height="291"/>
                                 <connections>
                                     <segue destination="A5b-hN-COU" kind="embed" identifier="containerViewSegue" id="Q3U-AC-oL4"/>
@@ -93,20 +94,20 @@
                                     <constraint firstAttribute="width" constant="140" id="y2q-HN-o2R"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6XZ-VD-Fuh">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6XZ-VD-Fuh">
                                 <rect key="frame" x="0.0" y="309.5" width="375" height="66.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sWl-Dd-jhe">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sWl-Dd-jhe">
                                         <rect key="frame" x="20" y="0.0" width="335" height="38"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTG-vF-6L7">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTG-vF-6L7">
                                                 <rect key="frame" x="0.0" y="0.0" width="167.5" height="38"/>
                                                 <state key="normal" image="Enter"/>
                                                 <connections>
                                                     <action selector="addToMyFav:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jJm-ew-Cu7"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCP-z3-h2w">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCP-z3-h2w">
                                                 <rect key="frame" x="167.5" y="0.0" width="167.5" height="38"/>
                                                 <state key="normal" title="寫評論"/>
                                                 <connections>
@@ -119,7 +120,7 @@
                                             <constraint firstItem="rCP-z3-h2w" firstAttribute="height" secondItem="MTG-vF-6L7" secondAttribute="height" id="qqt-wW-Mqu"/>
                                         </constraints>
                                     </stackView>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="knh-eA-cqH">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="knh-eA-cqH">
                                         <rect key="frame" x="119" y="38" width="137" height="29.5"/>
                                         <segments>
                                             <segment title="商品資訊"/>
@@ -132,8 +133,9 @@
                                     <constraint firstItem="sWl-Dd-jhe" firstAttribute="width" secondItem="6XZ-VD-Fuh" secondAttribute="width" constant="-40" id="auE-yg-tdZ"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="放商品名稱可以自動換行" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYv-jG-E8S">
-                                <rect key="frame" x="0.0" y="63" width="375" height="46.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYv-jG-E8S">
+                                <rect key="frame" x="189" y="84" width="182" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -142,24 +144,15 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6XZ-VD-Fuh" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="1eL-FE-GsO"/>
-                            <constraint firstItem="RMb-5G-ZyW" firstAttribute="top" secondItem="AYv-jG-E8S" secondAttribute="bottom" id="CsQ-2T-Yjv"/>
-                            <constraint firstItem="AYv-jG-E8S" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="63" id="DHe-cA-o0I"/>
-                            <constraint firstItem="RMb-5G-ZyW" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="EZU-oJ-TiW"/>
                             <constraint firstItem="6XZ-VD-Fuh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HOF-X8-fWQ"/>
                             <constraint firstItem="6XZ-VD-Fuh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Ln4-cL-J49"/>
-                            <constraint firstItem="AYv-jG-E8S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mos-Sm-Kam"/>
-                            <constraint firstItem="AYv-jG-E8S" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="SsU-eX-ay8"/>
-                            <constraint firstItem="RMb-5G-ZyW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="U6r-p4-b9v"/>
                             <constraint firstItem="DM4-m1-wzT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="63" id="VZ7-9r-hHR"/>
-                            <constraint firstItem="6XZ-VD-Fuh" firstAttribute="top" secondItem="RMb-5G-ZyW" secondAttribute="bottom" id="ZVs-4X-vzd"/>
                             <constraint firstAttribute="trailing" secondItem="DM4-m1-wzT" secondAttribute="trailing" constant="-140" id="bsY-hx-ec1"/>
-                            <constraint firstItem="RMb-5G-ZyW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c3E-gz-7qe"/>
                             <constraint firstItem="J0f-c3-o4s" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="dJ7-Ip-uF8"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="J0f-c3-o4s" secondAttribute="bottom" id="gRw-C8-hls"/>
                             <constraint firstItem="J0f-c3-o4s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kWP-ho-bga"/>
                             <constraint firstAttribute="trailing" secondItem="6XZ-VD-Fuh" secondAttribute="trailing" id="lH2-dm-YKc"/>
                             <constraint firstItem="J0f-c3-o4s" firstAttribute="top" secondItem="6XZ-VD-Fuh" secondAttribute="bottom" id="x7p-Kp-siY"/>
-                            <constraint firstItem="AYv-jG-E8S" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.07" id="z87-qF-bgW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aXX-ey-fvG">
@@ -175,10 +168,12 @@
                         <outlet property="detailImage" destination="RMb-5G-ZyW" id="zB4-uY-mgy"/>
                         <outlet property="detailSegmentControl" destination="knh-eA-cqH" id="4vA-iA-3Qh"/>
                         <outlet property="ingredientTextView" destination="7Uz-Cf-88L" id="5HO-l3-cNQ"/>
+                        <outlet property="itemName" destination="AYv-jG-E8S" id="uZl-UQ-CF7"/>
                         <outlet property="mainView" destination="8bC-Xf-vdC" id="YfY-5f-ynS"/>
                         <outlet property="myFavBut" destination="MTG-vF-6L7" id="Eqt-EZ-ozw"/>
                         <outlet property="subMenu" destination="DM4-m1-wzT" id="SSw-JO-nla"/>
                         <outlet property="trailingConstraint" destination="bsY-hx-ec1" id="u7D-xF-TgT"/>
+                        <outlet property="writeComBtn" destination="rCP-z3-h2w" id="RtZ-Km-2jc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -249,29 +244,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="descriptionTextView" destination="TiH-h3-eah" id="tXB-aq-LII"/>
-                        <outlet property="ingredientTextView" destination="7Uz-Cf-88L" id="MbE-aA-3fP"/>
+                        <outlet property="descriptionTextView" destination="7Uz-Cf-88L" id="b0z-rg-tmv"/>
+                        <outlet property="ingredientTextView" destination="TiH-h3-eah" id="4au-lE-fYt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B8r-l7-Iq0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1847.2" y="-326.98650674662673"/>
-        </scene>
-        <!--MyLoveTVC-->
-        <scene sceneID="kHJ-4e-77N">
-            <objects>
-                <viewControllerPlaceholder storyboardName="BarcodeStoryboard" referencedIdentifier="MyLoveTVC" id="QxD-Or-Z64" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yf9-bD-6sk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="158" y="321"/>
-        </scene>
-        <!--BarCodeViewController-->
-        <scene sceneID="Uhi-qe-g07">
-            <objects>
-                <viewControllerPlaceholder storyboardName="BarcodeStoryboard" referencedIdentifier="BarCodeViewController" id="9xU-Ka-9BW" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mMX-BL-R83" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="473" y="338"/>
         </scene>
         <!--Writing CommentsVC-->
         <scene sceneID="tLL-fe-42n">

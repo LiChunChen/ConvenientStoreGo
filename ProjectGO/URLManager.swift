@@ -10,11 +10,11 @@ import Foundation
 
 let requestURL = "https://convenientgo.000webhostapp.com/DBTest.php"
 let categoryURL = "https://convenientgo.000webhostapp.com/Category.php"
-let testURL = "https://convenientgo.000webhostapp.com/DBTest2.php"
 let uploadURL = "https://convenientgo.000webhostapp.com/UpdateFavorite.php"
+let insertURL = "https://convenientgo.000webhostapp.com/Insert.php"
 
 struct Item {
-    var barcode: String?
+    var barcode: Int?
     var name: String?
     var ml: String?
     var imgURL: String?
@@ -31,7 +31,7 @@ class URLManager {
     let session = URLSession.shared
     // configuration is a get-only property
 
-    func askForRequest(parameters: [String], urlString: String ,doneHandler:@escaping DoneHandler) {
+    func askForRequest(parameters: [Any], urlString: String ,doneHandler:@escaping DoneHandler) {
         
         //        let parameters = ["barcodeNumber" : "1"]
         guard let url = URL(string: urlString) else { return }
@@ -68,27 +68,25 @@ class URLManager {
 //                self.jsonResultLabel.text = "strData: \(strData ?? "Get strData fail.")"
 //            }
         
-            if let results = (try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)) as? [[[String: Any]]] {
+            if let results = (try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)) as? [[String: Any]] {
                 
                 var item = Item()
                 var items = [Item]()
-                for i in results {
-                    for j in i {
-                        item.barcode = String(describing: j["barcode"])
-                        item.name = j["name"] as? String
-                        item.ml = j["ml"] as? String
-                        item.imgURL = j["imgURL"] as? String
-                        item.description = j["description"] as? String
-                        item.ingredient = j["ingredient"] as? String
-                        item.favorite = j["favorite"] as? Int
-                        item.stars = j["stars"] as? Double
-                        items.append(item)
+                for j in results {
+                    item.barcode = j["barcode"] as? Int
+                    item.name = j["name"] as? String
+                    item.ml = j["ml"] as? String
+                    item.imgURL = j["imgURL"] as? String
+                    item.description = j["description"] as? String
+                    item.ingredient = j["ingredient"] as? String
+                    item.favorite = j["favorite"] as? Int
+                    item.stars = j["stars"] as? Double
+                    items.append(item)
 //                        print(items)
-                        DispatchQueue.main.async {
-                            // Callback funciton
-                            doneHandler(true, nil, items)
-                        }
-                    }
+                }
+                DispatchQueue.main.async {
+                    // Callback funciton
+                    doneHandler(true, nil, items)
                 }
             }else {
                 NSLog("Get jsonResult fail.")
@@ -101,8 +99,8 @@ class URLManager {
         task.resume()
     }
     
-    func changeToDB(parameter: [String:Any]) {
-        guard let url = URL(string: uploadURL) else { return }
+    func changeToDB(parameter: [String:Any], urlString: String) {
+        guard let url = URL(string: urlString) else { return }
         guard let data = try? JSONSerialization.data(withJSONObject: parameter, options: .prettyPrinted) else { return }
         var request = URLRequest(url: url)
         request.httpBody = data

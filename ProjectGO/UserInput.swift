@@ -10,7 +10,7 @@ import Foundation
 
 struct userComment{
     var name: String?
-    var comments: String?
+//    var comments: String?
     var starCount: Double?
     var description: String?
     

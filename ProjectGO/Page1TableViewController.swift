@@ -75,7 +75,7 @@ class Page1TableViewController: UITableViewController {
         }
         cell.itemName.text = informations![row].name
         cell.itemDetail.text = informations![row].ml
-        cell.itemHeart.image = UIImage(named: "heart.png")
+        cell.itemHeart.image = UIImage(named: "liked00")
         cell.heartNum.text = String(describing: informations![row].favorite)
         cell.itemStars.image = UIImage(named: "star.png")
         cell.starsNum.text = String(describing: informations![row].stars)
@@ -84,16 +84,13 @@ class Page1TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let barcode = informations![indexPath.row].barcode!
+        var history = History.sharedInstance().historyList
+        history.append(barcode)
         let storyboard = UIStoryboard(name:"Main",bundle:nil)
         if let viewcontroller = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
-            //            print("Original barcode: \(informations![indexPath.row].barcode)")
-            //            guard let barcode = informations![indexPath.row].barcode else {
-            //                return
-            //            }
-            //            print("Guard1 barcode: \(barcode)")
-            //            let barcodeString = barcode as! String
-            //            print("let barcodeString: \(barcodeString)")
-            viewcontroller.barcodes = ["4710088470423"]
+            viewcontroller.barcodes = [barcode]
             self.navigationController?.pushViewController(viewcontroller, animated: true)
         }
     }

@@ -17,14 +17,19 @@ class MyLove {
         }
         return myLoveShared!
     }
-    var myLoveList = [String]()
+    var myLoveList = [Int]()
     
 }
 
 class History {
     
-    static let historyShared = History()
-    
-    var historyList = [String]()
+    static var historyShared: History?
+    class func sharedInstance() -> History {
+        if historyShared == nil {
+            historyShared = History()
+        }
+        return historyShared!
+    }
+    var historyList = [Int]()
     
 }

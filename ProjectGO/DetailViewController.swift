@@ -14,11 +14,14 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var subMenu: UIView!
     
-    var barcodes: [String]?
+    @IBOutlet weak var itemName: UILabel!
+    
+    var barcodes: [Int]?
     let urlManager = URLManager()
     var information = [Item]()
     var isfavorite = false
     var favorites = MyLove.sharedInstance()
+    var history = History.sharedInstance()
     var number = 0
     
  
@@ -31,6 +34,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var detailSegmentControl: UISegmentedControl!
     
     @IBOutlet weak var myFavBut: UIButton!
+    @IBOutlet weak var writeComBtn: UIButton!
     @IBOutlet weak var containerView: UIView!
     
     
@@ -61,15 +65,17 @@ class DetailViewController: UIViewController {
         //prepare to present product title
         self.title = "商品"
         myFavBut.isEnabled = false
+        writeComBtn.isEnabled = false
+        history.historyList.append(barcodes![0])
         
         mainView.bringSubview(toFront: subMenu)
         
         detailSegmentControl.addTarget(self, action: #selector(onControl(sender:)), for: .valueChanged)
         
-        guard let barcodes = barcodes else {
-            return
-        }
-        urlManager.askForRequest(parameters: barcodes, urlString: requestURL) { (success, error, results) in
+//        guard let barcodes = barcodes else {
+//            return
+//        }
+        urlManager.askForRequest(parameters: barcodes!, urlString: requestURL) { (success, error, results) in
             guard success == true else {
                 print("askForRequest fail.")
                 return
@@ -82,19 +88,20 @@ class DetailViewController: UIViewController {
             if data != nil {
                 self.detailImage.image = UIImage(data:data! as Data)
             }
+            self.itemName.text = results[0].name!
             self.information = results
             self.descriptionVC.information = results
             if self.favorites.myLoveList.count != 0 {
                 for i in 0..<self.favorites.myLoveList.count {
-                    if self.favorites.myLoveList[i] == barcodes[0] {
+                    if self.favorites.myLoveList[i] == self.barcodes![0] {
                         self.number = i
                         self.isfavorite = true
                         self.myFavBut.setImage(UIImage(named:"Cancel"), for: UIControlState.normal)
-                        //                        self.myFavBut.imageView?.image = UIImage(named: "Cancel")
                     }
                 }
             }
             self.myFavBut.isEnabled = true
+            self.writeComBtn.isEnabled = true
             self.descriptionVC.self.viewDidLoad()
         }
         
@@ -159,7 +166,7 @@ class DetailViewController: UIViewController {
         }
         
         let parameter = ["favorite":information[0].favorite!,"barcode":barcodes![0]] as [String : Any]
-        urlManager.changeToDB(parameter: parameter)
+        urlManager.changeToDB(parameter: parameter, urlString: uploadURL)
         
     }
     
@@ -214,6 +221,7 @@ class DetailViewController: UIViewController {
     
     @IBAction func writingComment(_ sender: Any) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "writingCommentsVC") as? writingCommentsVC
+        controller?.barcodes = barcodes!
         self.navigationController?.pushViewController(controller!, animated: true)
     }
     

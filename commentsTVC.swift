@@ -9,6 +9,8 @@
 import UIKit
 
 class commentsTVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var comment = userComment()
 
     @IBOutlet weak var showStarView: CosmosView!
     override func viewDidLoad() {
@@ -37,6 +39,16 @@ class commentsTVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         return cell
+        
+        /*
+         guard nameTF.text != "" else{
+         comment.name = "Unknown"
+         return
+         }
+         comment.name = nameTF.text
+         comment.description = tf.text
+         comment.starCount = ratingStarView.rating
+         self.dismiss(animated: true, completion: nil) */
     
     }
     

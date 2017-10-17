@@ -127,8 +127,8 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
         let storyboard = UIStoryboard(name:"Main",bundle:nil)
         if let viewcontroller = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
-            let barcode = barcodeString
-            viewcontroller.barcodes = [barcode]
+            let barcode = Int(barcodeString)
+            viewcontroller.barcodes = [barcode!]
            self.navigationController?.pushViewController(viewcontroller, animated: true)
         }
     }

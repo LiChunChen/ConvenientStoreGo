@@ -13,8 +13,9 @@ class writingCommentsVC: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var tf: UITextField!
     @IBOutlet weak var ratingStarView: CosmosView!
-    var comment = userComment()
-    var userComments = [userComment]()
+    
+    let urlManager = URLManager()
+    var barcodes: [Int]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,23 +42,24 @@ class writingCommentsVC: UIViewController, UITextFieldDelegate{
         return true
     }
     
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    
     @IBAction func doneButton(_ sender: Any) {
         //write in database
-        guard nameTF.text != nil else{
-            comment.name = "Unknown"
+        var name = ""
+        guard tf.text != "" else {
+            let alert = UIAlertController(title: "評論不可為空白", message: "請輸入您對此商品的評論", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "好", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
             return
         }
-        comment.name = nameTF.text
-        comment.description = tf.text
-        comment.starCount = ratingStarView.rating
+        if nameTF.text == "" {
+            name = "Unknown"
+        }else {
+            name = nameTF.text!
+        }
+        print(name)
+        let dictionary = ["name":name,"comment":tf.text!,"barcode":barcodes![0]] as [String : Any]
+        urlManager.changeToDB(parameter: dictionary, urlString: insertURL)
+        
         self.dismiss(animated: true, completion: nil)
     }
 
