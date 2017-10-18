@@ -45,7 +45,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         locationManager.startUpdatingLocation()
         self.title = "離我最近的超商"
         checkNetworkConnection()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+            guard self.coordinateArray.count > 1 else{
+                return
+            }
             self.startDownloading()
         })
        
@@ -91,8 +94,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             print(currentLocation)
         }
         NSLog("Lat:\(coordinate.latitude),Lon:\(coordinate.longitude)")
-        
         coordinateArray.append(coordinate)
+
         //download your-city-location-data
         
         DispatchQueue.once(token: "MoveAndZoomMap"){

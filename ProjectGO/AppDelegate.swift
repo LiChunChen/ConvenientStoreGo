@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame:UIScreen.main.bounds)
         let sb = UIStoryboard(name:"IntroductionStoryboard",bundle:nil)
-        var inVC = sb.instantiateViewController(withIdentifier: "on")
+        var inVC = sb.instantiateViewController(withIdentifier: "WalkthroughController")
         
         let userDefaults = UserDefaults.standard
         if userDefaults.bool(forKey: "onOK") {
