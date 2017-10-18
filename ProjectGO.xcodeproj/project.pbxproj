@@ -91,6 +91,10 @@
 		56D1B4E81F6564CB00F1727A /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
 		56D1B4EB1F656F6800F1727A /* writingCommentsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = writingCommentsVC.swift; sourceTree = "<group>"; };
 		56E65FC01F65753200E99C62 /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
+		56FB80221F96ECBA00E5253D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		56FB80231F96ECBA00E5253D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/IntroductionStoryboard.strings"; sourceTree = "<group>"; };
+		56FB80241F96ECBA00E5253D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/BarcodeStoryboard.strings"; sourceTree = "<group>"; };
+		56FB80251F96ECBA00E5253D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		AE23837E1F963045003C0CA6 /* en-TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-TW"; path = "en-TW.lproj/Main.strings"; sourceTree = "<group>"; };
 		AE23837F1F963045003C0CA6 /* en-TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-TW"; path = "en-TW.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		AE2383811F9631C9003C0CA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/IntroductionStoryboard.storyboard; sourceTree = "<group>"; };
@@ -407,6 +411,7 @@
 			children = (
 				56D1B4D11F653D5600F1727A /* Base */,
 				AE23837E1F963045003C0CA6 /* en-TW */,
+				56FB80221F96ECBA00E5253D /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 			children = (
 				56D1B4D61F653D5600F1727A /* Base */,
 				AE23837F1F963045003C0CA6 /* en-TW */,
+				56FB80251F96ECBA00E5253D /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -425,6 +431,7 @@
 			children = (
 				AE2383811F9631C9003C0CA6 /* Base */,
 				AE2383841F9631CD003C0CA6 /* en-TW */,
+				56FB80231F96ECBA00E5253D /* zh-Hant */,
 			);
 			name = IntroductionStoryboard.storyboard;
 			sourceTree = "<group>";
@@ -434,6 +441,7 @@
 			children = (
 				AE2383861F9633E8003C0CA6 /* Base */,
 				AE2383891F9633EB003C0CA6 /* en-TW */,
+				56FB80241F96ECBA00E5253D /* zh-Hant */,
 			);
 			name = BarcodeStoryboard.storyboard;
 			sourceTree = "<group>";

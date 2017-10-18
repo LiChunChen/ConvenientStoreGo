@@ -46,9 +46,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         self.title = "離我最近的超商"
         checkNetworkConnection()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            guard self.coordinateArray.count > 1 else{
+            /*guard self.coordinateArray.count > 1 else{
                 return
-            }
+            }*/
             self.startDownloading()
         })
        

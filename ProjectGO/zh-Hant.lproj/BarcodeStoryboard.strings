@@ -1,0 +1,54 @@
+
+/* Class = "UILabel"; text = "0"; ObjectID = "1Bg-LW-yka"; */
+"1Bg-LW-yka.text" = "0";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "1t6-P3-U0g"; */
+"1t6-P3-U0g.title" = "Item";
+
+/* Class = "UILabel"; text = "商品名稱"; ObjectID = "2LK-2l-LtR"; */
+"2LK-2l-LtR.text" = "商品名稱";
+
+/* Class = "UIButton"; normalTitle = "掃描"; ObjectID = "7ae-u9-kHx"; */
+"7ae-u9-kHx.normalTitle" = "掃描";
+
+/* Class = "UITabBarItem"; title = "掃描"; ObjectID = "C4W-79-fKl"; */
+"C4W-79-fKl.title" = "掃描";
+
+/* Class = "UIButton"; normalTitle = "瀏覽紀錄"; ObjectID = "D7X-Lk-3zI"; */
+"D7X-Lk-3zI.normalTitle" = "瀏覽紀錄";
+
+/* Class = "UILabel"; text = "商品名稱"; ObjectID = "GG8-Yd-Eub"; */
+"GG8-Yd-Eub.text" = "商品名稱";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "PXt-hV-V1i"; */
+"PXt-hV-V1i.text" = "0";
+
+/* Class = "UINavigationItem"; title = "BarCode"; ObjectID = "Pz6-6D-ZSW"; */
+"Pz6-6D-ZSW.title" = "BarCode";
+
+/* Class = "UILabel"; text = "容量"; ObjectID = "SbN-9t-lrR"; */
+"SbN-9t-lrR.text" = "容量";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "hYz-ba-QZ6"; */
+"hYz-ba-QZ6.text" = "0";
+
+/* Class = "UIButton"; normalTitle = "商品資訊"; ObjectID = "haT-CU-UBj"; */
+"haT-CU-UBj.normalTitle" = "商品資訊";
+
+/* Class = "UILabel"; text = "容量"; ObjectID = "kjY-sr-n3l"; */
+"kjY-sr-n3l.text" = "容量";
+
+/* Class = "UIButton"; normalTitle = "商品地圖"; ObjectID = "kqQ-Ou-4I8"; */
+"kqQ-Ou-4I8.normalTitle" = "商品地圖";
+
+/* Class = "UIButton"; normalTitle = "我的最愛"; ObjectID = "r1P-s4-alS"; */
+"r1P-s4-alS.normalTitle" = "我的最愛";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "tNK-1U-npN"; */
+"tNK-1U-npN.text" = "0";
+
+/* Class = "UINavigationItem"; title = "瀏覽紀錄"; ObjectID = "tPm-h9-ee9"; */
+"tPm-h9-ee9.title" = "瀏覽紀錄";
+
+/* Class = "UIButton"; normalTitle = "Light"; ObjectID = "tdZ-xN-DNh"; */
+"tdZ-xN-DNh.normalTitle" = "Light";
