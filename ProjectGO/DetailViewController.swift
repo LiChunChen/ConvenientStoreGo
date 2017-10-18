@@ -75,9 +75,6 @@ class DetailViewController: UIViewController {
         // Create and add the view to the screen.
         let progressHUD = ProgressHUD(text: "Loading")
         self.view.addSubview(progressHUD)
-        // All done!
-        
-        self.view.backgroundColor = UIColor.black
         
         urlManager.askForRequest(parameters: barcodes!, urlString: requestURL) { (success, error, results) in
             guard success == true else {

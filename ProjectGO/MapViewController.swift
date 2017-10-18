@@ -49,32 +49,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
     }
 
-    /*
-    func AddressToCoordinate(address:String, completion: @escaping(CLLocationCoordinate2D) ->()){
-        let geocoder = CLGeocoder()
-        var result:CLLocationCoordinate2D!
-        geocoder.geocodeAddressString(address) { (placemarks, error) in
-        
-            guard error == nil else{
-                print("geocoder:\(String(describing: error))")
-                return
-            }
-            guard let placemarks = placemarks , placemarks.count > 0 else {
-                print("placemarks is nil")
-                return
-            }
-            guard let targetPlacemark = placemarks.first else{
-                print("Invalid first placemark.")
-                return
-            }            
-            guard let coordinate = targetPlacemark.location?.coordinate else{
-                print("Invalid coordinate")
-                return
-            }
-            result = coordinate
-            completion(result)
-        }
-    }*/
+
     
     // MARK: - Get current location coordinate
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -101,13 +76,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             }
             
         }
-        
-        DispatchQueue.once(token: "MoveAndZoomMap"){
             let span = MKCoordinateSpanMake(0.001,0.001)
             let region = MKCoordinateRegion(center: coordinate, span: span)
             mapView.setRegion(region, animated: true)
-           
-          }
+        
+            self.mapView.showsUserLocation = true
+            manager.stopUpdatingLocation()
         }
     
     // MARK: - convert coordinate to address
@@ -164,24 +138,44 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     // MARK: - add shop to annotation
     func addShopAnnotation(list:Array<Shop>){
         for shop in list{
-            let annotation = MKPointAnnotation()
-            if shop.coordinate != nil {
-                var shopCoordinate = shop.coordinate!
-                if let latNum = shopCoordinate["lat"] as? Double, let lngNum = shopCoordinate["lng"] as? Double {
-                    let coordinate = CLLocationCoordinate2D(latitude: latNum, longitude: lngNum)
-                    annotation.coordinate = coordinate
-                    annotation.title = shop.title
-                    annotation.subtitle = shop.address
-                }
-                 self.mapView.addAnnotation(annotation)
-                
+            if shop.category == "7-11"{
+                categoryAddAnnotaiton(shop: shop, image: "pointGreen")
+            }
+            else if shop.category == "FamilyMart"{
+                categoryAddAnnotaiton(shop: shop, image: "pointBlue")
+            }
+            else if shop.category == "Hi-Life"{
+                categoryAddAnnotaiton(shop: shop, image: "pointRed")
+            }
+            else if shop.category == "OK"{
+                categoryAddAnnotaiton(shop: shop, image: "pointOk")
             }
             else{
-                print("Do nothing")
+                print("do nothing")
             }
         }
         
     }
+    
+    func categoryAddAnnotaiton(shop:Shop, image:String){
+        let annotation = CustomPointAnnotation()
+        if shop.coordinate != nil {
+            var shopCoordinate = shop.coordinate!
+            if let latNum = shopCoordinate["lat"] as? Double, let lngNum = shopCoordinate["lng"] as? Double {
+                let coordinate = CLLocationCoordinate2D(latitude: latNum, longitude: lngNum)
+                annotation.coordinate = coordinate
+                annotation.title = shop.title
+                annotation.subtitle = shop.address
+                annotation.imageName = image
+            }
+            self.mapView.addAnnotation(annotation)
+        }
+        else{
+            print("do nothing")
+        }
+        
+    }
+
     
     
     // MARK: - put annotation on map
@@ -198,7 +192,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             result?.annotation = annotation
         }
         result?.canShowCallout = true
-        let image = UIImage(named: "pointRed")
+        let cpa = annotation as! CustomPointAnnotation
+        let image = UIImage(named:cpa.imageName)
         result?.image = image
         
         //Prepare LeftCalloutAccessoryView
@@ -208,7 +203,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         return result
     }
     
-
+ 
+    @IBAction func showMyLocation(_ sender: Any){
+        locationManager.startUpdatingLocation()
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

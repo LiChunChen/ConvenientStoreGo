@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import CoreLocation
+import MapKit
 
 struct Shop{
     var title: String?
@@ -17,3 +17,6 @@ struct Shop{
 
 }
 
+class CustomPointAnnotation: MKPointAnnotation {
+    var imageName: String!
+}
