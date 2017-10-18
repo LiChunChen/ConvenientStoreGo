@@ -16,7 +16,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var isFirstLocationReceived = false
     var shopList = [Shop]()
     var address = ""
+    var myCurrentLocation = CLLocationCoordinate2D()
     
+    
+    @IBOutlet weak var shopSelectSeg: UISegmentedControl!
     @IBOutlet weak var mapView: MKMapView!
     
     // MARK: - check if network works
@@ -32,6 +35,86 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
 
     }
     
+    @IBAction func selectShop(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex{
+        case 0:
+            mapView.removeAnnotations(mapView.annotations)
+            locationManager.startUpdatingLocation()
+            getAddressFromCoordinate(pdblLatitude: String(myCurrentLocation.latitude), withLongitude: String(myCurrentLocation.longitude)) { (address) in
+                self.address = address
+                loadData(url:getURL(city: address), completion: { (shopList) in
+                    self.addShopAnnotation(list: shopList)
+                })
+                
+            }
+            print("show all annotation")
+        case 1:
+            mapView.removeAnnotations(mapView.annotations)
+            getAddressFromCoordinate(pdblLatitude: String(myCurrentLocation.latitude), withLongitude: String(myCurrentLocation.longitude), completion: { (address) in
+                self.address = address
+                loadData(url:getURL(city: address), completion: { (shopList) in
+                    for shop in shopList{
+                        if shop.category == "7-11"{
+                            self.categoryAddAnnotaiton(shop: shop, imageName: "pointGreen")
+                        }
+                    }
+                })
+                
+            })
+            print("show 7-11")
+        case 2:
+            mapView.removeAnnotations(mapView.annotations)
+            getAddressFromCoordinate(pdblLatitude: String(myCurrentLocation.latitude), withLongitude: String(myCurrentLocation.longitude), completion: { (address) in
+                self.address = address
+                loadData(url:getURL(city: address), completion: { (shopList) in
+                    for shop in shopList{
+                        if shop.category == "FamilyMart"{
+                            self.categoryAddAnnotaiton(shop: shop, imageName: "pointBlue")
+                        }
+                    }
+                })
+                
+            })
+            print("show FamilyMart")
+        case 3:
+            mapView.removeAnnotations(mapView.annotations)
+            getAddressFromCoordinate(pdblLatitude: String(myCurrentLocation.latitude), withLongitude: String(myCurrentLocation.longitude), completion: { (address) in
+                self.address = address
+                loadData(url:getURL(city: address), completion: { (shopList) in
+                    for shop in shopList{
+                        if shop.category == "Hi-Life"{
+                            self.categoryAddAnnotaiton(shop: shop, imageName: "pointRed")
+                        }
+                    }
+                })
+                
+            })
+            print("show Hi-Life")
+        case 4:
+            mapView.removeAnnotations(mapView.annotations)
+            getAddressFromCoordinate(pdblLatitude: String(myCurrentLocation.latitude), withLongitude: String(myCurrentLocation.longitude), completion: { (address) in
+                self.address = address
+                loadData(url:getURL(city: address), completion: { (shopList) in
+                    for shop in shopList{
+                        if shop.category == "OK"{
+                            self.categoryAddAnnotaiton(shop: shop, imageName: "pointOk")
+                        }
+                    }
+                })
+                
+            })
+            print("show OK")
+        default:
+            mapView.removeAnnotations(mapView.annotations)
+            getAddressFromCoordinate(pdblLatitude: String(myCurrentLocation.latitude), withLongitude: String(myCurrentLocation.longitude)) { (address) in
+                self.address = address
+                loadData(url:getURL(city: address), completion: { (shopList) in
+                    self.addShopAnnotation(list: shopList)
+                })
+            }
+            print("show all annotation")
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -63,7 +146,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             print(currentLocation)
         }
         NSLog("Lat:\(coordinate.latitude),Lon:\(coordinate.longitude)")
-
+        let lat = coordinate.latitude
+        let lng = coordinate.longitude
+        myCurrentLocation = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+        
         //download your-city-location-data
         DispatchQueue.once(token: "LocateYourCity"){
             
@@ -139,16 +225,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     func addShopAnnotation(list:Array<Shop>){
         for shop in list{
             if shop.category == "7-11"{
-                categoryAddAnnotaiton(shop: shop, image: "pointGreen")
+                categoryAddAnnotaiton(shop: shop, imageName: "pointGreen")
             }
             else if shop.category == "FamilyMart"{
-                categoryAddAnnotaiton(shop: shop, image: "pointBlue")
+                categoryAddAnnotaiton(shop: shop, imageName: "pointBlue")
             }
             else if shop.category == "Hi-Life"{
-                categoryAddAnnotaiton(shop: shop, image: "pointRed")
+                categoryAddAnnotaiton(shop: shop, imageName: "pointRed")
             }
             else if shop.category == "OK"{
-                categoryAddAnnotaiton(shop: shop, image: "pointOk")
+                categoryAddAnnotaiton(shop: shop, imageName: "pointOk")
             }
             else{
                 print("do nothing")
@@ -157,7 +243,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
     }
     
-    func categoryAddAnnotaiton(shop:Shop, image:String){
+    func categoryAddAnnotaiton(shop:Shop, imageName:String){
         let annotation = CustomPointAnnotation()
         if shop.coordinate != nil {
             var shopCoordinate = shop.coordinate!
@@ -166,7 +252,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 annotation.coordinate = coordinate
                 annotation.title = shop.title
                 annotation.subtitle = shop.address
-                annotation.imageName = image
+                annotation.imageName = imageName
             }
             self.mapView.addAnnotation(annotation)
         }
