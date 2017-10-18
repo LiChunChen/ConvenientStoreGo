@@ -17,10 +17,11 @@ class HistoryRecordTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // Create and add the view to the screen.
+        let progressHUD = ProgressHUD(text: "Loading")
+        self.view.addSubview(progressHUD)
+        // All done!
+        
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         let alert = UIAlertController(title: "0筆記錄", message: "您目前還沒有瀏覽過任何商品", preferredStyle: .alert)
@@ -42,6 +43,7 @@ class HistoryRecordTVC: UITableViewController {
                 print("Get results fail.")
                 return
             }
+            progressHUD.isHidden = true
             self.informations = results
             self.tableView.reloadData()
         }
@@ -80,11 +82,9 @@ class HistoryRecordTVC: UITableViewController {
         }
         cell.itemName.text = informations[row].name
         cell.itemDetail.text = informations[row].ml
-        cell.itemHeart.image = UIImage(named: "liked00")
         if let heart = informations[row].favorite {
             cell.heartNum.text = String(describing: heart)
         }
-        cell.itemStars.image = UIImage(named: "")
         if let star = informations[row].stars {
             cell.starsNum.text = String(describing: star)
         }

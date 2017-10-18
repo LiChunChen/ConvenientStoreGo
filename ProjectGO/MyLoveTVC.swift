@@ -17,6 +17,13 @@ class MyLoveTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Create and add the view to the screen.
+        let progressHUD = ProgressHUD(text: "Loading")
+        self.view.addSubview(progressHUD)
+        // All done!
+        
+        self.title = "我的收藏"
+        
         let alert = UIAlertController(title: "零筆收藏", message: "您目前沒有將任何商品加入收藏內", preferredStyle: .alert)
         let ok = UIAlertAction(title: "知道了", style: .default, handler: nil)
         alert.addAction(ok)
@@ -39,6 +46,7 @@ class MyLoveTVC: UITableViewController {
                 print("Get results fail.")
                 return
             }
+            progressHUD.isHidden = true
             self.informations = results
             self.tableView.reloadData()
         }
@@ -79,11 +87,9 @@ class MyLoveTVC: UITableViewController {
         }
         cell.itemName.text = informations[row].name
         cell.itemDetail.text = informations[row].ml
-        cell.itemHeart.image = UIImage(named: "liked00")
         if let heart = informations[row].favorite {
             cell.heartNum.text = String(describing: heart)
         }
-        cell.itemStars.image = UIImage(named: "")
         if let star = informations[row].stars {
             cell.starsNum.text = String(describing: star)
         }

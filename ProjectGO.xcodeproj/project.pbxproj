@@ -22,6 +22,7 @@
 		023FD87B1F736AF10097EF70 /* HistoryRecordTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD8791F736AF10097EF70 /* HistoryRecordTVC.swift */; };
 		023FD87D1F736AF60097EF70 /* MyLoveTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023FD87C1F736AF60097EF70 /* MyLoveTVC.swift */; };
 		023FD8851F736B390097EF70 /* BarCodeFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = 023FD8811F736B390097EF70 /* BarCodeFrame.png */; };
+		027FC81D1F970F6B00DB5E6E /* loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027FC81C1F970F6A00DB5E6E /* loading.swift */; };
 		565C68721F923A5A0040DA95 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565C686C1F923A580040DA95 /* MapViewController.swift */; };
 		565C68731F923A5A0040DA95 /* loadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565C686D1F923A580040DA95 /* loadData.swift */; };
 		565C68741F923A5A0040DA95 /* shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565C686E1F923A580040DA95 /* shop.swift */; };
@@ -69,6 +70,7 @@
 		023FD8791F736AF10097EF70 /* HistoryRecordTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryRecordTVC.swift; sourceTree = "<group>"; };
 		023FD87C1F736AF60097EF70 /* MyLoveTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLoveTVC.swift; sourceTree = "<group>"; };
 		023FD8811F736B390097EF70 /* BarCodeFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BarCodeFrame.png; sourceTree = "<group>"; };
+		027FC81C1F970F6A00DB5E6E /* loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loading.swift; sourceTree = "<group>"; };
 		161F20937880477E0FC7E34E /* Pods-ProjectGO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectGO.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectGO/Pods-ProjectGO.release.xcconfig"; sourceTree = "<group>"; };
 		2031CB7178061594B6C52B8A /* Pods-ProjectGO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectGO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectGO/Pods-ProjectGO.debug.xcconfig"; sourceTree = "<group>"; };
 		565C686C1F923A580040DA95 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				56D1B4CE1F653D5600F1727A /* ViewController.swift */,
 				56D1B4D01F653D5600F1727A /* Main.storyboard */,
 				56D1B4DE1F653E7700F1727A /* DetailViewController.swift */,
+				027FC81C1F970F6A00DB5E6E /* loading.swift */,
 				56D1B4E81F6564CB00F1727A /* CommentsTableViewCell.swift */,
 				56D1B4E41F6555DF00F1727A /* commentsTVC.swift */,
 				56D1B4E21F65486400F1727A /* descriptionVC.swift */,
@@ -269,7 +272,7 @@
 				TargetAttributes = {
 					56D1B4C81F653D5600F1727A = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 7UK8PZR57E;
+						DevelopmentTeam = 4HWCBSMFJU;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -379,6 +382,7 @@
 				023FD87D1F736AF60097EF70 /* MyLoveTVC.swift in Sources */,
 				AE31CCCC1F94AC0A002F9E19 /* Page9TableViewController.swift in Sources */,
 				023FD86B1F7361260097EF70 /* StartViewController.swift in Sources */,
+				027FC81D1F970F6B00DB5E6E /* loading.swift in Sources */,
 				023FD8771F736AE00097EF70 /* BarCodeViewController.swift in Sources */,
 				022A402D1F9345B400237D5C /* URLManager.swift in Sources */,
 				5692F0511F920A7E00DE2AB3 /* UserInput.swift in Sources */,
@@ -563,11 +567,11 @@
 			baseConfigurationReference = 2031CB7178061594B6C52B8A /* Pods-ProjectGO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7UK8PZR57E;
+				DEVELOPMENT_TEAM = 4HWCBSMFJU;
 				INFOPLIST_FILE = ProjectGO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.satty.map;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jenny.HelloMyBarCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -579,11 +583,11 @@
 			baseConfigurationReference = 161F20937880477E0FC7E34E /* Pods-ProjectGO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7UK8PZR57E;
+				DEVELOPMENT_TEAM = 4HWCBSMFJU;
 				INFOPLIST_FILE = ProjectGO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.satty.map;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jenny.HelloMyBarCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;

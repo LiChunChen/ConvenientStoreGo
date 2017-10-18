@@ -27,4 +27,7 @@ extension DispatchQueue{
             job()
             objc_sync_exit(self)  //用了defer 就不用
     }
+    public class func clear(){
+        _onceTokens = [String]()
+    }
 }

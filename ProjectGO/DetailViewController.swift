@@ -72,9 +72,13 @@ class DetailViewController: UIViewController {
         
         detailSegmentControl.addTarget(self, action: #selector(onControl(sender:)), for: .valueChanged)
         
-//        guard let barcodes = barcodes else {
-//            return
-//        }
+        // Create and add the view to the screen.
+        let progressHUD = ProgressHUD(text: "Loading")
+        self.view.addSubview(progressHUD)
+        // All done!
+        
+        self.view.backgroundColor = UIColor.black
+        
         urlManager.askForRequest(parameters: barcodes!, urlString: requestURL) { (success, error, results) in
             guard success == true else {
                 print("askForRequest fail.")
@@ -89,6 +93,7 @@ class DetailViewController: UIViewController {
                 self.detailImage.image = UIImage(data:data! as Data)
             }
             self.itemName.text = results[0].name!
+            progressHUD.isHidden = true
             self.information = results
             self.descriptionVC.information = results
             if self.favorites.myLoveList.count != 0 {

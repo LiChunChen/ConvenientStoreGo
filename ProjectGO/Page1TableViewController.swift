@@ -22,12 +22,11 @@ class Page1TableViewController: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.refreshControl?.addTarget(self, action: #selector(loadData), for: UIControlEvents.valueChanged)
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
         
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        // Create and add the view to the screen.
+        let progressHUD = ProgressHUD(text: "Loading")
+        self.view.addSubview(progressHUD)
+        // All done!
         
         urlManager.askForRequest(parameters: ["牛奶"], urlString: categoryURL) { (success, error, results) in
             guard success == true else {
@@ -38,6 +37,7 @@ class Page1TableViewController: UITableViewController {
                 print("Get results fail.")
                 return
             }
+            progressHUD.isHidden = true
             self.informations = results
             self.tableView.reloadData()
         }
@@ -75,8 +75,12 @@ class Page1TableViewController: UITableViewController {
         }
         cell.itemName.text = informations![row].name
         cell.itemDetail.text = informations![row].ml
-        cell.heartNum.text = String(describing: informations![row].favorite)
-        cell.starsNum.text = String(describing: informations![row].stars)
+        if let heart = informations![row].favorite {
+            cell.heartNum.text = String(describing: heart)
+        }
+        if let star = informations![row].stars {
+            cell.starsNum.text = String(describing: star)
+        }
         
         return cell
     }

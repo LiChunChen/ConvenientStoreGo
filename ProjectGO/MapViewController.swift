@@ -16,7 +16,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var isFirstLocationReceived = false
     var shopList = [Shop]()
     var address = ""
-    var coordinateArray = [CLLocationCoordinate2D]()
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -45,12 +44,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         locationManager.startUpdatingLocation()
         self.title = "離我最近的超商"
         checkNetworkConnection()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            /*guard self.coordinateArray.count > 1 else{
-                return
-            }*/
-            self.startDownloading()
-        })
+
        
         
     }
@@ -94,9 +88,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             print(currentLocation)
         }
         NSLog("Lat:\(coordinate.latitude),Lon:\(coordinate.longitude)")
-        coordinateArray.append(coordinate)
 
         //download your-city-location-data
+        DispatchQueue.once(token: "LocateYourCity"){
+            
+            getAddressFromCoordinate(pdblLatitude: String(coordinate.latitude), withLongitude: String(coordinate.longitude)) { (address) in
+                self.address = address
+                loadData(url:getURL(city: address), completion: { (shopList) in
+                    self.addShopAnnotation(list: shopList)
+                })
+                
+            }
+            
+        }
         
         DispatchQueue.once(token: "MoveAndZoomMap"){
             let span = MKCoordinateSpanMake(0.001,0.001)
@@ -150,19 +154,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
     }
     
-    
-    func startDownloading(){
-        let mycoordinate = coordinateArray[0]
-        getAddressFromCoordinate(pdblLatitude: String(mycoordinate.latitude), withLongitude: String(mycoordinate.longitude)) { (address) in
-            self.address = address
-            loadData(url:getURL(city: address), completion: { (shopList) in
-                self.addShopAnnotation(list: shopList)
-            })
-            
-        }
-        
-        
+    override func viewWillDisappear(_ animated: Bool) {
+        DispatchQueue.clear()
     }
+    
+
     
     
     // MARK: - add shop to annotation

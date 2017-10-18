@@ -199,11 +199,11 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             print("error")
         }
         if isLightOn {
-            
+            lightBtn.setImage(UIImage(named:"手電筒"), for: .normal)
             lightDevice?.torchMode = .off
             isLightOn = false
         } else {
-            
+            lightBtn.setImage(UIImage(named:"light-1"), for: .normal)
             lightDevice?.torchMode = .on
             isLightOn = true
         }

@@ -60,7 +60,7 @@ class writingCommentsVC: UIViewController, UITextFieldDelegate{
         let dictionary = ["name":name,"comment":tf.text!,"barcode":barcodes![0]] as [String : Any]
         urlManager.changeToDB(parameter: dictionary, urlString: insertURL)
         
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
 
     /*

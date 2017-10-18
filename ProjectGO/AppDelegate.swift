@@ -16,18 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        window = UIWindow(frame:UIScreen.main.bounds)
-        let sb = UIStoryboard(name:"IntroductionStoryboard",bundle:nil)
-        var inVC = sb.instantiateViewController(withIdentifier: "WalkthroughController")
-        
-        let userDefaults = UserDefaults.standard
-        if userDefaults.bool(forKey: "onOK") {
-            let sb1 = UIStoryboard(name:"BarcodeStoryboard",bundle:nil)
-            inVC = sb1.instantiateViewController(withIdentifier: "BarcodeBar")
-        }
-        
-        window?.rootViewController = inVC
-        window?.makeKeyAndVisible()
+//        window = UIWindow(frame:UIScreen.main.bounds)
+//        let sb = UIStoryboard(name:"IntroductionStoryboard",bundle:nil)
+//        var inVC = sb.instantiateViewController(withIdentifier: "WalkthroughController")
+//        
+//        let userDefaults = UserDefaults.standard
+//        if userDefaults.bool(forKey: "onOK") {
+//            let sb1 = UIStoryboard(name:"BarcodeStoryboard",bundle:nil)
+//            inVC = sb1.instantiateViewController(withIdentifier: "BarcodeBar")
+//        }
+//        
+//        window?.rootViewController = inVC
+//        window?.makeKeyAndVisible()
         return true
     }
 
