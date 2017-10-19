@@ -12,6 +12,7 @@ let requestURL = "https://convenientgo.000webhostapp.com/DBTest.php"
 let categoryURL = "https://convenientgo.000webhostapp.com/Category.php"
 let uploadURL = "https://convenientgo.000webhostapp.com/UpdateFavorite.php"
 let insertURL = "https://convenientgo.000webhostapp.com/Insert.php"
+let downloadComURL = "https://convenientgo.000webhostapp.com/DownloadCom.php"
 
 struct Item {
     var barcode: Int?
@@ -25,12 +26,13 @@ struct Item {
 }
 
 typealias DoneHandler = (Bool,Error?,[Item]?) -> Void
+typealias ComDoneHandler = (Bool,Error?,[userComment]?) -> Void
 
 class URLManager {
     
     let session = URLSession.shared
     // configuration is a get-only property
-
+    
     func askForRequest(parameters: [Any], urlString: String ,doneHandler:@escaping DoneHandler) {
         
         //        let parameters = ["barcodeNumber" : "1"]
@@ -42,7 +44,7 @@ class URLManager {
         request.httpBody = data
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "content-type")
-    
+        
         let task = session.dataTask(with: request) { (data, resopnse, error) in
             if let error = error {
                 NSLog("Download error: \(error)")
@@ -61,13 +63,13 @@ class URLManager {
             }
             
             /// To Test I got the Data or not
-//            let strData = String(data: data, encoding: .utf8)
-//            NSLog("strData: \(strData ?? "Get strData fail.")")
+            //            let strData = String(data: data, encoding: .utf8)
+            //            NSLog("strData: \(strData ?? "Get strData fail.")")
             
-//            DispatchQueue.main.async {
-//                self.jsonResultLabel.text = "strData: \(strData ?? "Get strData fail.")"
-//            }
-        
+            //            DispatchQueue.main.async {
+            //                self.jsonResultLabel.text = "strData: \(strData ?? "Get strData fail.")"
+            //            }
+            
             if let results = (try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)) as? [[String: Any]] {
                 
                 var item = Item()
@@ -82,7 +84,7 @@ class URLManager {
                     item.favorite = j["favorite"] as? Int
                     item.stars = j["stars"] as? Double
                     items.append(item)
-//                        print(items)
+                    //                        print(items)
                 }
                 DispatchQueue.main.async {
                     // Callback funciton
@@ -99,6 +101,7 @@ class URLManager {
         task.resume()
     }
     
+    // 更新資料庫
     func changeToDB(parameter: [String:Any], urlString: String) {
         guard let url = URL(string: urlString) else { return }
         guard let data = try? JSONSerialization.data(withJSONObject: parameter, options: .prettyPrinted) else { return }
@@ -109,4 +112,65 @@ class URLManager {
         let task = session.dataTask(with: request)
         task.resume()
     }
+    
+    
+    // 下載使用者評論
+    func downloadCom(parameters: [Int], doneHandler:@escaping ComDoneHandler) {
+        guard let url = URL(string: downloadComURL) else { return }
+        guard let data = try? JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted) else { return }
+        // JSONSerialization: 可以將 JSON 轉換為 Foundation 物件，或是將 Foundation 物件轉換為 JSON
+        
+        var request = URLRequest(url: url)
+        request.httpBody = data
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "content-type")
+        
+        let task = session.dataTask(with: request) { (data, resopnse, error) in
+            if let error = error {
+                NSLog("Download error: \(error)")
+                DispatchQueue.main.async {
+                    doneHandler(false, error, nil)
+                }
+                return
+            }
+            
+            guard let data = data else {
+                NSLog("Get data fail.")
+                DispatchQueue.main.async {
+                    doneHandler(false, nil, nil)
+                }
+                return
+            }
+            
+            /// To Test I got the Data or not
+            //            let strData = String(data: data, encoding: .utf8)
+            //            NSLog("strData: \(strData ?? "Get strData fail.")")
+            
+            //            DispatchQueue.main.async {
+            //                self.jsonResultLabel.text = "strData: \(strData ?? "Get strData fail.")"
+            //            }
+            
+            if let results = (try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)) as? [[String: Any]] {
+                
+                var comments = [userComment]()
+                for j in results {
+                    let comment = userComment(name: j["name"] as! String, stars: j["stars"] as! Int, comment: j["comment"] as! String)
+                    comments.append(comment)
+                    //                        print(items)
+                }
+                DispatchQueue.main.async {
+                    // Callback funciton
+                    doneHandler(true, nil, comments)
+                }
+            }else {
+                NSLog("Get jsonResult fail.")
+                DispatchQueue.main.async {
+                    doneHandler(false, nil, nil)
+                }
+            }
+        }
+        // task 被創造出來的時候
+        task.resume()
+    }
 }
+

@@ -16,17 +16,23 @@ class writingCommentsVC: UIViewController, UITextFieldDelegate{
     
     let urlManager = URLManager()
     var barcodes: [Int]?
+    var stars = 0.0
+    var totalStars = 0.0
+    var count = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.title = "我的評論"
+        print(totalStars)
+        print(count)
         
         //show star count number on screen
         ratingStarView.didFinishTouchingCosmos = {
             rating in
             self.ratingStarView.text = String(self.ratingStarView.rating)
+            self.stars = self.ratingStarView.rating
         }
         
         tf.delegate = self
@@ -57,8 +63,19 @@ class writingCommentsVC: UIViewController, UITextFieldDelegate{
             name = nameTF.text!
         }
         print(name)
-        let dictionary = ["name":name,"comment":tf.text!,"barcode":barcodes![0]] as [String : Any]
+        let dictionary = ["name":name,"comment":tf.text!,"barcode":barcodes![0],"stars":stars] as [String : Any]
         urlManager.changeToDB(parameter: dictionary, urlString: insertURL)
+        
+        if totalStars == 0.0 {
+            totalStars = stars
+        }else {
+            totalStars = (totalStars + stars)/2
+        }
+        
+        let parameter = ["stars":totalStars,"barcode":barcodes![0],"category":"stars"] as [String : Any]
+        urlManager.changeToDB(parameter: parameter, urlString: uploadURL)
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Update"), object: nil)
         
         self.navigationController?.popViewController(animated: true)
     }

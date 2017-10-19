@@ -15,14 +15,20 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var subMenu: UIView!
     
     @IBOutlet weak var itemName: UILabel!
+    @IBOutlet weak var itemMl: UILabel!
+    @IBOutlet weak var itemHearts: UILabel!
+    @IBOutlet weak var itemStars: UILabel!
+    
     
     var barcodes: [Int]?
     let urlManager = URLManager()
     var information = [Item]()
+    var comments = [userComment]()
     var isfavorite = false
     var favorites = MyLove.sharedInstance()
     var history = History.sharedInstance()
     var number = 0
+    var stars = 0.0
     
  
     @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
@@ -66,7 +72,16 @@ class DetailViewController: UIViewController {
         self.title = "商品"
         myFavBut.isEnabled = false
         writeComBtn.isEnabled = false
+        
+        if let allLove = UserDefaults.standard.object(forKey: "Favorites") {
+            favorites.myLoveList = allLove as! [Int]
+        }
+        if let allHistory = UserDefaults.standard.object(forKey: "Historys") {
+            history.historyList = allHistory as! [Int]
+        }
         history.historyList.append(barcodes![0])
+        UserDefaults.standard.set(history.historyList, forKey: "Historys")
+        UserDefaults.standard.synchronize()
         
         mainView.bringSubview(toFront: subMenu)
         
@@ -90,6 +105,9 @@ class DetailViewController: UIViewController {
                 self.detailImage.image = UIImage(data:data! as Data)
             }
             self.itemName.text = results[0].name!
+            self.itemMl.text = results[0].ml!
+            self.itemHearts.text = String(describing: results[0].favorite!)
+            self.itemStars.text = String(describing: results[0].stars!)
             progressHUD.isHidden = true
             self.information = results
             self.descriptionVC.information = results
@@ -98,7 +116,7 @@ class DetailViewController: UIViewController {
                     if self.favorites.myLoveList[i] == self.barcodes![0] {
                         self.number = i
                         self.isfavorite = true
-                        self.myFavBut.setImage(UIImage(named:"Cancel"), for: UIControlState.normal)
+                        self.myFavBut.setImage(UIImage(named:"CancelEng"), for: UIControlState.normal)
                     }
                 }
             }
@@ -107,7 +125,24 @@ class DetailViewController: UIViewController {
             self.descriptionVC.self.viewDidLoad()
         }
         
+        urlManager.downloadCom(parameters: barcodes!) { (success, error, results) in
+            guard success == true else {
+                print("Comments askForRequest fail.")
+                return
+            }
+            guard let results = results else {
+                print("Get comments fail.")
+                return
+            }
+            self.comments = results
+        }
         
+        NotificationCenter.default.addObserver(self, selector: #selector(reload), name: NSNotification.Name(rawValue: "Update"), object: nil)
+        
+    }
+    
+    @objc func reload() {
+        self.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {
@@ -145,6 +180,7 @@ class DetailViewController: UIViewController {
         }
         else{
         changePage(to: commentsTVC)
+        commentsTVC.comments = comments
         }
     }
     
@@ -157,17 +193,19 @@ class DetailViewController: UIViewController {
         if isfavorite == false {
             information[0].favorite! += 1
             isfavorite = true
-            myFavBut.setImage(UIImage(named:"Cancel"), for: UIControlState.normal)
+            myFavBut.setImage(UIImage(named:"CancelEng"), for: UIControlState.normal)
             favorites.myLoveList.append(barcodes![0])
-            print(favorites.myLoveList)
         }else {
             information[0].favorite! -= 1
             isfavorite = false
-            myFavBut.setImage(UIImage(named:"Enter"), for: UIControlState.normal)
+            myFavBut.setImage(UIImage(named:"EnterEng"), for: UIControlState.normal)
             favorites.myLoveList.remove(at: number)
         }
         
-        let parameter = ["favorite":information[0].favorite!,"barcode":barcodes![0]] as [String : Any]
+        UserDefaults.standard.set(favorites.myLoveList, forKey: "Favorites")
+        UserDefaults.standard.synchronize()
+        
+        let parameter = ["favorite":information[0].favorite!,"barcode":barcodes![0],"category":"hearts"] as [String : Any]
         urlManager.changeToDB(parameter: parameter, urlString: uploadURL)
         
     }

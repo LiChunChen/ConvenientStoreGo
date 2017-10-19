@@ -10,11 +10,15 @@ import UIKit
 
 class commentsTVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var comment = userComment()
+    var comments = [userComment]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if comments.count == 0 {
+            let alert = UIAlertController(title: "沒有評論", message: "目前沒有任何使用者對此商品進行評論", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "知道了", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,8 +27,7 @@ class commentsTVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return 1
-    
+        return comments.count == 0 ? 0:comments.count
     }
     
    
@@ -32,21 +35,14 @@ class commentsTVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
-        //let star = tableView.dequeueReusableCell(withIdentifier: "star", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CommentsTableViewCell
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        return cell
-        
-        /*
-         guard nameTF.text != "" else{
-         comment.name = "Unknown"
-         return
-         }
-         comment.name = nameTF.text
-         comment.description = tf.text
-         comment.starCount = ratingStarView.rating
-         self.dismiss(animated: true, completion: nil) */
+        let row = indexPath.row
+        cell.usernameLabel.text = comments[row].name
+        cell.commentsTextView.text = comments[row].comment
+        cell.showStarView.rating = Double(comments[row].stars)
     
+        return cell
     }
     
 

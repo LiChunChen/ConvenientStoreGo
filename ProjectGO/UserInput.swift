@@ -9,9 +9,9 @@
 import Foundation
 
 struct userComment{
-    var name: String?
-//    var comments: String?
-    var starCount: Double?
-    var description: String?
+    var name: String
+    //    var comments: String?
+    var stars: Int
+    var comment: String
     
 }

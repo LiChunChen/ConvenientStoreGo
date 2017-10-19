@@ -16,23 +16,27 @@ class HistoryRecordTVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        tableView.estimatedRowHeight = 150.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        if let allHistory = UserDefaults.standard.object(forKey: "Historys") {
+            historys.historyList = allHistory as! [Int]
+        }
+        
+        guard historys.historyList.count != 0 else {
+            let alert = UIAlertController(title: "0筆記錄", message: "您目前還沒有瀏覽過任何商品", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "知道了", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        
         // Create and add the view to the screen.
         let progressHUD = ProgressHUD(text: "Loading")
         self.view.addSubview(progressHUD)
         // All done!
-        
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        let alert = UIAlertController(title: "0筆記錄", message: "您目前還沒有瀏覽過任何商品", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "知道了", style: .default, handler: nil))
-        
-        tableView.estimatedRowHeight = 150.0
-        tableView.rowHeight = UITableViewAutomaticDimension
-        guard historys.historyList.count != 0 else {
-            present(alert, animated: true, completion: nil)
-            return
-        }
         
         urlManager.askForRequest(parameters: historys.historyList, urlString: requestURL) { (success, error, results) in
             guard success == true else {

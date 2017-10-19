@@ -9,10 +9,11 @@
 import UIKit
 import AVFoundation
 
-class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, UITabBarControllerDelegate {
     @IBOutlet weak var sideView: UIView!
     @IBOutlet weak var rightLC: NSLayoutConstraint!
     var menuShowing = true
+    var urlManager = URLManager()
     
     @IBOutlet weak var barcodeFrame: UIImageView!
     @IBOutlet weak var lightBtn: UIButton!
@@ -36,16 +37,18 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         // info: privace of camera's string
         // This app requires camera access to function properly
         // 此應用程序需要相機訪問才能正常工作
-    
+        
         self.navigationItem.leftBarButtonItem=nil
         self.navigationItem.hidesBackButton=true
         
         fromCamera()
         view.bringSubview(toFront: sideView)
-        
         view.bringSubview(toFront: lightBtn)
+        
+        self.tabBarController?.delegate = self
+        
     }
- 
+    
     
     //透過相機來掃條碼
     func fromCamera() {
@@ -116,7 +119,7 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             NSLog("Not valid metadata object.")
             return
         }
-     
+        
         guard let barcodeString = metadata.stringValue else {
             print("Transform To String Fail!")
             return
@@ -124,14 +127,28 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
         session.stopRunning()
         isRunning = false
+        let barcode = Int(barcodeString)
         
-        let storyboard = UIStoryboard(name:"Main",bundle:nil)
-        if let viewcontroller = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
-            let barcode = Int(barcodeString)
-            viewcontroller.barcodes = [barcode!]
-           self.navigationController?.pushViewController(viewcontroller, animated: true)
+        urlManager.askForRequest(parameters: [barcode!], urlString: requestURL) { (success, error, results) in
+            
+            guard success == true else {
+                print("askForRequest fail.")
+                let alert = UIAlertController(title: "無此商品", message: "查不到此商品的詳細資訊！", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "返回", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                self.session.startRunning()
+                self.isRunning = true
+                return
+            }
+            
+            let storyboard = UIStoryboard(name:"Main",bundle:nil)
+            if let viewcontroller = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+                viewcontroller.barcodes = [barcode!]
+                self.navigationController?.pushViewController(viewcontroller, animated: true)
+            }
         }
     }
+    
     @IBAction func openMenu(_ sender: Any) {
         if (menuShowing) {
             rightLC.constant = 0
@@ -145,55 +162,50 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             })
         }
         menuShowing = !menuShowing
-
+        
     }
     @IBAction func openLove(_ sender: Any) {
         let push2 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
         let loveVC = push2.instantiateViewController(withIdentifier: "MyLoveTVC")
-        rightLC.constant = -140
         self.navigationController?.pushViewController(loveVC, animated: true)
     }
     @IBAction func openMap(_ sender: Any) {
         let push = UIStoryboard.init(name: "Map", bundle: nil)
         let mapVC = push.instantiateViewController(withIdentifier: "MapViewController")
-        rightLC.constant = -140
         self.navigationController?.pushViewController(mapVC, animated: true)
     }
     @IBAction func openScan(_ sender: Any) {
         let push1 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
         let barcodeVC = push1.instantiateViewController(withIdentifier: "BarCodeViewController")
-        rightLC.constant = -140
         self.navigationController?.pushViewController(barcodeVC, animated: true)
         
     }
     @IBAction func openRecord(_ sender: Any) {
         let modal2 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
         let recordVC = modal2.instantiateViewController(withIdentifier: "HistoryRecordTVC")
-        rightLC.constant = -140
         self.navigationController?.pushViewController(recordVC, animated: true)
-
+        
     }
     @IBAction func openDrink(_ sender: Any) {
         let modal3 = UIStoryboard.init(name: "IntroductionStoryboard", bundle: nil)
         let drinkVC = modal3.instantiateViewController(withIdentifier: "ItemsViewController")
-        rightLC.constant = -140
         self.navigationController?.pushViewController(drinkVC, animated: true)
         
     }
- 
-    //    func captureOutput(_ captureOutput: AVCaptureOutput!,
-//                       didOutputMetadataObjects metadataObjects: [Any]!,
-//                       from connection: AVCaptureConnection!) {
-//
-//        guard let barcodeData = metadataObjects.first as? AVMetadataMachineReadableCodeObject else {
-//            print("Can not get metadataObjects.")
-//            return
-//        }
-//
-//
-//    }
     
-  
+    //    func captureOutput(_ captureOutput: AVCaptureOutput!,
+    //                       didOutputMetadataObjects metadataObjects: [Any]!,
+    //                       from connection: AVCaptureConnection!) {
+    //
+    //        guard let barcodeData = metadataObjects.first as? AVMetadataMachineReadableCodeObject else {
+    //            print("Can not get metadataObjects.")
+    //            return
+    //        }
+    //
+    //
+    //    }
+    
+    
     
     @IBAction func lightBtn(_ sender: Any) {
         
@@ -233,6 +245,11 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         }
         lightDevice?.unlockForConfiguration()
     }
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        self.fromCamera()
+    }
+    
 }
 
 

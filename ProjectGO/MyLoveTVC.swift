@@ -17,25 +17,31 @@ class MyLoveTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "我的收藏"
+        
+        tableView.estimatedRowHeight = 150.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        guard favorites.myLoveList.count != 0 else {
+            return
+        }
+        
+        if let allLove = UserDefaults.standard.object(forKey: "Favorites") {
+            favorites.myLoveList = allLove as! [Int]
+        }
+        
+        guard favorites.myLoveList.count != 0 else {
+            let alert = UIAlertController(title: "零筆收藏", message: "您目前沒有將任何商品加入收藏內", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "知道了", style: .default, handler: nil)
+            alert.addAction(ok)
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        
         // Create and add the view to the screen.
         let progressHUD = ProgressHUD(text: "Loading")
         self.view.addSubview(progressHUD)
         // All done!
-        
-        self.title = "我的收藏"
-        
-        let alert = UIAlertController(title: "零筆收藏", message: "您目前沒有將任何商品加入收藏內", preferredStyle: .alert)
-        let ok = UIAlertAction(title: "知道了", style: .default, handler: nil)
-        alert.addAction(ok)
-        if favorites.myLoveList.isEmpty == true {
-            present(alert, animated: true, completion: nil)
-        }
-        
-        tableView.estimatedRowHeight = 150.0
-        tableView.rowHeight = UITableViewAutomaticDimension
-        guard favorites.myLoveList.count != 0 else {
-            return
-        }
         
         urlManager.askForRequest(parameters: favorites.myLoveList, urlString: requestURL) { (success, error, results) in
             guard success == true else {
@@ -62,7 +68,11 @@ class MyLoveTVC: UITableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 1
+        if favorites.myLoveList.count == 0 {
+            return 0
+        }else {
+            return favorites.myLoveList.count
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -96,6 +106,14 @@ class MyLoveTVC: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name:"Main",bundle:nil)
+        if let viewcontroller = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+            viewcontroller.barcodes = [informations[indexPath.row].barcode!]
+            self.navigationController?.pushViewController(viewcontroller, animated: true)
+        }
+    }
     
     /*
      // Override to support conditional editing of the table view.
@@ -105,17 +123,19 @@ class MyLoveTVC: UITableViewController {
      }
      */
     
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
+    
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            favorites.myLoveList.remove(at: indexPath.row)
+            informations.remove(at: indexPath.row)
+            UserDefaults.standard.set(favorites.myLoveList, forKey: "Favorites")
+            UserDefaults.standard.synchronize()
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
     
     /*
      // Override to support rearranging the table view.

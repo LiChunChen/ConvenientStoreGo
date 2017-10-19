@@ -165,14 +165,14 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTG-vF-6L7">
                                                 <rect key="frame" x="0.0" y="0.0" width="187.5" height="25"/>
-                                                <state key="normal" image="Enter"/>
+                                                <state key="normal" image="EnterEng"/>
                                                 <connections>
                                                     <action selector="addToMyFav:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jJm-ew-Cu7"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCP-z3-h2w">
                                                 <rect key="frame" x="187.5" y="0.0" width="187.5" height="25"/>
-                                                <state key="normal" image="Write"/>
+                                                <state key="normal" image="WriteEng"/>
                                                 <connections>
                                                     <action selector="writingComment:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZeQ-aF-Sjy"/>
                                                 </connections>
@@ -224,7 +224,10 @@
                         <outlet property="detailImage" destination="RMb-5G-ZyW" id="zB4-uY-mgy"/>
                         <outlet property="detailSegmentControl" destination="knh-eA-cqH" id="4vA-iA-3Qh"/>
                         <outlet property="ingredientTextView" destination="7Uz-Cf-88L" id="5HO-l3-cNQ"/>
+                        <outlet property="itemHearts" destination="05w-y1-F38" id="RS1-Dp-grs"/>
+                        <outlet property="itemMl" destination="f8K-TK-PeR" id="xJy-Aa-SUD"/>
                         <outlet property="itemName" destination="AYv-jG-E8S" id="uZl-UQ-CF7"/>
+                        <outlet property="itemStars" destination="4GJ-uM-Oda" id="7he-8u-bPX"/>
                         <outlet property="mainView" destination="8bC-Xf-vdC" id="YfY-5f-ynS"/>
                         <outlet property="myFavBut" destination="MTG-vF-6L7" id="Eqt-EZ-ozw"/>
                         <outlet property="subMenu" destination="DM4-m1-wzT" id="SSw-JO-nla"/>
@@ -487,8 +490,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Enter" width="98" height="25"/>
-        <image name="Write" width="98" height="25"/>
+        <image name="EnterEng" width="98" height="25"/>
+        <image name="WriteEng" width="98" height="25"/>
         <image name="liked00" width="35" height="29"/>
         <image name="star" width="30" height="28"/>
         <image name="功能選單" width="34" height="24"/>
