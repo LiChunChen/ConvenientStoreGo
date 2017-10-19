@@ -52,6 +52,7 @@
 		AE31CCCC1F94AC0A002F9E19 /* Page9TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE31CCC41F94AC0A002F9E19 /* Page9TableViewController.swift */; };
 		AE31CCCD1F94AC0A002F9E19 /* Page7TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE31CCC51F94AC0A002F9E19 /* Page7TableViewController.swift */; };
 		AE31CCCE1F94AC0A002F9E19 /* Page2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE31CCC61F94AC0A002F9E19 /* Page2TableViewController.swift */; };
+		AE4E995F1F991619009A89A6 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE4E995E1F991618009A89A6 /* Property List.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +108,7 @@
 		AE31CCC41F94AC0A002F9E19 /* Page9TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page9TableViewController.swift; sourceTree = "<group>"; };
 		AE31CCC51F94AC0A002F9E19 /* Page7TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page7TableViewController.swift; sourceTree = "<group>"; };
 		AE31CCC61F94AC0A002F9E19 /* Page2TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2TableViewController.swift; sourceTree = "<group>"; };
+		AE4E995E1F991618009A89A6 /* Property List.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
 		B4E4996880052A8F3EC04A22 /* Pods_ProjectGO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectGO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -173,6 +175,7 @@
 				027FC81C1F970F6A00DB5E6E /* loading.swift */,
 				56D1B4E81F6564CB00F1727A /* CommentsTableViewCell.swift */,
 				56D1B4E41F6555DF00F1727A /* commentsTVC.swift */,
+				AE4E995E1F991618009A89A6 /* Property List.plist */,
 				56D1B4E21F65486400F1727A /* descriptionVC.swift */,
 				56E65FC21F6575DB00E99C62 /* writingComments */,
 				AE2383821F9631C9003C0CA6 /* IntroductionStoryboard.storyboard */,
@@ -268,7 +271,7 @@
 				TargetAttributes = {
 					56D1B4C81F653D5600F1727A = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 4HWCBSMFJU;
+						DevelopmentTeam = J5VAWCKFVV;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -298,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE4E995F1F991619009A89A6 /* Property List.plist in Resources */,
 				565C68781F9240630040DA95 /* Map.storyboard in Resources */,
 				022A40301F93538300237D5C /* 圖片無法顯示.png in Resources */,
 				023FD8851F736B390097EF70 /* BarCodeFrame.png in Resources */,
@@ -559,11 +563,11 @@
 			baseConfigurationReference = 2031CB7178061594B6C52B8A /* Pods-ProjectGO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4HWCBSMFJU;
+				DEVELOPMENT_TEAM = J5VAWCKFVV;
 				INFOPLIST_FILE = ProjectGO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Jenny.HelloMyBarCode;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myname.delegate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -575,11 +579,11 @@
 			baseConfigurationReference = 161F20937880477E0FC7E34E /* Pods-ProjectGO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4HWCBSMFJU;
+				DEVELOPMENT_TEAM = J5VAWCKFVV;
 				INFOPLIST_FILE = ProjectGO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Jenny.HelloMyBarCode;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myname.delegate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;

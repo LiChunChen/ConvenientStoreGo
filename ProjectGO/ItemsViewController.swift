@@ -161,7 +161,7 @@ class ItemsViewController: UIViewController{
         
         let push1 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
         let barcodeVC = push1.instantiateViewController(withIdentifier: "BarCodeViewController")
-        
+        trailingConstraint.constant = -140
         self.navigationController?.pushViewController(barcodeVC, animated: true)
         
 

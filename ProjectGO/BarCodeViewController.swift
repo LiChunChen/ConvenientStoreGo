@@ -133,8 +133,8 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             
             guard success == true else {
                 print("askForRequest fail.")
-                let alert = UIAlertController(title: "無此商品", message: "查不到此商品的詳細資訊！", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "返回", style: .default, handler: nil))
+                let alert = UIAlertController(title: "No product", message: "The details of the goods can not be found！", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Back", style: .default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
                 self.session.startRunning()
                 self.isRunning = true
@@ -167,28 +167,33 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     @IBAction func openLove(_ sender: Any) {
         let push2 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
         let loveVC = push2.instantiateViewController(withIdentifier: "MyLoveTVC")
+        rightLC.constant = -140
         self.navigationController?.pushViewController(loveVC, animated: true)
     }
     @IBAction func openMap(_ sender: Any) {
         let push = UIStoryboard.init(name: "Map", bundle: nil)
         let mapVC = push.instantiateViewController(withIdentifier: "MapViewController")
+        rightLC.constant = -140
         self.navigationController?.pushViewController(mapVC, animated: true)
     }
     @IBAction func openScan(_ sender: Any) {
         let push1 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
         let barcodeVC = push1.instantiateViewController(withIdentifier: "BarCodeViewController")
+        rightLC.constant = -140
         self.navigationController?.pushViewController(barcodeVC, animated: true)
         
     }
     @IBAction func openRecord(_ sender: Any) {
         let modal2 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
         let recordVC = modal2.instantiateViewController(withIdentifier: "HistoryRecordTVC")
+        rightLC.constant = -140
         self.navigationController?.pushViewController(recordVC, animated: true)
         
     }
     @IBAction func openDrink(_ sender: Any) {
         let modal3 = UIStoryboard.init(name: "IntroductionStoryboard", bundle: nil)
         let drinkVC = modal3.instantiateViewController(withIdentifier: "ItemsViewController")
+        rightLC.constant = -140
         self.navigationController?.pushViewController(drinkVC, animated: true)
         
     }

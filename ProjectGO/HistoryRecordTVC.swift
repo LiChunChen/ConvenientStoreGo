@@ -18,7 +18,7 @@ class HistoryRecordTVC: UITableViewController {
         super.viewDidLoad()
         
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
+        self.title = "Histroy"
         tableView.estimatedRowHeight = 150.0
         tableView.rowHeight = UITableViewAutomaticDimension
         
@@ -27,8 +27,8 @@ class HistoryRecordTVC: UITableViewController {
         }
         
         guard historys.historyList.count != 0 else {
-            let alert = UIAlertController(title: "0筆記錄", message: "您目前還沒有瀏覽過任何商品", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "知道了", style: .default, handler: nil))
+            let alert = UIAlertController(title: "0 record.", message: "You haven’t browsed any product.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             return
         }

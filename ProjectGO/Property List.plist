@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<string>掃描條碼</string>
+		<string>找尋店家位置圖</string>
+		<string>飲品相關資訊</string>
+		<string>使用APP</string>
+	</array>
+	<array>
+		<string>iphone-中</string>
+		<string>iphone3</string>
+		<string>iphone2</string>
+		<string>iphone4</string>
+	</array>
+	<array>
+		<string>快速掃描</string>
+		<string>查看附近店家</string>
+		<string>清楚知道商品成分</string>
+		<string></string>
+	</array>
+</array>
+</plist>

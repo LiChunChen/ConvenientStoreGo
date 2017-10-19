@@ -17,7 +17,7 @@ class MyLoveTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "我的收藏"
+        self.title = "My favorite"
         
         tableView.estimatedRowHeight = 150.0
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -31,8 +31,8 @@ class MyLoveTVC: UITableViewController {
         }
         
         guard favorites.myLoveList.count != 0 else {
-            let alert = UIAlertController(title: "零筆收藏", message: "您目前沒有將任何商品加入收藏內", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "知道了", style: .default, handler: nil)
+            let alert = UIAlertController(title: "0 record.", message: " You haven’t added anything to my favorite.", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
             alert.addAction(ok)
             present(alert, animated: true, completion: nil)
             return

@@ -52,7 +52,7 @@ class writingCommentsVC: UIViewController, UITextFieldDelegate{
         //write in database
         var name = ""
         guard tf.text != "" else {
-            let alert = UIAlertController(title: "評論不可為空白", message: "請輸入您對此商品的評論", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Comments should not be blank", message: "Please enter your comments for the product.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "好", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             return

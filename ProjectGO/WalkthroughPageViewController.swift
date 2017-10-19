@@ -10,19 +10,34 @@ import UIKit
 
 class WalkthroughPageViewController: UIPageViewController,UIPageViewControllerDataSource {
     
-    var pageHeadings=["掃描條碼","找尋店家位置地圖","飲品相關資訊","使用APP"]
-    var pageImages = ["iphone","iphone","iphone","最後畫面"]
-    var pageContent = ["輕鬆一鍵快速掃描","查看附近店家位置","清楚知道商品成分",""]
+    var pageHeadings=["Scan Barcode","Search Store Map","Beverage Information","Start!"]
+    var pageImages = ["iphoneEn-1","iphoneEn-2","iphoneEn-3","最後畫面"]
+    var pageContent = ["Scan quickly","Show near stores","knowing product description",""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
+        let userDefault = UserDefaults.standard
+        let languages = userDefault.object(forKey: "AppleLanguages") as! NSArray
+        let userLanguages = languages.object(at: 0) as? String
+        print("使用者手機目前語言:\(userLanguages)")
+        if userLanguages == "zh-Hant-TW" {
+            if let plistURL = Bundle.main.url(forResource: "Property List", withExtension: "plist"){
+                if let plistArray = NSArray(contentsOf: plistURL) as? [Array<String>]{
+                    pageHeadings = plistArray[2]
+                    pageImages = plistArray[1]
+                    pageContent = plistArray[0]
+                }
+            }
+        }
         dataSource = self
         
         if let startingViewController = contentViewController(at: 0){
-            setViewControllers([startingViewController], direction: .forward, animated: true, completion: nil)}
+            setViewControllers([startingViewController], direction: .forward, animated: true, completion: nil)
+            
+            }
     }
 
     override func didReceiveMemoryWarning() {

@@ -27,7 +27,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         if Reachability.isConnectedToNetwork(){
             print("Internet Connection Available!")
         }else{
-            let alert = UIAlertController(title: "嗚呼", message: "沒有網路連線", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Oh", message: "No network", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .default, handler: nil)
             alert.addAction(action)
             self.present(alert, animated: true, completion: nil)
@@ -125,7 +125,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.activityType = .automotiveNavigation
         locationManager.startUpdatingLocation()
-        self.title = "離我最近的超商"
+        self.title = "Stores near me"
         checkNetworkConnection()
 
        

@@ -36,39 +36,32 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wzR-WN-O81">
                                 <rect key="frame" x="235" y="64" width="140" height="200"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TqG-Ri-flO">
-                                        <rect key="frame" x="12" y="15" width="116" height="170"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="TqG-Ri-flO">
+                                        <rect key="frame" x="12" y="14.5" width="116" height="171"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ae-u9-kHx">
-                                                <rect key="frame" x="0.0" y="0.0" width="116" height="30"/>
-                                                <state key="normal" title="Scan"/>
-                                                <connections>
-                                                    <action selector="openScan:" destination="GYr-EP-lYq" eventType="touchUpInside" id="RQc-GQ-a1h"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqQ-Ou-4I8">
-                                                <rect key="frame" x="0.0" y="35" width="116" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="116" height="30"/>
                                                 <state key="normal" title="Map"/>
                                                 <connections>
                                                     <action selector="openMap:" destination="GYr-EP-lYq" eventType="touchUpInside" id="dsc-V5-HI2"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1P-s4-alS">
-                                                <rect key="frame" x="0.0" y="70" width="116" height="30"/>
+                                                <rect key="frame" x="0.0" y="47" width="116" height="30"/>
                                                 <state key="normal" title="My favorite"/>
                                                 <connections>
                                                     <action selector="openLove:" destination="GYr-EP-lYq" eventType="touchUpInside" id="tzp-SR-SNd"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7X-Lk-3zI">
-                                                <rect key="frame" x="0.0" y="105" width="116" height="30"/>
+                                                <rect key="frame" x="0.0" y="94" width="116" height="30"/>
                                                 <state key="normal" title="Browsing History"/>
                                                 <connections>
                                                     <action selector="openRecord:" destination="GYr-EP-lYq" eventType="touchUpInside" id="HQ3-cb-jnK"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haT-CU-UBj">
-                                                <rect key="frame" x="0.0" y="140" width="116" height="30"/>
+                                                <rect key="frame" x="0.0" y="141" width="116" height="30"/>
                                                 <state key="normal" title="Information"/>
                                                 <connections>
                                                     <action selector="openDrink:" destination="GYr-EP-lYq" eventType="touchUpInside" id="w9R-VR-w7L"/>

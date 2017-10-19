@@ -69,7 +69,7 @@ class DetailViewController: UIViewController {
         selectedVC = descriptionVC
         
         //prepare to present product title
-        self.title = "商品"
+        self.title = "Product"
         myFavBut.isEnabled = false
         writeComBtn.isEnabled = false
         

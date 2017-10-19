@@ -15,8 +15,8 @@ class commentsTVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         super.viewDidLoad()
 
         if comments.count == 0 {
-            let alert = UIAlertController(title: "沒有評論", message: "目前沒有任何使用者對此商品進行評論", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "知道了", style: .default, handler: nil))
+            let alert = UIAlertController(title: "No comment", message: "No user has commented on the product at present", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
         }
     }

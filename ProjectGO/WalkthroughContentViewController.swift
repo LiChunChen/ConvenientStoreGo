@@ -33,7 +33,7 @@ class WalkthroughContentViewController: UIViewController {
         
         switch index{
         case 0,1,2 : forwardBtn.isHidden = true
-        case 3 : forwardBtn.setTitle("進入APP", for: .normal)
+        case 3 : forwardBtn.setTitle("Start!", for: .normal)
         default:break
             
 
