@@ -161,6 +161,7 @@ class ItemsViewController: UIViewController{
         
         let push1 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
         let barcodeVC = push1.instantiateViewController(withIdentifier: "BarCodeViewController")
+        
         self.navigationController?.pushViewController(barcodeVC, animated: true)
         
 
@@ -169,12 +170,14 @@ class ItemsViewController: UIViewController{
     @IBAction func connectMap(_ sender: Any) {
         let push = UIStoryboard.init(name: "Map", bundle: nil)
         let mapVC = push.instantiateViewController(withIdentifier: "MapViewController")
+        trailingConstraint.constant = -140
         self.navigationController?.pushViewController(mapVC, animated: true)
     }
     
     @IBAction func connectMyLove(_ sender: Any) {
         let push2 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
         let loveVC = push2.instantiateViewController(withIdentifier: "MyLoveTVC")
+        trailingConstraint.constant = -140
         self.navigationController?.pushViewController(loveVC, animated: true)
         
       
@@ -184,12 +187,14 @@ class ItemsViewController: UIViewController{
     @IBAction func connectRecord(_ sender: Any) {
         let modal2 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
         let recordVC = modal2.instantiateViewController(withIdentifier: "HistoryRecordTVC")
+        trailingConstraint.constant = -140
         self.navigationController?.pushViewController(recordVC, animated: true)
 
     }
     @IBAction func connectDrink(_ sender: Any) {
         let modal3 = UIStoryboard.init(name: "IntroductionStoryboard", bundle: nil)
         let drinkVC = modal3.instantiateViewController(withIdentifier: "ItemsViewController")
+        trailingConstraint.constant = -140
         self.navigationController?.pushViewController(drinkVC, animated: true)
         
     }

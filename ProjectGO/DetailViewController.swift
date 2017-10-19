@@ -192,12 +192,14 @@ class DetailViewController: UIViewController {
     @IBAction func showScan(_ sender: Any) {
         let push1 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
         let barcodeVC = push1.instantiateViewController(withIdentifier: "BarCodeViewController")
+        trailingConstraint.constant = -140
         self.navigationController?.pushViewController(barcodeVC, animated: true)
         
     }
     @IBAction func showMap(_ sender: Any) {
         let push = UIStoryboard.init(name: "Map", bundle: nil)
         let mapVC = push.instantiateViewController(withIdentifier: "MapViewController")
+        trailingConstraint.constant = -140
         self.navigationController?.pushViewController(mapVC, animated: true)
         
     }
@@ -206,18 +208,20 @@ class DetailViewController: UIViewController {
         let push2 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
         let loveVC = push2.instantiateViewController(withIdentifier: "MyLoveTVC")
         self.navigationController?.pushViewController(loveVC, animated: true)
-        
+        trailingConstraint.constant = -140
     }
     
     @IBAction func showRecord(_ sender: Any) {
         let modal2 = UIStoryboard.init(name: "BarcodeStoryboard", bundle: nil)
         let recordVC = modal2.instantiateViewController(withIdentifier: "HistoryRecordTVC")
        self.navigationController?.pushViewController(recordVC, animated: true)
+        trailingConstraint.constant = -140
     }
     @IBAction func openDrink(_ sender: Any) {
         let modal3 = UIStoryboard.init(name: "IntroductionStoryboard", bundle: nil)
         let drinkVC = modal3.instantiateViewController(withIdentifier: "ItemsViewController")
         self.navigationController?.pushViewController(drinkVC, animated: true)
+        trailingConstraint.constant = -140
         
     }
     
@@ -225,6 +229,7 @@ class DetailViewController: UIViewController {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "writingCommentsVC") as? writingCommentsVC
         controller?.barcodes = barcodes!
         self.navigationController?.pushViewController(controller!, animated: true)
+        trailingConstraint.constant = -140
     }
 
     /*
