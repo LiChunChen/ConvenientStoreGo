@@ -37,39 +37,39 @@
                                 <rect key="frame" x="235" y="64" width="140" height="200"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TqG-Ri-flO">
-                                        <rect key="frame" x="39" y="15" width="62" height="170"/>
+                                        <rect key="frame" x="12" y="15" width="116" height="170"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ae-u9-kHx">
-                                                <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
-                                                <state key="normal" title="掃描"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="116" height="30"/>
+                                                <state key="normal" title="Scan"/>
                                                 <connections>
                                                     <action selector="openScan:" destination="GYr-EP-lYq" eventType="touchUpInside" id="RQc-GQ-a1h"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqQ-Ou-4I8">
-                                                <rect key="frame" x="0.0" y="35" width="62" height="30"/>
-                                                <state key="normal" title="商品地圖"/>
+                                                <rect key="frame" x="0.0" y="35" width="116" height="30"/>
+                                                <state key="normal" title="Map"/>
                                                 <connections>
                                                     <action selector="openMap:" destination="GYr-EP-lYq" eventType="touchUpInside" id="dsc-V5-HI2"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1P-s4-alS">
-                                                <rect key="frame" x="0.0" y="70" width="62" height="30"/>
-                                                <state key="normal" title="我的最愛"/>
+                                                <rect key="frame" x="0.0" y="70" width="116" height="30"/>
+                                                <state key="normal" title="My favorite"/>
                                                 <connections>
                                                     <action selector="openLove:" destination="GYr-EP-lYq" eventType="touchUpInside" id="tzp-SR-SNd"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7X-Lk-3zI">
-                                                <rect key="frame" x="0.0" y="105" width="62" height="30"/>
-                                                <state key="normal" title="瀏覽紀錄"/>
+                                                <rect key="frame" x="0.0" y="105" width="116" height="30"/>
+                                                <state key="normal" title="Browsing History"/>
                                                 <connections>
                                                     <action selector="openRecord:" destination="GYr-EP-lYq" eventType="touchUpInside" id="HQ3-cb-jnK"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haT-CU-UBj">
-                                                <rect key="frame" x="0.0" y="140" width="62" height="30"/>
-                                                <state key="normal" title="商品資訊"/>
+                                                <rect key="frame" x="0.0" y="140" width="116" height="30"/>
+                                                <state key="normal" title="Information"/>
                                                 <connections>
                                                     <action selector="openDrink:" destination="GYr-EP-lYq" eventType="touchUpInside" id="w9R-VR-w7L"/>
                                                 </connections>
@@ -137,14 +137,14 @@
                                                 <constraint firstAttribute="width" constant="70" id="UhJ-tK-Hud"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="商品名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GG8-Yd-Eub">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GG8-Yd-Eub">
                                             <rect key="frame" x="86" y="8" width="281" height="23.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="容量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbN-9t-lrR">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Capacity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbN-9t-lrR">
                                             <rect key="frame" x="86" y="37" width="281" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -220,11 +220,11 @@
             </objects>
             <point key="canvasLocation" x="1950" y="157"/>
         </scene>
-        <!--掃描-->
+        <!--Scan-->
         <scene sceneID="Mgb-Xg-SKM">
             <objects>
                 <navigationController storyboardIdentifier="BarcodeNav" automaticallyAdjustsScrollViewInsets="NO" id="5Y7-bA-KT4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="掃描" image="掃描器" id="C4W-79-fKl"/>
+                    <tabBarItem key="tabBarItem" title="Scan" image="掃描器" id="C4W-79-fKl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="j5M-VY-nOC">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

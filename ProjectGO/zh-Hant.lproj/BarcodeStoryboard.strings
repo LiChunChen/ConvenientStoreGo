@@ -8,41 +8,41 @@
 /* Class = "UILabel"; text = "商品名稱"; ObjectID = "2LK-2l-LtR"; */
 "2LK-2l-LtR.text" = "商品名稱";
 
-/* Class = "UIButton"; normalTitle = "掃描"; ObjectID = "7ae-u9-kHx"; */
+/* Class = "UIButton"; normalTitle = "Scan"; ObjectID = "7ae-u9-kHx"; */
 "7ae-u9-kHx.normalTitle" = "掃描";
 
-/* Class = "UITabBarItem"; title = "掃描"; ObjectID = "C4W-79-fKl"; */
+/* Class = "UITabBarItem"; title = "Scan"; ObjectID = "C4W-79-fKl"; */
 "C4W-79-fKl.title" = "掃描";
 
-/* Class = "UIButton"; normalTitle = "瀏覽紀錄"; ObjectID = "D7X-Lk-3zI"; */
+/* Class = "UIButton"; normalTitle = "Browsing History"; ObjectID = "D7X-Lk-3zI"; */
 "D7X-Lk-3zI.normalTitle" = "瀏覽紀錄";
 
-/* Class = "UILabel"; text = "商品名稱"; ObjectID = "GG8-Yd-Eub"; */
-"GG8-Yd-Eub.text" = "商品名稱";
+/* Class = "UILabel"; text = "Name"; ObjectID = "GG8-Yd-Eub"; */
+"GG8-Yd-Eub.text" = "Name";
 
 /* Class = "UILabel"; text = "0"; ObjectID = "PXt-hV-V1i"; */
 "PXt-hV-V1i.text" = "0";
 
 /* Class = "UINavigationItem"; title = "BarCode"; ObjectID = "Pz6-6D-ZSW"; */
-"Pz6-6D-ZSW.title" = "BarCode";
+"Pz6-6D-ZSW.title" = "掃條碼";
 
-/* Class = "UILabel"; text = "容量"; ObjectID = "SbN-9t-lrR"; */
+/* Class = "UILabel"; text = "Capacity"; ObjectID = "SbN-9t-lrR"; */
 "SbN-9t-lrR.text" = "容量";
 
 /* Class = "UILabel"; text = "0"; ObjectID = "hYz-ba-QZ6"; */
 "hYz-ba-QZ6.text" = "0";
 
-/* Class = "UIButton"; normalTitle = "商品資訊"; ObjectID = "haT-CU-UBj"; */
+/* Class = "UIButton"; normalTitle = "Information"; ObjectID = "haT-CU-UBj"; */
 "haT-CU-UBj.normalTitle" = "商品資訊";
 
 /* Class = "UILabel"; text = "容量"; ObjectID = "kjY-sr-n3l"; */
 "kjY-sr-n3l.text" = "容量";
 
-/* Class = "UIButton"; normalTitle = "商品地圖"; ObjectID = "kqQ-Ou-4I8"; */
-"kqQ-Ou-4I8.normalTitle" = "商品地圖";
+/* Class = "UIButton"; normalTitle = "Map"; ObjectID = "kqQ-Ou-4I8"; */
+"kqQ-Ou-4I8.normalTitle" = "超商地圖";
 
-/* Class = "UIButton"; normalTitle = "我的最愛"; ObjectID = "r1P-s4-alS"; */
-"r1P-s4-alS.normalTitle" = "我的最愛";
+/* Class = "UIButton"; normalTitle = "My favorite"; ObjectID = "r1P-s4-alS"; */
+"r1P-s4-alS.normalTitle" = "我的收藏";
 
 /* Class = "UILabel"; text = "0"; ObjectID = "tNK-1U-npN"; */
 "tNK-1U-npN.text" = "0";

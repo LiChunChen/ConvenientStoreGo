@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--商品詳細資訊-->
+        <!--Information-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="DetailViewController" id="BYZ-38-t0r" customClass="DetailViewController" customModule="ProjectGO" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,13 +30,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="1LO-4D-y1A">
                                         <rect key="frame" x="212" y="0.0" width="163" height="228"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品名稱" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYv-jG-E8S">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYv-jG-E8S">
                                                 <rect key="frame" x="0.0" y="0.0" width="163" height="91"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="容量" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8K-TK-PeR">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capacity" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8K-TK-PeR">
                                                 <rect key="frame" x="0.0" y="91" width="163" height="80"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -109,35 +109,35 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cey-X3-OEE">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="24"/>
-                                                <state key="normal" title="掃描"/>
+                                                <state key="normal" title="Scan"/>
                                                 <connections>
                                                     <action selector="showScan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ntv-Gx-4aA"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7JR-wW-Nog">
                                                 <rect key="frame" x="0.0" y="39" width="120" height="24"/>
-                                                <state key="normal" title="超商地圖"/>
+                                                <state key="normal" title="Map"/>
                                                 <connections>
                                                     <action selector="showMap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pdY-ei-peI"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5m-zh-fTe">
                                                 <rect key="frame" x="0.0" y="78" width="120" height="24"/>
-                                                <state key="normal" title="我的最愛"/>
+                                                <state key="normal" title="My Favorite"/>
                                                 <connections>
                                                     <action selector="showFav:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dj7-R1-Ios"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z63-aj-2iC">
                                                 <rect key="frame" x="0.0" y="117" width="120" height="24"/>
-                                                <state key="normal" title="瀏覽紀錄"/>
+                                                <state key="normal" title="Browsing History"/>
                                                 <connections>
                                                     <action selector="showRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1VB-5l-YLf"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leR-6x-Tl4">
                                                 <rect key="frame" x="0.0" y="156" width="120" height="24"/>
-                                                <state key="normal" title="商品資訊"/>
+                                                <state key="normal" title="Information"/>
                                                 <connections>
                                                     <action selector="openDrink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gcr-Zf-0x2"/>
                                                 </connections>
@@ -185,10 +185,10 @@
                                         </constraints>
                                     </stackView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="knh-eA-cqH">
-                                        <rect key="frame" x="119" y="25" width="137" height="29"/>
+                                        <rect key="frame" x="103" y="25" width="169" height="29"/>
                                         <segments>
-                                            <segment title="商品資訊"/>
-                                            <segment title="評論"/>
+                                            <segment title="Description"/>
+                                            <segment title="Comment"/>
                                         </segments>
                                     </segmentedControl>
                                 </subviews>
@@ -211,7 +211,7 @@
                             <constraint firstItem="6XZ-VD-Fuh" firstAttribute="top" secondItem="4Ya-M2-WDT" secondAttribute="bottom" id="znE-Yr-h7N"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="商品詳細資訊" id="aXX-ey-fvG">
+                    <navigationItem key="navigationItem" title="Information" id="aXX-ey-fvG">
                         <barButtonItem key="rightBarButtonItem" title="More" image="功能選單" id="Kem-7o-An5">
                             <connections>
                                 <action selector="sideMenu:" destination="BYZ-38-t0r" id="iiO-Oc-k2Z"/>
@@ -251,7 +251,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mBg-kI-12j">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="301"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品說明" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpd-ae-LF2">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpd-ae-LF2">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
                                         <color key="backgroundColor" red="0.74152689999999999" green="0.9758615625" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -264,7 +264,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成分" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIP-kc-JGb">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIP-kc-JGb">
                                         <rect key="frame" x="0.0" y="150.5" width="375" height="30"/>
                                         <color key="backgroundColor" red="0.74152689999999999" green="0.9758615625" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -323,13 +323,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0GO-Xf-JBM">
                                 <rect key="frame" x="37.5" y="70" width="300" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名稱：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Anh-mx-oGy">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Anh-mx-oGy">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="評論者" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q3b-vI-rNs">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q3b-vI-rNs">
                                         <rect key="frame" x="75" y="0.0" width="225" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -352,7 +352,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="bezel" placeholder="寫下你的評論吧！" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vD4-Ju-s85">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="bezel" placeholder="Write Your Comment" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vD4-Ju-s85">
                                 <rect key="frame" x="38" y="183" width="300" height="267"/>
                                 <color key="textColor" red="0.085759041878172626" green="0.085759041878172626" blue="0.085759041878172626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -360,7 +360,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKH-4Y-llt">
                                 <rect key="frame" x="38" y="475" width="300" height="30"/>
-                                <state key="normal" title="完成"/>
+                                <state key="normal" title="Finish"/>
                                 <connections>
                                     <action selector="doneButton:" destination="Ser-np-Bse" eventType="touchUpInside" id="Xjy-1e-D7v"/>
                                 </connections>
@@ -407,7 +407,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dza-vJ-BSr">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="252"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -465,7 +465,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l0q-rP-y4P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2040.8" y="286.50674662668666"/>
+            <point key="canvasLocation" x="2289" y="224"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WYa-xW-N3f">

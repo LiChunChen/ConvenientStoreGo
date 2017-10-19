@@ -73,6 +73,10 @@
 		027FC81C1F970F6A00DB5E6E /* loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loading.swift; sourceTree = "<group>"; };
 		161F20937880477E0FC7E34E /* Pods-ProjectGO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectGO.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectGO/Pods-ProjectGO.release.xcconfig"; sourceTree = "<group>"; };
 		2031CB7178061594B6C52B8A /* Pods-ProjectGO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectGO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectGO/Pods-ProjectGO.debug.xcconfig"; sourceTree = "<group>"; };
+		56033BEA1F985CA00004F64E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		56033BEC1F985CA00004F64E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/BarcodeStoryboard.strings"; sourceTree = "<group>"; };
+		56033BED1F985CA00004F64E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		56033BF11F985DF40004F64E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/IntroductionStoryboard.strings"; sourceTree = "<group>"; };
 		565C686C1F923A580040DA95 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		565C686D1F923A580040DA95 /* loadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loadData.swift; sourceTree = "<group>"; };
 		565C686E1F923A580040DA95 /* shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shop.swift; sourceTree = "<group>"; };
@@ -93,16 +97,8 @@
 		56D1B4E81F6564CB00F1727A /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
 		56D1B4EB1F656F6800F1727A /* writingCommentsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = writingCommentsVC.swift; sourceTree = "<group>"; };
 		56E65FC01F65753200E99C62 /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
-		56FB80221F96ECBA00E5253D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
-		56FB80231F96ECBA00E5253D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/IntroductionStoryboard.strings"; sourceTree = "<group>"; };
-		56FB80241F96ECBA00E5253D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/BarcodeStoryboard.strings"; sourceTree = "<group>"; };
-		56FB80251F96ECBA00E5253D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		AE23837E1F963045003C0CA6 /* en-TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-TW"; path = "en-TW.lproj/Main.strings"; sourceTree = "<group>"; };
-		AE23837F1F963045003C0CA6 /* en-TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-TW"; path = "en-TW.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		AE2383811F9631C9003C0CA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/IntroductionStoryboard.storyboard; sourceTree = "<group>"; };
-		AE2383841F9631CD003C0CA6 /* en-TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-TW"; path = "en-TW.lproj/IntroductionStoryboard.strings"; sourceTree = "<group>"; };
 		AE2383861F9633E8003C0CA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BarcodeStoryboard.storyboard; sourceTree = "<group>"; };
-		AE2383891F9633EB003C0CA6 /* en-TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-TW"; path = "en-TW.lproj/BarcodeStoryboard.strings"; sourceTree = "<group>"; };
 		AE31CCBF1F94AC09002F9E19 /* Page8TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page8TableViewController.swift; sourceTree = "<group>"; };
 		AE31CCC01F94AC0A002F9E19 /* Page3TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page3TableViewController.swift; sourceTree = "<group>"; };
 		AE31CCC11F94AC0A002F9E19 /* Page4TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page4TableViewController.swift; sourceTree = "<group>"; };
@@ -285,7 +281,7 @@
 			knownRegions = (
 				en,
 				Base,
-				"en-TW",
+				"zh-Hant",
 			);
 			mainGroup = 56D1B4C01F653D5600F1727A;
 			productRefGroup = 56D1B4CA1F653D5600F1727A /* Products */;
@@ -414,8 +410,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				56D1B4D11F653D5600F1727A /* Base */,
-				AE23837E1F963045003C0CA6 /* en-TW */,
-				56FB80221F96ECBA00E5253D /* zh-Hant */,
+				56033BEA1F985CA00004F64E /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -424,8 +419,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				56D1B4D61F653D5600F1727A /* Base */,
-				AE23837F1F963045003C0CA6 /* en-TW */,
-				56FB80251F96ECBA00E5253D /* zh-Hant */,
+				56033BED1F985CA00004F64E /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -434,8 +428,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AE2383811F9631C9003C0CA6 /* Base */,
-				AE2383841F9631CD003C0CA6 /* en-TW */,
-				56FB80231F96ECBA00E5253D /* zh-Hant */,
+				56033BF11F985DF40004F64E /* zh-Hant */,
 			);
 			name = IntroductionStoryboard.storyboard;
 			sourceTree = "<group>";
@@ -444,8 +437,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				AE2383861F9633E8003C0CA6 /* Base */,
-				AE2383891F9633EB003C0CA6 /* en-TW */,
-				56FB80241F96ECBA00E5253D /* zh-Hant */,
+				56033BEC1F985CA00004F64E /* zh-Hant */,
 			);
 			name = BarcodeStoryboard.storyboard;
 			sourceTree = "<group>";

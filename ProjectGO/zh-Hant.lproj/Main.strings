@@ -11,56 +11,53 @@
 /* Class = "UILabel"; text = "0"; ObjectID = "4GJ-uM-Oda"; */
 "4GJ-uM-Oda.text" = "0";
 
-/* Class = "UIButton"; normalTitle = "超商地圖"; ObjectID = "7JR-wW-Nog"; */
+/* Class = "UIButton"; normalTitle = "Map"; ObjectID = "7JR-wW-Nog"; */
 "7JR-wW-Nog.normalTitle" = "超商地圖";
 
-/* Class = "UILabel"; text = "商品名稱"; ObjectID = "AYv-jG-E8S"; */
+/* Class = "UILabel"; text = "Name"; ObjectID = "AYv-jG-E8S"; */
 "AYv-jG-E8S.text" = "商品名稱";
 
-/* Class = "UILabel"; text = "名稱："; ObjectID = "Anh-mx-oGy"; */
+/* Class = "UILabel"; text = "Name："; ObjectID = "Anh-mx-oGy"; */
 "Anh-mx-oGy.text" = "名稱：";
 
-/* Class = "UIButton"; normalTitle = "掃描"; ObjectID = "Cey-X3-OEE"; */
+/* Class = "UIButton"; normalTitle = "Scan"; ObjectID = "Cey-X3-OEE"; */
 "Cey-X3-OEE.normalTitle" = "掃描";
 
-/* Class = "UIButton"; normalTitle = "完成"; ObjectID = "EKH-4Y-llt"; */
+/* Class = "UIButton"; normalTitle = "Finish"; ObjectID = "EKH-4Y-llt"; */
 "EKH-4Y-llt.normalTitle" = "完成";
 
-/* Class = "UIButton"; normalTitle = "我的最愛"; ObjectID = "J5m-zh-fTe"; */
+/* Class = "UIButton"; normalTitle = "My Favorite"; ObjectID = "J5m-zh-fTe"; */
 "J5m-zh-fTe.normalTitle" = "我的收藏";
 
 /* Class = "UIBarButtonItem"; title = "More"; ObjectID = "Kem-7o-An5"; */
 "Kem-7o-An5.title" = "More";
 
-/* Class = "UITextField"; placeholder = "評論者"; ObjectID = "Q3b-vI-rNs"; */
+/* Class = "UITextField"; placeholder = "Your Name"; ObjectID = "Q3b-vI-rNs"; */
 "Q3b-vI-rNs.placeholder" = "評論者";
 
-/* Class = "UILabel"; text = "成分"; ObjectID = "SIP-kc-JGb"; */
+/* Class = "UILabel"; text = "Ingredient"; ObjectID = "SIP-kc-JGb"; */
 "SIP-kc-JGb.text" = "成分";
 
-/* Class = "UINavigationItem"; title = "商品詳細資訊"; ObjectID = "aXX-ey-fvG"; */
+/* Class = "UINavigationItem"; title = "Information"; ObjectID = "aXX-ey-fvG"; */
 "aXX-ey-fvG.title" = "商品詳細資訊";
 
-/* Class = "UILabel"; text = "商品說明"; ObjectID = "dpd-ae-LF2"; */
-"dpd-ae-LF2.text" = "商品說明";
+/* Class = "UILabel"; text = "Description"; ObjectID = "dpd-ae-LF2"; */
+"dpd-ae-LF2.text" = "商品資訊";
 
-/* Class = "UILabel"; text = "容量"; ObjectID = "f8K-TK-PeR"; */
+/* Class = "UILabel"; text = "Capacity"; ObjectID = "f8K-TK-PeR"; */
 "f8K-TK-PeR.text" = "容量";
 
-/* Class = "UISegmentedControl"; knh-eA-cqH.segmentTitles[0] = "商品資訊"; ObjectID = "knh-eA-cqH"; */
+/* Class = "UISegmentedControl"; knh-eA-cqH.segmentTitles[0] = "Description"; ObjectID = "knh-eA-cqH"; */
 "knh-eA-cqH.segmentTitles[0]" = "商品資訊";
 
-/* Class = "UISegmentedControl"; knh-eA-cqH.segmentTitles[1] = "評論"; ObjectID = "knh-eA-cqH"; */
+/* Class = "UISegmentedControl"; knh-eA-cqH.segmentTitles[1] = "Comment"; ObjectID = "knh-eA-cqH"; */
 "knh-eA-cqH.segmentTitles[1]" = "評論";
 
-/* Class = "UIButton"; normalTitle = "商品資訊"; ObjectID = "leR-6x-Tl4"; */
+/* Class = "UIButton"; normalTitle = "Information"; ObjectID = "leR-6x-Tl4"; */
 "leR-6x-Tl4.normalTitle" = "商品資訊";
 
-/* Class = "UIButton"; normalTitle = "寫評論"; ObjectID = "rCP-z3-h2w"; */
-"rCP-z3-h2w.normalTitle" = "寫評論";
-
-/* Class = "UITextField"; placeholder = "寫下你的評論吧！"; ObjectID = "vD4-Ju-s85"; */
+/* Class = "UITextField"; placeholder = "Write Your Comment"; ObjectID = "vD4-Ju-s85"; */
 "vD4-Ju-s85.placeholder" = "寫下你的評論吧！";
 
-/* Class = "UIButton"; normalTitle = "瀏覽紀錄"; ObjectID = "z63-aj-2iC"; */
+/* Class = "UIButton"; normalTitle = "Browsing History"; ObjectID = "z63-aj-2iC"; */
 "z63-aj-2iC.normalTitle" = "瀏覽紀錄";

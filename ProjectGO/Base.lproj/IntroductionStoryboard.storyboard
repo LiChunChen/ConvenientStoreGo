@@ -152,7 +152,7 @@
             </objects>
             <point key="canvasLocation" x="-1711" y="297"/>
         </scene>
-        <!--飲品列表-->
+        <!--Beverage List-->
         <scene sceneID="U1k-Zu-oXz">
             <objects>
                 <viewController storyboardIdentifier="ItemsViewController" automaticallyAdjustsScrollViewInsets="NO" id="63j-wx-mP2" customClass="ItemsViewController" customModule="ProjectGO" customModuleProvider="target" sceneMemberID="viewController">
@@ -173,7 +173,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX4-Ao-cox">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="牛奶"/>
+                                                <state key="normal" title="Milk"/>
                                                 <connections>
                                                     <action selector="showPage1:" destination="63j-wx-mP2" eventType="touchUpInside" id="6Wm-85-TdT"/>
                                                 </connections>
@@ -181,7 +181,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoU-Pl-Buw">
                                                 <rect key="frame" x="80" y="0.0" width="80" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="茶"/>
+                                                <state key="normal" title="tea"/>
                                                 <connections>
                                                     <action selector="showPage2:" destination="63j-wx-mP2" eventType="touchUpInside" id="gyp-CM-BNc"/>
                                                 </connections>
@@ -189,7 +189,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMS-YW-887">
                                                 <rect key="frame" x="160" y="0.0" width="80" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="水"/>
+                                                <state key="normal" title="water"/>
                                                 <connections>
                                                     <action selector="showPage3:" destination="63j-wx-mP2" eventType="touchUpInside" id="hhp-Nj-79c"/>
                                                 </connections>
@@ -197,7 +197,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sb-q6-5VM">
                                                 <rect key="frame" x="240" y="0.0" width="80" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="咖啡"/>
+                                                <state key="normal" title="coffee"/>
                                                 <connections>
                                                     <action selector="showPage4:" destination="63j-wx-mP2" eventType="touchUpInside" id="B4S-3C-ftx"/>
                                                 </connections>
@@ -205,7 +205,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G59-Tc-TaF">
                                                 <rect key="frame" x="320" y="0.0" width="80" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="酒"/>
+                                                <state key="normal" title="wine"/>
                                                 <connections>
                                                     <action selector="showPage5:" destination="63j-wx-mP2" eventType="touchUpInside" id="jGc-Ot-dCj"/>
                                                 </connections>
@@ -213,7 +213,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gb1-ey-Qhc">
                                                 <rect key="frame" x="400" y="0.0" width="80" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="機能"/>
+                                                <state key="normal" title="energy"/>
                                                 <connections>
                                                     <action selector="showPage6:" destination="63j-wx-mP2" eventType="touchUpInside" id="fal-2d-jXy"/>
                                                 </connections>
@@ -221,7 +221,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eg-4V-PMB">
                                                 <rect key="frame" x="480" y="0.0" width="80" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="運動"/>
+                                                <state key="normal" title="sports"/>
                                                 <connections>
                                                     <action selector="showPage7:" destination="63j-wx-mP2" eventType="touchUpInside" id="wXA-sU-R3d"/>
                                                 </connections>
@@ -229,7 +229,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPt-SC-pz7">
                                                 <rect key="frame" x="560" y="0.0" width="80" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="果汁"/>
+                                                <state key="normal" title="juice"/>
                                                 <connections>
                                                     <action selector="showPage8:" destination="63j-wx-mP2" eventType="touchUpInside" id="353-p0-mHI"/>
                                                 </connections>
@@ -237,7 +237,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V02-YE-kYK">
                                                 <rect key="frame" x="640" y="0.0" width="80" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="穀物"/>
+                                                <state key="normal" title="cereals"/>
                                                 <connections>
                                                     <action selector="showPage9:" destination="63j-wx-mP2" eventType="touchUpInside" id="Zpi-be-CP1"/>
                                                 </connections>
@@ -272,35 +272,35 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbw-hN-rjc">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="24"/>
-                                                <state key="normal" title="掃描"/>
+                                                <state key="normal" title="Scan"/>
                                                 <connections>
                                                     <action selector="connetScanner:" destination="63j-wx-mP2" eventType="touchUpInside" id="tHx-Ge-nhK"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeF-Ap-goW">
                                                 <rect key="frame" x="0.0" y="39" width="120" height="24"/>
-                                                <state key="normal" title="超商地圖"/>
+                                                <state key="normal" title="Map"/>
                                                 <connections>
                                                     <action selector="connectMap:" destination="63j-wx-mP2" eventType="touchUpInside" id="Dn6-gU-QTY"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WyV-q7-YrN">
                                                 <rect key="frame" x="0.0" y="78" width="120" height="24"/>
-                                                <state key="normal" title="我的最愛"/>
+                                                <state key="normal" title="My Favorite"/>
                                                 <connections>
                                                     <action selector="connectMyLove:" destination="63j-wx-mP2" eventType="touchUpInside" id="rO9-E4-YrN"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQO-AZ-i6U">
                                                 <rect key="frame" x="0.0" y="117" width="120" height="24"/>
-                                                <state key="normal" title="瀏覽紀錄"/>
+                                                <state key="normal" title="Browsing History"/>
                                                 <connections>
                                                     <action selector="connectRecord:" destination="63j-wx-mP2" eventType="touchUpInside" id="VpV-4a-ztH"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CW3-me-x05">
                                                 <rect key="frame" x="0.0" y="156" width="120" height="24"/>
-                                                <state key="normal" title="商品資訊"/>
+                                                <state key="normal" title="Information"/>
                                                 <connections>
                                                     <action selector="connectDrink:" destination="63j-wx-mP2" eventType="touchUpInside" id="7L0-Ln-hc5"/>
                                                 </connections>
@@ -334,7 +334,7 @@
                             <constraint firstItem="sxl-gb-PSM" firstAttribute="top" secondItem="0IP-w4-fxQ" secondAttribute="bottom" id="hol-OA-8Fh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="飲品列表" id="kXQ-gx-YcZ">
+                    <navigationItem key="navigationItem" title="Beverage List" id="kXQ-gx-YcZ">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="功能選單" id="zeW-l1-2CX">
                             <connections>
                                 <action selector="open:" destination="63j-wx-mP2" id="GRd-km-aAw"/>
@@ -379,14 +379,14 @@
                                             <rect key="frame" x="7" y="8" width="70" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="商品名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SI3-ow-R3w">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SI3-ow-R3w">
                                             <rect key="frame" x="86" y="8" width="281" height="23.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="容量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWj-b1-blD">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="capacity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWj-b1-blD">
                                             <rect key="frame" x="86" y="37" width="281" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -950,14 +950,14 @@
                                             <rect key="frame" x="7" y="8" width="70" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="商品名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8e-wK-PUf">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8e-wK-PUf">
                                             <rect key="frame" x="86" y="8" width="281" height="23.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="容量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u68-0w-EGu">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="capacity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u68-0w-EGu">
                                             <rect key="frame" x="86" y="37" width="281" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -1029,14 +1029,14 @@
                                             <rect key="frame" x="7" y="8" width="70" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="商品名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njp-4m-SeS">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njp-4m-SeS">
                                             <rect key="frame" x="86" y="8" width="281" height="23.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="容量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNw-xD-FUy">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="capacity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNw-xD-FUy">
                                             <rect key="frame" x="86" y="37" width="281" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
