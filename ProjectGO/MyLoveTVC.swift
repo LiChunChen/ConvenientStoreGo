@@ -22,10 +22,6 @@ class MyLoveTVC: UITableViewController {
         tableView.estimatedRowHeight = 150.0
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        guard favorites.myLoveList.count != 0 else {
-            return
-        }
-        
         if let allLove = UserDefaults.standard.object(forKey: "Favorites") {
             favorites.myLoveList = allLove as! [Int]
         }
@@ -67,12 +63,7 @@ class MyLoveTVC: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
-        if favorites.myLoveList.count == 0 {
-            return 0
-        }else {
-            return favorites.myLoveList.count
-        }
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -102,6 +93,17 @@ class MyLoveTVC: UITableViewController {
         }
         if let star = informations[row].stars {
             cell.starsNum.text = String(describing: star)
+        }
+        if informations[row].stars! == 5.0 {
+            cell.itemStars.image = UIImage(named: "star5")
+        }else if informations[row].stars! >= 4.0 {
+            cell.itemStars.image = UIImage(named: "star4")
+        }else if informations[row].stars! >= 3.0 {
+            cell.itemStars.image = UIImage(named: "star3")
+        }else if informations[row].stars! >= 2.0 {
+            cell.itemStars.image = UIImage(named: "star2")
+        }else {
+            cell.itemStars.image = UIImage(named: "star1")
         }
         return cell
     }

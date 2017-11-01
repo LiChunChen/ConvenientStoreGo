@@ -14,11 +14,11 @@ class commentsTVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if comments.count == 0 {
-            let alert = UIAlertController(title: "No comment", message: "No user has commented on the product at present", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
-        }
+//        if comments.count == 0 {
+//            let alert = UIAlertController(title: "No comment", message: "No user has commented on the product at present", preferredStyle: .alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//            present(alert, animated: true, completion: nil)
+//        }
     }
 
     override func didReceiveMemoryWarning() {

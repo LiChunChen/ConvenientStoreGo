@@ -81,6 +81,17 @@ class Page1TableViewController: UITableViewController {
         if let star = informations![row].stars {
             cell.starsNum.text = String(describing: star)
         }
+        if informations![row].stars! == 5.0 {
+            cell.itemStars.image = UIImage(named: "star5")
+        }else if informations![row].stars! >= 4.0 {
+            cell.itemStars.image = UIImage(named: "star4")
+        }else if informations![row].stars! >= 3.0 {
+            cell.itemStars.image = UIImage(named: "star3")
+        }else if informations![row].stars! >= 2.0 {
+            cell.itemStars.image = UIImage(named: "star2")
+        }else {
+            cell.itemStars.image = UIImage(named: "star1")
+        }
         
         return cell
     }

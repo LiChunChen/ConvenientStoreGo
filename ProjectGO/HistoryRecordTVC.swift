@@ -92,6 +92,17 @@ class HistoryRecordTVC: UITableViewController {
         if let star = informations[row].stars {
             cell.starsNum.text = String(describing: star)
         }
+        if informations[row].stars! == 5.0 {
+            cell.itemStars.image = UIImage(named: "star5")
+        }else if informations[row].stars! >= 4.0 {
+            cell.itemStars.image = UIImage(named: "star4")
+        }else if informations[row].stars! >= 3.0 {
+            cell.itemStars.image = UIImage(named: "star3")
+        }else if informations[row].stars! >= 2.0 {
+            cell.itemStars.image = UIImage(named: "star2")
+        }else {
+            cell.itemStars.image = UIImage(named: "star1")
+        }
         return cell
     }
     
@@ -113,17 +124,18 @@ class HistoryRecordTVC: UITableViewController {
     }
     */
 
-    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            historys.historyList.remove(at: indexPath.row)
+            informations.remove(at: indexPath.row)
+            UserDefaults.standard.set(historys.historyList, forKey: "Historys")
+            UserDefaults.standard.synchronize()
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
 
     /*
     // Override to support rearranging the table view.

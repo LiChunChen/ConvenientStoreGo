@@ -79,9 +79,23 @@ class DetailViewController: UIViewController {
         if let allHistory = UserDefaults.standard.object(forKey: "Historys") {
             history.historyList = allHistory as! [Int]
         }
-        history.historyList.append(barcodes![0])
-        UserDefaults.standard.set(history.historyList, forKey: "Historys")
-        UserDefaults.standard.synchronize()
+        if history.historyList.count == 0 {
+            history.historyList.append(barcodes![0])
+            UserDefaults.standard.set(history.historyList, forKey: "Historys")
+            UserDefaults.standard.synchronize()
+        }else {
+            var bool = false
+            for i in 0..<history.historyList.count {
+                if history.historyList[i] == barcodes![0] {
+                    bool = true
+                }
+            }
+            if bool != true {
+                history.historyList.append(barcodes![0])
+                UserDefaults.standard.set(history.historyList, forKey: "Historys")
+                UserDefaults.standard.synchronize()
+            }
+        }
         
         mainView.bringSubview(toFront: subMenu)
         
@@ -125,6 +139,7 @@ class DetailViewController: UIViewController {
             self.descriptionVC.self.viewDidLoad()
         }
         
+//        parameter = ["type":"select","parameter":barcodes!,"DB":"Comment","category":"barcode"] as [String:Any]
         urlManager.downloadCom(parameters: barcodes!) { (success, error, results) in
             guard success == true else {
                 print("Comments askForRequest fail.")
@@ -205,7 +220,7 @@ class DetailViewController: UIViewController {
         UserDefaults.standard.set(favorites.myLoveList, forKey: "Favorites")
         UserDefaults.standard.synchronize()
         
-        let parameter = ["favorite":information[0].favorite!,"barcode":barcodes![0],"category":"hearts"] as [String : Any]
+        let parameter = ["update":information[0].favorite!,"barcode":barcodes![0],"category":"favorite"] as [String : Any]
         urlManager.changeToDB(parameter: parameter, urlString: uploadURL)
         
     }
@@ -266,6 +281,7 @@ class DetailViewController: UIViewController {
     @IBAction func writingComment(_ sender: Any) {
         let controller = self.storyboard?.instantiateViewController(withIdentifier: "writingCommentsVC") as? writingCommentsVC
         controller?.barcodes = barcodes!
+        controller?.totalStars = information[0].stars!
         self.navigationController?.pushViewController(controller!, animated: true)
         trailingConstraint.constant = -140
     }
